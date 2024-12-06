@@ -31,7 +31,7 @@ export default function Home() {
       <Projects properties={bookedProperties} />
       <MissionVision />
       <AboutUs />
-      <RecentAdditions properties={bookedProperties} />
+      {/* <RecentAdditions properties={bookedProperties} /> */}
       <Footer />
     </div>
   );
