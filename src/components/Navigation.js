@@ -49,7 +49,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className="bg-white text-black sticky top-0 z-50 border-b shadow-md rounded-full mx-8">
+    <nav className="bg-white text-black sticky top-0 z-50 border-b shadow-md rounded-full mx-20">
       <div className="flex justify-between items-center px-6 py-4 max-w-screen-xl mx-auto">
         {/* Logo */}
         <div>

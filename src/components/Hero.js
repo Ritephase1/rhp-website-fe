@@ -18,7 +18,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <h1 className="text-5xl md:text-4xl font-bold text-white mb-4">
+      <h1 className="text-5xl md:text-5xl font-bold text-white mb-4">
         Rhino Homes & Properties
       </h1>
       <p className="text-xl md:text-lg text-white max-w-xl mx-auto mb-8">

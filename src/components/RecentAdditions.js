@@ -1,47 +1,91 @@
+import { FaBed, FaShower, FaCar, FaMapMarkerAlt } from "react-icons/fa";
+
 export default function RecentAdditions({ properties }) {
   return (
-    <section
-      style={{
-        backgroundColor: "#8B0000",
-        color: "white",
-        padding: "3rem 2rem",
-      }}
-    >
-      <h2
-        style={{ fontSize: "2rem", textAlign: "center", marginBottom: "2rem" }}
-      >
-        Recent Booked Properties
-      </h2>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "1.5rem",
-        }}
-      >
+    <section className="text-black py-12 px-6">
+      <div className="mb-8">
+        <h2 className="text-xl text-[#006557] text-left ">Recent Additions</h2>
+        <h1 className="text-black font-bold text-xl">
+          Find Properties that Suits You
+        </h1>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {properties.map((property) => (
           <div
             key={property.id}
-            style={{
-              backgroundColor: "#000",
-              padding: "1rem",
-              borderRadius: "5px",
-              textAlign: "center",
-            }}
+            className="bg-[#FFFBE8] text-white rounded-lg overflow-hidden shadow-lg flex"
           >
-            <img
-              src={property.imageUrl}
-              alt={property.title}
-              style={{
-                width: "100%",
-                height: "200px",
-                objectFit: "cover",
-                borderRadius: "5px",
-              }}
-            />
-            <h3 style={{ marginTop: "1rem" }}>{property.title}</h3>
-            <p>{property.description}</p>
-            <p>${property.price.toFixed(2)}</p>
+            {/* Image Section */}
+            <div className="w-1/3 relative">
+              <img
+                src={property.imageUrl}
+                alt={property.title}
+                className="w-full h-full object-cover rounded-bl-lg"
+              />
+            </div>
+
+            {/* Text Section */}
+            <div className="w-2/3 p-4 bg-[#FFFBR8] text-left">
+              <h3 className="text-lg text-black font-bold mb-2">
+                {property.title}
+              </h3>
+
+              {/* Address */}
+              <div className="flex items-center text-black text-sm mb-4">
+                <FaMapMarkerAlt className="w-5 h-5 mr-2" />
+                <p>{property.address}</p>
+              </div>
+
+              {/* Beds, Size, Parking */}
+              <div className="flex items-center text-xs text-black mb-4">
+                <FaBed className="w-5 h-5 mr-2" />
+                <p>{property.beds} Beds</p>
+                <span className="mx-2">|</span>
+                <span className="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-5 h-5 mr-2"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M3 3h14a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <p>{property.size} m²</p>
+                </span>
+              </div>
+
+              {/* Bathrooms */}
+              <div className="flex items-center text-black text-xs mb-4">
+                <FaShower className="w-5 h-5 mr-2" />
+                <p>{property.bathrooms} Bathrooms</p>
+                <span className="mx-2">|</span>
+                <FaCar className="w-5 h-5 mr-2" />
+                <p>{property.parking} Parking Lot</p>
+              </div>
+
+              {/* Features */}
+              <div className="text-[#006557] text-sm font-semibold mb-2">
+                Features
+              </div>
+              <div className="text-black text-sm mb-2">{property.features}</div>
+
+              {/* ROI */}
+              <div className="text-[#006557] text-sm font-semibold mb-2">
+                ROI: {property.roi}%
+              </div>
+
+              {/* Invest Now Button */}
+              <a
+                href="#"
+                className="text-red-500 mt-4 block text-center font-bold underline"
+              >
+                Invest Now
+              </a>
+            </div>
           </div>
         ))}
       </div>

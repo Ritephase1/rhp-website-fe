@@ -5,6 +5,7 @@ import AboutUs from "@/components/AboutUs";
 import RecentAdditions from "@/components/RecentAdditions";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Project";
+import SignupCard from "@/components/SignupCard";
 import "../styles/globals.css";
 
 export default function Home() {
@@ -25,6 +26,35 @@ export default function Home() {
     },
   ];
 
+  const recentAdditionProperties = [
+    {
+      id: 1,
+      imageUrl:
+        "https://landmarkhomes.sgp1.digitaloceanspaces.com/plans/kawau/Kawau-2020.jpg",
+      title: "Kawau Beach House",
+      address: "123 Kawau Island Rd, Kawau Island, New Zealand",
+      beds: 3,
+      size: 250,
+      bathrooms: 2,
+      parking: 2,
+      features: "Sea View, Private Beach Access, Fully Furnished",
+      roi: 5.2,
+    },
+    {
+      id: 2,
+      imageUrl:
+        "https://landmarkhomes.sgp1.digitaloceanspaces.com/plans/kawau/Kawau-2020.jpg", // Sample image, replace with another image if you want multiple properties
+      title: "Bayview Mansion",
+      address: "456 Bayview St, Auckland, New Zealand",
+      beds: 4,
+      size: 350,
+      bathrooms: 3,
+      parking: 3,
+      features: "Ocean View, Spacious Living, Pool",
+      roi: 6.8,
+    },
+  ];
+
   return (
     <div>
       {/* <Navigation /> */}
@@ -32,7 +62,8 @@ export default function Home() {
       <Projects properties={bookedProperties} />
       <MissionVision />
       <AboutUs />
-      {/* <RecentAdditions properties={bookedProperties} /> */}
+      <RecentAdditions properties={recentAdditionProperties} />
+      <SignupCard />
       <Footer />
     </div>
   );
