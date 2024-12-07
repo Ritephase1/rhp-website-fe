@@ -1,58 +1,19 @@
 export default function MissionVision() {
   return (
-    <section
-      style={{
-        backgroundColor: "#D02A1A",
-        color: "white",
-        // padding: "3rem 2rem",
-        textAlign: "center",
-      }}
-    >
-      {/* <h2 style={{ fontSize: "2rem", marginBottom: "2rem" }}>
-        Our Mission and Vision
-      </h2> */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "2rem",
-          maxWidth: "800px",
-          margin: "0 auto",
-        }}
-      >
+    <section className="bg-[#D02A1A] text-white py-12 text-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {/* Mission Section */}
-        <div
-          style={{
-            backgroundColor: "#D02A1A",
-            padding: "2rem",
-            borderRadius: "8px",
-            textAlign: "left",
-            width: "450px",
-          }}
-        >
+        <div className="bg-[#D02A1A] p-8 rounded-lg text-left w-full flex flex-col items-center">
           <img
             src="/icons/mission.png" // Replace with the path to your mission icon
             alt="Mission Icon"
-            style={{
-              width: "40px",
-              height: "40px",
-              marginBottom: "1rem",
-            }}
+            className="w-10 h-10 mb-4"
           />
-          <h3
-            style={{
-              marginBottom: "1rem",
-              fontWeight: "bold",
-              fontSize: "2.3rem",
-              lineHeight: "2.5rem",
-            }}
-          >
-            Mission Statement
-          </h3>
-          <p>
+          <h3 className="text-2xl font-bold mb-4">Mission Statement</h3>
+          <p className="text-base leading-relaxed">
             We are committed to transforming dreams into reality by creating
             exceptional living and working spaces. Our mission is to be a
-            leading residential and commercial eal estate developer, dedicated
+            leading residential and commercial real estate developer, dedicated
             to delivering innovative, sustainable, and high-quality projects
             that enhance communities and exceed the expectations of our
             stakeholders.
@@ -60,37 +21,17 @@ export default function MissionVision() {
         </div>
 
         {/* Vision Section */}
-        <div
-          style={{
-            backgroundColor: "#D02A1A",
-            padding: "2rem",
-            borderRadius: "8px",
-            textAlign: "left",
-          }}
-        >
+        <div className="bg-[#D02A1A] p-8 rounded-lg text-left w-full flex flex-col items-center">
           <img
             src="/icons/vision.png" // Replace with the path to your vision icon
             alt="Vision Icon"
-            style={{
-              width: "40px",
-              height: "40px",
-              marginBottom: "1rem",
-            }}
+            className="w-10 h-10 mb-4"
           />
-          <h3
-            style={{
-              marginBottom: "1rem",
-              fontWeight: "2.5rem",
-              fontSize: "2.5rem",
-              lineHeight: "2.5rem",
-            }}
-          >
-            Vision
-          </h3>
-          <p>
+          <h3 className="text-2xl font-bold mb-4">Vision</h3>
+          <p className="text-base leading-relaxed">
             We are committed to transforming dreams into reality by creating
             exceptional living and working spaces. Our mission is to be a
-            leading residential and commercial eal estate developer, dedicated
+            leading residential and commercial real estate developer, dedicated
             to delivering innovative, sustainable, and high-quality projects
             that enhance communities and exceed the expectations of our
             stakeholders.
