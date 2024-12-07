@@ -5,6 +5,7 @@ import AboutUs from "@/components/AboutUs";
 import RecentAdditions from "@/components/RecentAdditions";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Project";
+import "../styles/globals.css";
 
 export default function Home() {
   const bookedProperties = [

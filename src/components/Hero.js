@@ -11,7 +11,7 @@ export default function Hero() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         color: "white",
-        height: "100vh", // Updated to cover the entire screen height
+        minHeight: "100vh", // Ensure it covers the viewport height
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -29,7 +29,7 @@ export default function Hero() {
           left: "0",
           width: "100%",
           zIndex: "100",
-          marginTop: "1rem", // Adds space between navigation and hero background
+          marginTop: "1rem",
         }}
       >
         <Navigation />
@@ -39,7 +39,6 @@ export default function Hero() {
         style={{
           padding: "5px 20px",
           margin: "50px 0px 10px",
-          // fontSize: "smaller",
           borderRadius: "20px",
           color: "white",
           border: "1px solid white",
@@ -50,12 +49,20 @@ export default function Hero() {
 
       {/* Hero Content */}
       <h1
-        style={{ fontSize: "4rem", fontWeight: "bold", marginBottom: "1rem" }}
+        style={{
+          fontSize: "4rem",
+          fontWeight: "bold",
+          marginBottom: "1rem",
+        }}
       >
         Rhino Homes & Properties
       </h1>
       <p
-        style={{ fontSize: "1.2rem", maxWidth: "600px", marginBottom: "2rem" }}
+        style={{
+          fontSize: "1.2rem",
+          maxWidth: "600px",
+          marginBottom: "2rem",
+        }}
       >
         We are committed to transforming dreams into reality by creating
         exceptional living and working spaces.
@@ -65,13 +72,13 @@ export default function Hero() {
       <div
         style={{
           display: "flex",
+          flexDirection: "row",
           alignItems: "center",
           width: "90%",
           maxWidth: "500px",
           borderRadius: "25px",
           overflow: "hidden",
           marginTop: "1rem",
-          paddingRight: "5px",
         }}
       >
         <input
@@ -89,12 +96,6 @@ export default function Hero() {
             color: "#333",
             transition: "background-color 0.3s ease",
           }}
-          onFocus={(e) => {
-            e.target.style.backgroundColor = "#f1f1f1";
-          }}
-          onBlur={(e) => {
-            e.target.style.backgroundColor = "#fff";
-          }}
         />
         <button
           style={{
@@ -108,7 +109,6 @@ export default function Hero() {
             borderTopRightRadius: "50%",
             borderBottomRightRadius: "50%",
             borderRadius: "50%",
-            marginLeft: "-7rem",
           }}
         >
           <svg
@@ -134,19 +134,16 @@ export default function Hero() {
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "2rem",
-          marginTop: "1rem",
-          marginTop: "20px",
           flexWrap: "wrap",
+          justifyContent: "center",
+          gap: "2rem",
+          marginTop: "20px",
         }}
       >
         {/* Commercial Image */}
         <div
           style={{
-            flex: "1 1 auto",
+            flex: "1 1 120px",
             maxWidth: "150px",
             textAlign: "center",
           }}
@@ -166,7 +163,7 @@ export default function Hero() {
         {/* Residential Image */}
         <div
           style={{
-            flex: "1 1 auto",
+            flex: "1 1 120px",
             maxWidth: "150px",
             textAlign: "center",
           }}
