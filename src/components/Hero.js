@@ -5,115 +5,39 @@ import Navigation from "./Navigation";
 export default function Hero() {
   return (
     <section
-      style={{
-        backgroundImage: `url('/images/hero.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        color: "white",
-        minHeight: "100vh", // Ensure it covers the viewport height
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        textAlign: "center",
-        padding: "2rem",
-        position: "relative",
-      }}
+      className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
+      style={{ backgroundImage: "url('/images/hero.png')" }}
     >
       {/* Navigation Component */}
-      <div
-        style={{
-          position: "absolute",
-          top: "0",
-          left: "0",
-          width: "100%",
-          zIndex: "100",
-          marginTop: "1rem",
-        }}
-      >
+      <div className="absolute top-0 left-0 w-full z-10 mt-4">
         <Navigation />
       </div>
 
-      <div
-        style={{
-          padding: "5px 20px",
-          margin: "50px 0px 10px",
-          borderRadius: "20px",
-          color: "white",
-          border: "1px solid white",
-        }}
-      >
-        <p>LET US GUIDE YOUR HOME</p>
+      <div className="bg-white text-black p-2 rounded-full border-2 border-white mb-10">
+        <p className="text-sm">LET US GUIDE YOUR HOME</p>
       </div>
 
       {/* Hero Content */}
-      <h1
-        style={{
-          fontSize: "4rem",
-          fontWeight: "bold",
-          marginBottom: "1rem",
-        }}
-      >
+      <h1 className="text-5xl md:text-4xl font-bold text-white mb-4">
         Rhino Homes & Properties
       </h1>
-      <p
-        style={{
-          fontSize: "1.2rem",
-          maxWidth: "600px",
-          marginBottom: "2rem",
-        }}
-      >
+      <p className="text-xl md:text-lg text-white max-w-xl mx-auto mb-8">
         We are committed to transforming dreams into reality by creating
         exceptional living and working spaces.
       </p>
 
       {/* Search Bar */}
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          width: "90%",
-          maxWidth: "500px",
-          borderRadius: "25px",
-          overflow: "hidden",
-          marginTop: "1rem",
-        }}
-      >
+      <div className="flex items-center max-w-md w-full border-2 rounded-full overflow-hidden bg-white mx-auto">
         <input
           type="text"
           placeholder="Enter Name, Keywords..."
-          style={{
-            flex: 1,
-            padding: "0.8rem 1.5rem",
-            border: "none",
-            outline: "none",
-            fontSize: "1rem",
-            borderTopLeftRadius: "25px",
-            borderBottomLeftRadius: "25px",
-            backgroundColor: "#fff",
-            color: "#333",
-            transition: "background-color 0.3s ease",
-          }}
+          className="flex-1 px-6 py-3 text-gray-800 text-sm outline-none rounded-l-full"
         />
-        <button
-          style={{
-            backgroundColor: "#8B0000",
-            padding: "0.8rem",
-            border: "none",
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderTopRightRadius: "50%",
-            borderBottomRightRadius: "50%",
-            borderRadius: "50%",
-          }}
-        >
+        <button className="bg-red-600 p-3 rounded-r-full flex items-center justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="white"
+            color="white"
             viewBox="0 0 24 24"
             width="20px"
             height="20px"
@@ -126,57 +50,27 @@ export default function Hero() {
         </button>
       </div>
 
-      <div style={{ marginTop: "40px" }}>
+      <div className="mt-10 text-white">
         <p>What are you looking for ?</p>
       </div>
 
       {/* Image Section */}
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: "2rem",
-          marginTop: "20px",
-        }}
-      >
+      <div className="flex flex-wrap justify-center gap-8 mt-10">
         {/* Commercial Image */}
-        <div
-          style={{
-            flex: "1 1 120px",
-            maxWidth: "150px",
-            textAlign: "center",
-          }}
-        >
+        <div className="flex-1 max-w-[150px] text-center">
           <img
             src="/icons/commercial.png"
             alt="commercial button"
-            style={{
-              width: "100%",
-              height: "auto",
-              maxWidth: "120px",
-              borderRadius: "8px",
-            }}
+            className="w-full h-auto max-w-[120px] rounded-lg"
           />
         </div>
 
         {/* Residential Image */}
-        <div
-          style={{
-            flex: "1 1 120px",
-            maxWidth: "150px",
-            textAlign: "center",
-          }}
-        >
+        <div className="flex-1 max-w-[150px] text-center">
           <img
             src="/icons/residential.png"
             alt="residential"
-            style={{
-              width: "100%",
-              height: "auto",
-              maxWidth: "120px",
-              borderRadius: "8px",
-            }}
+            className="w-full h-auto max-w-[120px] rounded-lg"
           />
         </div>
       </div>
