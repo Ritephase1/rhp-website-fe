@@ -1,67 +1,23 @@
 export default function AboutUs() {
   return (
-    <section
-      style={{
-        color: "black",
-        textAlign: "center",
-      }}
-    >
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "2rem",
-          maxWidth: "800px",
-          margin: "0 auto",
-        }}
-      >
-        {/* image section */}
-        <div
-          style={{
-            padding: "2.5rem",
-            borderRadius: "8px",
-            textAlign: "left",
-            width: "450px",
-          }}
-        >
+    <section className="text-black text-center py-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {/* Image Section */}
+        <div className="p-10 rounded-lg text-left flex justify-center">
           <img
-            src="/images/about.png" // Replace with the path to your mission icon
-            alt="about Icon"
-            style={{
-              marginBottom: "1rem",
-            }}
+            src="/images/about.png" // Replace with the path to your about icon
+            alt="About Icon"
+            className="w-full h-auto object-contain"
           />
         </div>
 
         {/* Text Section */}
-        <div
-          style={{
-            padding: "2rem",
-            borderRadius: "8px",
-            textAlign: "left",
-          }}
-        >
-          <h3
-            style={{
-              marginBottom: "1rem",
-              // fontWeight: "2.5rem",
-              fontSize: "1.2rem",
-              color: "red",
-              lineHeight: "2.5rem",
-            }}
-          >
-            About Us
-          </h3>
-          <h1
-            style={{
-              fontWeight: "bold",
-              fontSize: "2.5rem",
-              lineHeight: "2.3rem",
-            }}
-          >
+        <div className="p-8 rounded-lg text-left">
+          <h3 className="text-xl text-red-600 mb-4">About Us</h3>
+          <h1 className="font-bold text-3xl mb-4">
             Rhino Properties & Homes Ltd.
           </h1>
-          <small style={{ width: "500px", lineHeight: "1rem" }}>
+          <small className="block mb-6 text-md leading-relaxed max-w-prose mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -75,16 +31,7 @@ export default function AboutUs() {
             explicabo.
           </small>
 
-          <button
-            style={{
-              color: "white",
-              backgroundColor: "red",
-              borderRadius: "5px",
-              padding: "4px",
-              margin: "4px",
-              fontWeight: "bold",
-            }}
-          >
+          <button className="bg-red-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-red-700 transition duration-300">
             Read More
           </button>
         </div>
