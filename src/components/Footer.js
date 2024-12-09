@@ -1,59 +1,43 @@
 import React from "react";
+import { FaFacebook, FaInstagram, FaWhatsapp, FaArrowUp } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer
+      className="relative text-white p-16"
       style={{
-        position: "relative",
-        color: "white",
-        padding: "4rem 2rem",
+        backgroundColor: "#0A1229", // Background color
       }}
     >
       {/* Background Image Overlay */}
       <div
+        className="absolute inset-0"
         style={{
-          position: "absolute",
-          top: "0",
-          left: "0",
-          right: "0",
-          bottom: "0",
-          backgroundImage: `url('/images/footer_img.png')`,
+          backgroundImage: "url('/images/footer_img.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: "0.5", // Adjust opacity here
-          zIndex: "-1", // Ensure it's behind the content
+          opacity: "0.2", // Reduced opacity for the image
+          // zIndex: "-1",
         }}
       ></div>
 
-      {/* Content inside Footer */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gap: "2rem",
-          maxWidth: "1200px",
-          margin: "0 auto",
-          position: "relative", // Ensure content is above the image overlay
-        }}
-      >
+      {/* Content Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto relative">
         {/* First Grid Layout */}
         <div>
-          <h3 style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-            Rhino Homes & Properties
-          </h3>
-          <p style={{ fontSize: "0.8rem" }}>
+          <h3 className="font-bold text-lg mb-4">Rhino Homes & Properties</h3>
+          <p className="text-sm">
             We build luxury and affordable homes for our clients at competitive
-            cost and we enable investors partner with us at different stages of
-            our projects
+            costs and enable investors to partner with us at different stages of
+            our projects.
           </p>
         </div>
 
         {/* Second Grid Layout */}
         <div>
-          {/* <ul></ul> */}
-          <h3 style={{ fontWeight: "bold", fontSize: "1.2rem" }}>Offers</h3>
-          <ul style={{ fontSize: "0.8rem" }}>
+          <h3 className="font-bold text-lg mb-4">Offers</h3>
+          <ul className="text-sm space-y-2">
             <li>Residential Properties</li>
             <li>Commercial Properties</li>
             <li>Investment Opportunities</li>
@@ -63,13 +47,10 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Second Grid Layout */}
+        {/* Third Grid Layout */}
         <div>
-          <h3 style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-            {" "}
-            Quick Link
-          </h3>
-          <ul style={{ fontSize: "0.8rem" }}>
+          <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+          <ul className="text-sm space-y-2">
             <li>About Us</li>
             <li>News</li>
             <li>FAQs</li>
@@ -79,127 +60,58 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Third Grid Layout */}
+        {/* Fourth Grid Layout */}
         <div>
-          <h3 style={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-            Join a Newsletter
-          </h3>
-          <p>Your Email</p>
-          <div style={{ display: "flex" }}>
+          <h3 className="font-bold text-lg mb-4">Join Our Newsletter</h3>
+          <p className="mb-4">Your Email</p>
+          <div className="flex items-center space-x-2 mb-4">
             <input
               type="email"
               placeholder="Enter Your Email"
-              style={{
-                padding: "0.8rem",
-                width: "100%",
-                marginBottom: "1rem",
-                borderRadius: "5px",
-              }}
+              className="p-3 flex-1 rounded-md text-black"
             />
-            <button
-              style={{
-                backgroundColor: "#DA221FF7",
-                color: "white",
-                padding: "16px 48px",
-                border: "none",
-                cursor: "pointer",
-
-                borderRadius: "5px",
-              }}
-            >
+            <button className="bg-red-600 px-4 py-3 text-white rounded-md">
               Subscribe
             </button>
           </div>
-          <ul style={{ display: "flex", gap: "7px", marginTop: "10px" }}>
-            <li
-              style={{
-                border: "1px solid red",
-                borderRadius: "50%",
-                padding: "3px",
-                backgroundColor: "red",
-              }}
-            >
-              f
+          <ul className="flex space-x-4">
+            <li className="bg-red-600 p-3 rounded-full">
+              <FaFacebook className="text-white" />
             </li>
-            <li
-              style={{
-                border: "1px solid red",
-                borderRadius: "50%",
-                padding: "3px",
-                backgroundColor: "red",
-              }}
-            >
-              Bc
+            <li className="bg-red-600 p-3 rounded-full">
+              <FaInstagram className="text-white" />
             </li>
-            <li
-              style={{
-                border: "1px solid red",
-                borderRadius: "50%",
-                padding: "3px",
-                backgroundColor: "red",
-              }}
-            >
-              {" "}
-              lg
+            <li className="bg-red-600 p-3 rounded-full">
+              <FaWhatsapp className="text-white" />
             </li>
           </ul>
         </div>
-
-        {/* Fourth Grid Layout (empty for now, you can add content later) */}
       </div>
 
-      {/* Color Overlay */}
-      <div
-        style={{
-          position: "absolute",
-          top: "0",
-          left: "0",
-          right: "0",
-          bottom: "0",
-          backgroundColor: "#0A1229",
-          opacity: "0.7", // Adjust opacity for the overlay
-          zIndex: "-1", // Ensure it's behind the content
-        }}
-      ></div>
-      {/* The horizontal rectangle at the footer */}
-
-      <div
-        style={{
-          backgroundColor: "#0A1229",
-          width: "90%",
-          border: "1px solid white",
-          textAlign: "center",
-          position: "absolute",
-          bottom: "0px",
-          // margin: "30px 0px 0px 0px",
-          marginTop: "40px",
-          display: "flex",
-          gap: "10px",
-          // marginBottom: "0px",
-          // marginTop: "20px",
-        }}
-      >
-        <div
-          style={{
-            padding: "3px",
-            backgroundColor: "#D02A1A",
-            width: "120px",
-          }}
-        >
-          <img src="/icons/white_logo.png" alt="logo" />
+      {/* Footer Bottom */}
+      <div className="bg-black text-white mt-8 py-4 px-6 flex justify-between items-center border-t border-gray-700">
+        <div className="flex items-center space-x-4">
+          <div className="bg-red-600 p-2">
+            <img src="/icons/white_logo.png" alt="logo" className="w-12 h-12" />
+          </div>
+          <p className="text-sm">
+            (C) Rhino Homes & Properties Limited. All Rights Reserved
+          </p>
         </div>
-        <div>
-          <p>(C) Rhino Homes & Properties Limited. All Rights Reserved</p>
-        </div>
-        {/* Social media handles */}
-        <div style={{ position: "relative", right: "0px" }}>
-          <ul>
-            <li>instagram</li>
-            <li>facebook</li>
-            <li>Whatsapp</li>
-            <li> Arrow Up</li>
-          </ul>
-        </div>
+        <ul className="flex space-x-4">
+          <li>
+            <FaFacebook className="text-xl" />
+          </li>
+          <li>
+            <FaInstagram className="text-xl" />
+          </li>
+          <li>
+            <FaWhatsapp className="text-xl" />
+          </li>
+          <li>
+            <FaArrowUp className="text-xl cursor-pointer" />
+          </li>
+        </ul>
       </div>
     </footer>
   );
