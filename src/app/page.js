@@ -6,6 +6,7 @@ import RecentAdditions from "@/components/RecentAdditions";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Project";
 import SignupCard from "@/components/SignupCard";
+import RHP from "@/components/RHP";
 import "../styles/globals.css";
 
 export default function Home() {
@@ -64,6 +65,7 @@ export default function Home() {
       <AboutUs />
       <RecentAdditions properties={recentAdditionProperties} />
       <SignupCard />
+      <RHP />
       <Footer />
     </div>
   );

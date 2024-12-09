@@ -89,6 +89,11 @@ export default function RecentAdditions({ properties }) {
           </div>
         ))}
       </div>
+      <div class="flex justify-center items-center">
+        <button className="bg-[#DA221FF7] text-white mt-5 py-2 px-4 rounded-lg font-semibold hover:bg-red-700 transition duration-300 text-sm">
+          Show Property
+        </button>
+      </div>
     </section>
   );
 }
