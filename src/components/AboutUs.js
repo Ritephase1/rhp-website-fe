@@ -1,11 +1,11 @@
-export default function AboutUs() {
+export default function AboutUs({ imageUrl }) {
   return (
     <section className="text-black text-center py-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {/* Image Section */}
         <div className="p-10 rounded-lg text-left flex justify-center">
           <img
-            src="/images/about.png" // Replace with the path to your about icon
+            src={imageUrl} // Use the passed image URL prop
             alt="About Icon"
             className="w-full h-auto object-contain"
           />
@@ -17,7 +17,7 @@ export default function AboutUs() {
           <h1 className="font-bold text-3xl mb-4">
             Rhino Properties & Homes Ltd.
           </h1>
-          <small className="block mb-6 text-md leading-relaxed max-w-prose mx-auto">
+          <small className="block mb-6 text-md text-white leading-relaxed max-w-prose mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

@@ -62,7 +62,7 @@ export default function Home() {
       <Hero />
       <Projects properties={bookedProperties} />
       <MissionVision />
-      <AboutUs />
+      <AboutUs imageUrl="/images/about.png" />
       <RecentAdditions properties={recentAdditionProperties} />
       <SignupCard />
       <RHP />

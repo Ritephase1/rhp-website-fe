@@ -91,12 +91,8 @@ export default function Footer() {
       <div className="bg-[#0A1229] border-t border-[#7C7878] text-white mt-10 flex flex-col md:flex-row md:justify-between items-center ">
         {/* Logo and Rights */}
         <div className="flex items-center space-x-4">
-          <div className="bg-[#D02A1A] p-2 rounded-md">
-            <img
-              src="/icons/white_logo.png"
-              alt="logo"
-              className="w-20 h-auto"
-            />
+          <div className="bg-[#D02A1A] p-2">
+            <img src="/icons/white_logo.png" alt="logo" className="w-35 h-10" />
           </div>
           <p className="text-sm text-center md:text-left">
             © Rhino Homes & Properties Limited. All Rights Reserved.

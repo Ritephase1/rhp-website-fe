@@ -1,9 +1,9 @@
 export default function MissionVision() {
   return (
-    <section className="bg-[#D02A1A] text-white py-12 text-center">
+    <section className="bg-[#7D1910] text-white py-12 text-center">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {/* Mission Section */}
-        <div className="bg-[#D02A1A] p-8 rounded-lg text-left w-full flex flex-col items-center">
+        <div className="bg-[#7D1910] p-8 rounded-lg text-left w-full flex flex-col items-center">
           <img
             src="/icons/mission.png" // Replace with the path to your mission icon
             alt="Mission Icon"
@@ -21,7 +21,7 @@ export default function MissionVision() {
         </div>
 
         {/* Vision Section */}
-        <div className="bg-[#D02A1A] p-8 rounded-lg text-left w-full flex flex-col items-center">
+        <div className="bg-[#7D1910] p-8 rounded-lg text-left w-full flex flex-col items-center">
           <img
             src="/icons/vision.png" // Replace with the path to your vision icon
             alt="Vision Icon"
