@@ -1,10 +1,10 @@
 import React from "react";
-import { FaFacebook, FaInstagram, FaWhatsapp, FaArrowUp } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer
-      className="relative text-white p-16"
+      className="relative text-white px-6 py-10 md:py-16"
       style={{
         backgroundColor: "#0A1229", // Background color
       }}
@@ -17,17 +17,16 @@ export default function Footer() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: "0.2", // Reduced opacity for the image
-          // zIndex: "-1",
+          opacity: "0.2",
         }}
       ></div>
 
       {/* Content Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto relative">
         {/* First Grid Layout */}
         <div>
           <h3 className="font-bold text-lg mb-4">Rhino Homes & Properties</h3>
-          <p className="text-sm">
+          <p className="text-sm leading-relaxed">
             We build luxury and affordable homes for our clients at competitive
             costs and enable investors to partner with us at different stages of
             our projects.
@@ -63,53 +62,60 @@ export default function Footer() {
         {/* Fourth Grid Layout */}
         <div>
           <h3 className="font-bold text-lg mb-4">Join Our Newsletter</h3>
-          <p className="mb-4">Your Email</p>
-          <div className="flex items-center space-x-2 mb-4">
+          <p className="text-sm mb-4">Your Email</p>
+          <div className="flex flex-col space-y-4">
             <input
               type="email"
               placeholder="Enter Your Email"
-              className="p-3 flex-1 rounded-md text-black"
+              className="p-3 w-full rounded-md text-black"
             />
-            <button className="bg-red-600 px-4 py-3 text-white rounded-md">
+            <button className="bg-red-600 w-full py-3 text-white rounded-md">
               Subscribe
             </button>
           </div>
-          <ul className="flex space-x-4">
-            <li className="bg-red-600 p-3 rounded-full">
-              <FaFacebook className="text-white" />
+          <ul className="flex py-5 items-center space-x-4">
+            <li className="p-3 bg-[#0A1229] border border-[#7C7878] rounded-full">
+              <FaFacebook className="text-white text-lg" />
             </li>
-            <li className="bg-red-600 p-3 rounded-full">
-              <FaInstagram className="text-white" />
+            <li className="p-3 bg-[#0A1229] border border-[#7C7878] rounded-full">
+              <FaInstagram className="text-white text-lg" />
             </li>
-            <li className="bg-red-600 p-3 rounded-full">
-              <FaWhatsapp className="text-white" />
+            <li className="p-3 bg-[#0A1229] border border-[#7C7878] rounded-full">
+              <FaWhatsapp className="text-white text-lg" />
             </li>
           </ul>
         </div>
       </div>
 
       {/* Footer Bottom */}
-      <div className="bg-black text-white mt-8 py-4 px-6 flex justify-between items-center border-t border-gray-700">
+      <div className="bg-[#0A1229] border-t border-[#7C7878] text-white mt-10 flex flex-col md:flex-row md:justify-between items-center ">
+        {/* Logo and Rights */}
         <div className="flex items-center space-x-4">
-          <div className="bg-red-600 p-2">
-            <img src="/icons/white_logo.png" alt="logo" className="w-12 h-12" />
+          <div className="bg-[#D02A1A] p-2 rounded-md">
+            <img
+              src="/icons/white_logo.png"
+              alt="logo"
+              className="w-20 h-auto"
+            />
           </div>
-          <p className="text-sm">
-            (C) Rhino Homes & Properties Limited. All Rights Reserved
+          <p className="text-sm text-center md:text-left">
+            © Rhino Homes & Properties Limited. All Rights Reserved.
           </p>
         </div>
-        <ul className="flex space-x-4">
-          <li>
-            <FaFacebook className="text-xl" />
+
+        {/* Social Links */}
+        <ul className="flex justify-center items-center space-x-4">
+          <li className="p-5 bg-[#0A1229] border-r border-l border-[#7C7878]">
+            <FaFacebook className="text-white text-lg" />
           </li>
-          <li>
-            <FaInstagram className="text-xl" />
+          <li className="p-5 bg-[#0A1229] border-r border-l border-[#7C7878]">
+            <FaInstagram className="text-white text-lg" />
           </li>
-          <li>
-            <FaWhatsapp className="text-xl" />
+          <li className="p-5 bg-[#0A1229] border-r border-l  border-[#7C7878] ">
+            <FaWhatsapp className="text-white text-lg" />
           </li>
-          <li>
-            <FaArrowUp className="text-xl cursor-pointer" />
+          <li className="p-5 bg-[#D02A1A] border-r border-l">
+            <img src="/icons/move_up.png" alt="go up" className="w-4 h-4" />
           </li>
         </ul>
       </div>

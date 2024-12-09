@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { FaChevronDown, FaTimes, FaBars, FaUserCircle } from "react-icons/fa";
+import { MdPhone } from "react-icons/md";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,6 +87,12 @@ export default function Navigation() {
               )}
             </li>
           ))}
+
+          {/* Phone icon */}
+          <li className="flex space-flex-2">
+            <MdPhone /> + 3490-2734
+          </li>
+
           {/* Invest Button */}
           <li>
             <a
