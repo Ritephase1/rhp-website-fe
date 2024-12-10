@@ -1,24 +1,44 @@
+// Navigation.js
+
 "use client";
 
+import dynamic from "next/dynamic"; // Import dynamic from Next.js
 import { useState, useEffect, useRef } from "react";
-import { FaChevronDown, FaTimes, FaBars, FaUserCircle } from "react-icons/fa";
-import { MdPhone } from "react-icons/md";
+// import { FaChevronDown, FaTimes, FaBars, FaUserCircle } from "react-icons/fa";
+// import { MdPhone } from "react-icons/md";
+
+// Lazy load the icons (optional to enhance performance)
+const FaChevronDownLazy = dynamic(
+  () => import("react-icons/fa").then((mod) => mod.FaChevronDown),
+  { ssr: false }
+);
+const FaTimesLazy = dynamic(
+  () => import("react-icons/fa").then((mod) => mod.FaTimes),
+  { ssr: false }
+);
+const FaBarsLazy = dynamic(
+  () => import("react-icons/fa").then((mod) => mod.FaBars),
+  { ssr: false }
+);
+const FaUserCircleLazy = dynamic(
+  () => import("react-icons/fa").then((mod) => mod.FaUserCircle),
+  { ssr: false }
+);
+const MdPhoneLazy = dynamic(
+  () => import("react-icons/md").then((mod) => mod.MdPhone),
+  { ssr: false }
+);
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const modalRef = useRef(); // Reference to the mobile modal
+  const modalRef = useRef();
 
-  // Links for the navigation
   const links = [
     { name: "Home", href: "#home" },
     {
       name: "About Us",
-      href: "#about-us",
-      subLinks: [
-        { name: "Our Team", href: "#team" },
-        { name: "Our Mission", href: "#mission" },
-      ],
+      href: "/about-us",
     },
     {
       name: "Projects",
@@ -30,6 +50,7 @@ export default function Navigation() {
     },
     { name: "Agent", href: "#agent" },
     { name: "Blog", href: "#blog" },
+    { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -37,11 +58,10 @@ export default function Navigation() {
     setActiveDropdown((prev) => (prev === name ? null : name));
   };
 
-  // Close the menu if clicked outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
-        setIsMenuOpen(false); // Close the menu if clicked outside
+        setIsMenuOpen(false);
       }
     };
 
@@ -70,7 +90,7 @@ export default function Navigation() {
               </a>
               {link.subLinks && (
                 <>
-                  <FaChevronDown className="ml-2 inline-block text-sm text-gray-500 group-hover:text-gray-700 transition" />
+                  <FaChevronDownLazy className="ml-2 inline-block text-sm text-gray-500 group-hover:text-gray-700 transition" />
                   <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md border w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
                     {link.subLinks.map((subLink) => (
                       <li key={subLink.name} className="hover:bg-gray-100">
@@ -87,13 +107,9 @@ export default function Navigation() {
               )}
             </li>
           ))}
-
-          {/* Phone icon */}
           <li className="flex space-flex-2">
-            <MdPhone /> + 3490-2734
+            <MdPhoneLazy /> + 3490-2734
           </li>
-
-          {/* Invest Button */}
           <li>
             <a
               href="#invest"
@@ -102,33 +118,30 @@ export default function Navigation() {
               Invest
             </a>
           </li>
-          {/* Profile Icon */}
           <li>
             <a href="#profile" className="text-2xl">
-              <FaUserCircle />
+              <FaUserCircleLazy />
             </a>
           </li>
         </ul>
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center space-x-4">
-          {/* Invest Button */}
           <a
             href="#invest"
             className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition"
           >
             Invest
           </a>
-          {/* Profile Icon */}
           <a href="#profile" className="text-2xl">
-            <FaUserCircle />
+            <FaUserCircleLazy />
           </a>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-2xl text-black"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <FaTimes /> : <FaBars />}
+            {isMenuOpen ? <FaTimesLazy /> : <FaBarsLazy />}
           </button>
         </div>
       </div>
@@ -148,7 +161,7 @@ export default function Navigation() {
                 >
                   {link.name}
                   {link.subLinks && (
-                    <FaChevronDown
+                    <FaChevronDownLazy
                       className={`ml-2 transition-transform ${
                         activeDropdown === link.name ? "rotate-180" : ""
                       }`}

@@ -1,0 +1,33 @@
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  animation: slide 100s linear infinite;
+}
+
+  
+  .project-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Increase card size */
+    margin: auto;
+    animation: slideIn 1.5s ease-in-out; /* Apply animation */
+  }
+  
+  .project-card img {
+    border-radius: 10px;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    transition: transform 0.3s ease-in-out;
+  }

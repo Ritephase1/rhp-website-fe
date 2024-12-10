@@ -19,3 +19,43 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* THE STYLE FOR THE ANIMATION FOR THE PROJECT COMPONENT */
+
+
+/* Animation for sliding in from the right */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.project-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px; /* Increase card size */
+  margin: auto;
+  animation: slideIn 1.5s ease-in-out; /* Apply animation */
+}
+
+.project-card img {
+  border-radius: 10px;
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  transition: transform 0.3s ease-in-out;
+}
+
+.animate-slide {
+  animation: slideIn 1s ease-in-out;
+}

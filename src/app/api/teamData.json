@@ -1,0 +1,40 @@
+[
+    {
+      "id": 1,
+      "name": "Mercy Tolibabo",
+      "occupation": "Engineer",
+      "imageSrc": "/images/team2.png",
+      "socialLinks": {
+        "facebook": "https://facebook.com/mercy",
+        "twitter": "https://twitter.com/mercy",
+        "linkedin": "https://linkedin.com/in/mercy",
+        "share": "https://example.com/share"
+      }
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "occupation": "Developer",
+      "imageSrc": "/images/team3.png",
+      "socialLinks": {
+        "facebook": "https://facebook.com/john",
+        "twitter": "https://twitter.com/john",
+        "linkedin": "https://linkedin.com/in/john",
+        "share": "https://example.com/share"
+      }
+    },
+
+    {
+      "id": 2,
+      "name": "Angela Deo",
+      "occupation": "Deputy Director",
+      "imageSrc": "/images/team4.png",
+      "socialLinks": {
+        "facebook": "https://facebook.com/john",
+        "twitter": "https://twitter.com/john",
+        "linkedin": "https://linkedin.com/in/john",
+        "share": "https://example.com/share"
+      }
+    }
+  ]
+  

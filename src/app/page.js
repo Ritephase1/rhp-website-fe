@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+// import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import MissionVision from "@/components/MissionVision";
 import AboutUs from "@/components/AboutUs";
@@ -8,6 +8,9 @@ import Projects from "@/components/Project";
 import SignupCard from "@/components/SignupCard";
 import RHP from "@/components/RHP";
 import "../styles/globals.css";
+import Team from "@/components/Team";
+import Testimonial from "@/components/Testimonial";
+import TrustedByBrands from "@/components/TrustedByBrands";
 
 export default function Home() {
   const bookedProperties = [
@@ -62,9 +65,13 @@ export default function Home() {
       <Hero />
       <Projects properties={bookedProperties} />
       <MissionVision />
+      <Team />
       <AboutUs imageUrl="/images/about.png" />
       <RecentAdditions properties={recentAdditionProperties} />
       <SignupCard />
+
+      <Testimonial />
+      <TrustedByBrands />
       <RHP />
       <Footer />
     </div>

@@ -1,0 +1,15 @@
+[
+   
+    {
+      "id": 2,
+      "name": "Commercial",
+      "image": "/icons/brand2.png"
+    },
+    {
+      "id": 3,
+      "name": "Corporate",
+      "image": "/icons/brand3.png"
+    }
+ 
+  ]
+  
