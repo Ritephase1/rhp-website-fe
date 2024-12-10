@@ -61,10 +61,10 @@ import {
 
 export default function Team() {
   return (
-    <section className="bg-black text-white py-12 px-16">
+    <section className="bg-white text-white m-auto w-[80%] py-12 px-16">
       <h2 className="text-2xl text-left mb-8">OUR TEAM</h2>
 
-      <div className="grid grid-cols-2  sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-2  sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {teamData.map((member) => (
           <div key={member.id} className="relative w-full sm:w-80 mx-auto">
             {/* Image */}

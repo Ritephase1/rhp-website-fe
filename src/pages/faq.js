@@ -2,6 +2,8 @@
 import { useState } from "react";
 import "../../src/styles/globals.css";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+
 export default function FAQ() {
   // State to track which questions are expanded
   const [expanded, setExpanded] = useState({});
@@ -17,6 +19,7 @@ export default function FAQ() {
   return (
     <section>
       {/* Image Section */}
+      <Navbar />
       <div
         className="relative w-full h-80 sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: "url('/images/faq.png')" }}
@@ -39,13 +42,19 @@ export default function FAQ() {
                 What does Rhino Homes and Properties Ltd specialize in?
                 <span className="ml-2 text-xl">{expanded[1] ? "-" : "+"}</span>
               </h2>
-              {expanded[1] && (
-                <p className="transition-all ease-in-out duration-300">
-                  We specialize in providing top-tier real estate solutions,
-                  including residential and commercial property development,
-                  sales, leasing, and investment opportunities across Nigeria.
-                </p>
-              )}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  expanded[1] ? "max-h-[500px]" : "max-h-0"
+                }`}
+              >
+                {expanded[1] && (
+                  <p className="transition-all ease-in-out duration-300">
+                    We specialize in providing top-tier real estate solutions,
+                    including residential and commercial property development,
+                    sales, leasing, and investment opportunities across Nigeria.
+                  </p>
+                )}
+              </div>
             </div>
 
             <div className="mb-4">
@@ -56,13 +65,19 @@ export default function FAQ() {
                 Why should I invest with Rhino Homes?
                 <span className="ml-2 text-xl">{expanded[2] ? "-" : "+"}</span>
               </h2>
-              {expanded[2] && (
-                <p className="transition-all ease-in-out duration-300">
-                  Investing with Rhino Homes offers reliable returns, secure
-                  investment opportunities, and access to premium real estate
-                  options in both residential and commercial sectors.
-                </p>
-              )}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  expanded[2] ? "max-h-[500px]" : "max-h-0"
+                }`}
+              >
+                {expanded[2] && (
+                  <p className="transition-all ease-in-out duration-300">
+                    Investing with Rhino Homes offers reliable returns, secure
+                    investment opportunities, and access to premium real estate
+                    options in both residential and commercial sectors.
+                  </p>
+                )}
+              </div>
             </div>
           </div>
 
@@ -76,13 +91,19 @@ export default function FAQ() {
                 What is Residential and commercial property?
                 <span className="ml-2 text-xl">{expanded[3] ? "-" : "+"}</span>
               </h2>
-              {expanded[3] && (
-                <p className="transition-all ease-in-out duration-300">
-                  Residential property refers to buildings intended for housing,
-                  while commercial property is used for business activities like
-                  offices, shops, and industrial spaces.
-                </p>
-              )}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  expanded[3] ? "max-h-[500px]" : "max-h-0"
+                }`}
+              >
+                {expanded[3] && (
+                  <p className="transition-all ease-in-out duration-300">
+                    Residential property refers to buildings intended for
+                    housing, while commercial property is used for business
+                    activities like offices, shops, and industrial spaces.
+                  </p>
+                )}
+              </div>
             </div>
 
             <div className="mb-4">
@@ -93,13 +114,19 @@ export default function FAQ() {
                 What are the various investments available at RHP?
                 <span className="ml-2 text-xl">{expanded[4] ? "-" : "+"}</span>
               </h2>
-              {expanded[4] && (
-                <p className="transition-all ease-in-out duration-300">
-                  At Rhino Homes, you can invest in residential and commercial
-                  properties, real estate development projects, and leasing
-                  opportunities, each tailored to your investment needs.
-                </p>
-              )}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  expanded[4] ? "max-h-[500px]" : "max-h-0"
+                }`}
+              >
+                {expanded[4] && (
+                  <p className="transition-all ease-in-out duration-300">
+                    At Rhino Homes, you can invest in residential and commercial
+                    properties, real estate development projects, and leasing
+                    opportunities, each tailored to your investment needs.
+                  </p>
+                )}
+              </div>
             </div>
 
             <div className="mb-4">
@@ -110,13 +137,19 @@ export default function FAQ() {
                 How can I invest with Rhino Homes?
                 <span className="ml-2 text-xl">{expanded[5] ? "-" : "+"}</span>
               </h2>
-              {expanded[5] && (
-                <p className="transition-all ease-in-out duration-300">
-                  To invest, simply reach out to our sales team, sign the
-                  necessary agreements, and choose your preferred investment
-                  package based on your budget and preferences.
-                </p>
-              )}
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  expanded[5] ? "max-h-[500px]" : "max-h-0"
+                }`}
+              >
+                {expanded[5] && (
+                  <p className="transition-all ease-in-out duration-300">
+                    To invest, simply reach out to our sales team, sign the
+                    necessary agreements, and choose your preferred investment
+                    package based on your budget and preferences.
+                  </p>
+                )}
+              </div>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ import SignupCard from "@/components/SignupCard";
 import RHP from "@/components/RHP";
 import "../styles/globals.css";
 import Team from "@/components/Team";
-import Testimonial from "@/components/Testimonial";
+// import Testimonial from "@/components/Testimonial";
 import TrustedByBrands from "@/components/TrustedByBrands";
 
 export default function Home() {
@@ -70,7 +70,7 @@ export default function Home() {
       <RecentAdditions properties={recentAdditionProperties} />
       <SignupCard />
 
-      <Testimonial />
+      {/* <Testimonial /> */}
       <TrustedByBrands />
       <RHP />
       <Footer />

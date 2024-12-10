@@ -3,7 +3,7 @@ import brands from "../app/api/brands.json"; // Import JSON data
 
 export default function TrustedByBrands() {
   return (
-    <section className="bg-[#DA221FF7] text-white py-10 px-16">
+    <section className="bg-[#7D1910F7] text-white py-10 px-16">
       <h2 className="text-2xl text-center mb-8">
         Trusted by leading Brands <span className="text-md">nationwide</span>
       </h2>

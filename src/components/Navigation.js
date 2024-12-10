@@ -35,10 +35,10 @@ export default function Navigation() {
   const modalRef = useRef();
 
   const links = [
-    { name: "Home", href: "#home" },
+    // { name: "Home", href: "#home" },
     {
       name: "About Us",
-      href: "/about-us",
+      href: "/about",
     },
     {
       name: "Projects",

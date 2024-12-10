@@ -7,24 +7,28 @@ const Testimonial = () => {
     {
       id: 1,
       image: "/images/team2.png",
+      title: "ENGR",
       content: "This platform has truly transformed my learning experience!",
       name: "John Doe",
     },
     {
       id: 2,
       image: "/images/team3.png",
+      title: "ENGR",
       content: "The user interface is sleek and easy to navigate.",
       name: "Jane Smith",
     },
     {
       id: 3,
       image: "/images/team4.png",
+      title: "ENGR",
       content: "I highly recommend this to anyone starting out.",
       name: "Alice Brown",
     },
     {
       id: 4,
       image: "/images/about2.png",
+      title: "ENGR",
       content: "The resources available here are top-notch.",
       name: "David Clark",
     },
@@ -58,38 +62,46 @@ const Testimonial = () => {
               <img
                 src={getVisibleTestimonial().image}
                 alt={getVisibleTestimonial().name}
-                className="w-24 h-24 rounded-full object-cover mb-4"
+                className="w-24 h-24 rounded-md object-contain mb-4"
               />
             </div>
 
             {/* Content section */}
+
             <div className="flex flex-col w-2/3 ml-4">
-              <p className="text-md text-left mb-4">
-                {getVisibleTestimonial().content}
-              </p>
-              <p className="mt-2 text-sm text-left">
+              <h2 className="font-bold text-left text-lg text-white">
+                {getVisibleTestimonial().title}
+              </h2>
+              <p className="mt-1 text-lg mb-5 text-left">
                 - {getVisibleTestimonial().name}
+              </p>
+
+              <p className="text-sm text-left mb-4">
+                {getVisibleTestimonial().content}
               </p>
             </div>
           </div>
 
           {/* Right Card */}
-          <div className="flex w-full p-4 rounded-md bg-white text-gray-900">
+          <div className="flex w-full border border-red p-4 rounded-md bg-white text-gray-900">
             {/* Image on the top left */}
             <div className="flex-shrink-0 w-1/3">
               <img
                 src={getVisibleTestimonial().image}
                 alt={getVisibleTestimonial().name}
-                className="w-24 h-24 rounded-full object-cover mb-4"
+                className="w-24 h-24 rounded-md object-contain mb-4"
               />
             </div>
 
             {/* Content section */}
             <div className="flex flex-col w-2/3 ml-4">
-              <p className="mt-2 text-sm text-left">
+              <h2 className="font-bold text-left text-lg">
+                {getVisibleTestimonial().title}
+              </h2>
+              <p className="mt-1 text-md mb-3 text-left">
                 - {getVisibleTestimonial().name}
               </p>
-              <p className="text-md text-left mb-4">
+              <p className="text-sm text-left mb-4">
                 {getVisibleTestimonial().content}
               </p>
             </div>
