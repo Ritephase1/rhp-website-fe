@@ -20,10 +20,10 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <h1 className="text-2xl md:text-5xl font-bold text-white mb-4">
+      <h1 className="text-2xl md:text-6xl lg:text-6xl font-bold text-white mb-4">
         Rhino Homes & Properties
       </h1>
-      <p className="text-sm w-[80%] md:text-xl text-white mx-auto mb-10">
+      <p className="text-sm w-[80%] md:text-2xl text-white mx-auto mb-10">
         We are committed to transforming dreams into reality by creating
         exceptional living and working spaces.
       </p>
@@ -53,7 +53,7 @@ export default function Hero() {
       </div>
 
       <div className="mt-10 text-white">
-        <p>What are you looking for ?</p>
+        <p className="md:text-xl">What are you looking for ?</p>
       </div>
 
       {/* Image Section */}

@@ -2,17 +2,17 @@ import "../styles/home.css";
 
 export default function Projects() {
   return (
-    <section className="bg-black text-white py-12 px-16">
+    <section className="bg-black text-white py-10 px-10">
       <img
         src="/icons/OUR_PROJECTS.png"
         alt="OUR PROJECTS"
         className="w-96 mx-auto"
       />
-      <h2 className="text-2xl text-left mb-8">OUR PROJECTS</h2>
+      <h2 className="text-lg text-left pt-3 mb-3 md:mb-8">OUR PROJECTS</h2>
 
-      <div className="overflow-hidden relative">
+      <div className="overflow-hidden animate-slide relative">
         {/* Sliding container */}
-        <div className="flex animate-slide space-x-8 w-max">
+        <div className="flex space-x-8 w-max">
           {/* Duplicate cards for continuous sliding effect */}
           {Array(8)
             .fill(null)
