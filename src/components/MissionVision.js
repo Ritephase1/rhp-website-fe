@@ -1,6 +1,6 @@
 export default function MissionVision() {
   return (
-    <section className="bg-[#7D1910] text-white py-12 text-center">
+    <section className="bg-[#7D1910] text-white md:p-40 py-12 text-center">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[90%] mx-auto">
         {/* Mission Section */}
         <div className="bg-[#7D1910] p-8 rounded-lg text-left w-full flex flex-col items-center">

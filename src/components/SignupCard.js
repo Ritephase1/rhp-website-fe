@@ -3,7 +3,7 @@ import { FaArrowCircleRight } from "react-icons/fa";
 export default function SignupCard() {
   return (
     <section
-      className="relative flex items-center justify-center text-center px-3 py-7 md:p-20 bg-red-600"
+      className="relative flex items-center justify-center text-center px-3 py-10 md:p-40 bg-red-600"
       style={{
         backgroundImage: "url('/images/signup.jpeg')",
         backgroundSize: "cover",
