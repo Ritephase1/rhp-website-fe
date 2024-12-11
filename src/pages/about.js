@@ -9,6 +9,8 @@ const AboutUs = lazy(() => import("../components/AboutUs"));
 const Footer = lazy(() => import("../components/Footer"));
 const Testimonial = lazy(() => import("../components/Testimonial"));
 const TrustedByBrands = lazy(() => import("../components/TrustedByBrands"));
+
+const WhyInvestWithUs = lazy(() => import("../components/WhyInvest"));
 import Navbar from "@/components/Navbar";
 
 export default function About() {
@@ -46,6 +48,9 @@ export default function About() {
           <Team />
         </Suspense>
 
+        <Suspense fallback={<div>Loading...</div>}>
+          <WhyInvestWithUs />
+        </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
           <Testimonial />
         </Suspense>

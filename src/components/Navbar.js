@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { VscAccount } from "react-icons/vsc";
 import Image from "next/image"; // Import Image from next/image
 import Link from "next/link"; // Import Link from next/link
 import { FaUser, FaBars } from "react-icons/fa"; // Import icons from react-icons
@@ -12,16 +13,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white p-4 shadow-md">
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between">
+    <nav className="bg-white shadow-md">
+      <div className="max-w-screen-xl gap-2 mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0 ">
           <Image
             src="/icons/white_logo.png"
             alt="Company Logo"
-            width={150}
+            width={120}
             height={20}
-            className="bg-red-800 rounded-md py-3 px-5 "
+            className="bg-red-800 py-5 px-10 m:px-10"
           />
         </div>
 
@@ -65,9 +66,10 @@ const Navbar = () => {
         </ul>
 
         {/* User Icon and Investment Button */}
-        <div className="flex items-center space-x-4">
-          <FaUser className="text-2xl" /> {/* Using React Icon for user icon */}
-          <button className="bg-red-600 text-white py-2 px-4 rounded-full hover:bg-red-700">
+        <div className="flex items-center mr-5 space-x-4">
+          <VscAccount className="text-2xl" />{" "}
+          {/* Using React Icon for user icon */}
+          <button className="bg-red-600 text-white py-2 px-4 rounded-md md:rounded-full  hover:bg-red-700">
             Investment
           </button>
         </div>
@@ -75,7 +77,8 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
           <button className="text-black" onClick={toggleMenu}>
-            <FaBars /> {/* Using React Icon for menu button */}
+            <FaBars className="mr-5 text-2xl" />{" "}
+            {/* Using React Icon for menu button */}
           </button>
         </div>
       </div>
@@ -83,7 +86,7 @@ const Navbar = () => {
       {/* Mobile Menu (toggle visibility) */}
       <div
         id="mobile-menu"
-        className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}
+        className={`${isMenuOpen ? "block" : "hidden"} md:hidden `}
       >
         <ul className="flex flex-col space-y-4 p-4">
           <li>
