@@ -1,32 +1,9 @@
-// export default function SignupCard() {
-//   return (
-//     <section
-//       className="relative flex flex-col items-center justify-center text-center bg-cover bg-center p-12"
-//       style={{
-//         backgroundImage: "url('/images/signup.jpeg')",
-//         transform: "scaleX(-1)", // Reverses only the background image
-//       }}
-//     >
-//       <div className="absolute top-0 left-0 right-0 bottom-0 bg-red-600 opacity-70 z-[-1]"></div>
-//       <div style={{ transform: "scaleX(-1)" }}>
-//         <h2 className="text-2xl text-white font-bold text-center mb-8">
-//           Make the Smart Move
-//           <span className="text-[#F2FF8CF7]"> Today!</span>
-//         </h2>
-
-//         {/* Sign Up Button */}
-//         <button className="bg-white text-red-500 px-8 py-3 rounded-full font-bold">
-//           Sign Up Now
-//         </button>
-//       </div>
-//     </section>
-//   );
-// }
+import { FaArrowCircleRight } from "react-icons/fa";
 
 export default function SignupCard() {
   return (
     <section
-      className="relative flex items-center justify-center text-center p-20 bg-red-600"
+      className="relative flex items-center justify-center text-center px-3 py-7 md:p-20 bg-red-600"
       style={{
         backgroundImage: "url('/images/signup.jpeg')",
         backgroundSize: "cover",
@@ -41,13 +18,13 @@ export default function SignupCard() {
         className="relative z-10 flex items-center gap-4"
         style={{ transform: "scaleX(-1)" }}
       >
-        <h2 className="text-2xl text-white font-bold">
+        <h2 className="text-sm md:text-2xl text-white font-bold">
           Make the Smart Move
           <span className="text-[#F2FF8CF7]"> Today!</span>
         </h2>
 
         {/* Sign Up Button */}
-        <button className="bg-white mx-8 text-red-500 px-8 py-3 rounded-tr-xl font-bold">
+        <button className="bg-white mx-2 md:mx-8 text-sm  text-red-500 md:px-8 px-3 py-2 md:py-3 rounded-tr-xl gap-2 font-bold flex">
           Sign Up Now
         </button>
       </div>
