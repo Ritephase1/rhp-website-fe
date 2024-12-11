@@ -56,6 +56,19 @@ export default function Home() {
       features: "Ocean View, Spacious Living, Pool",
       roi: 6.8,
     },
+    {
+      id: 1,
+      imageUrl:
+        "https://landmarkhomes.sgp1.digitaloceanspaces.com/plans/kawau/Kawau-2020.jpg",
+      title: "Kawau Beach House",
+      address: "123 Kawau Island Rd, Kawau Island, New Zealand",
+      beds: 3,
+      size: 250,
+      bathrooms: 2,
+      parking: 2,
+      features: "Sea View, Private Beach Access, Fully Furnished",
+      roi: 5.2,
+    },
   ];
 
   return (

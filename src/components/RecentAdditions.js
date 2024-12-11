@@ -2,10 +2,12 @@ import { FaBed, FaShower, FaCar, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function RecentAdditions({ properties }) {
   return (
-    <section className="text-black bg-white py-12 px-6">
+    <section className="text-black bg-white py-8 px-6">
       <div className="mb-8">
-        <h2 className="text-xl text-[#006557] text-left ">Recent Additions</h2>
-        <h1 className="text-black font-bold text-xl">
+        <h2 className="text-xl md:text-2xl text-[#006557] text-left ">
+          Recent Additions
+        </h2>
+        <h1 className="text-black font-bold text-xl md:text-2xl">
           Find Properties that Suits You
         </h1>
       </div>
@@ -89,7 +91,7 @@ export default function RecentAdditions({ properties }) {
           </div>
         ))}
       </div>
-      <div class="flex justify-center items-center">
+      <div class="flex justify-center mt-4 items-center">
         <button className="bg-[#DA221FF7] text-white mt-5 py-2 px-4 rounded-lg font-semibold hover:bg-red-700 transition duration-300 text-sm">
           Show Property
         </button>
