@@ -27,14 +27,14 @@ export default function About() {
       >
         {/* Text Section */}
         <div
-          className="absolute top-1/2 transform -translate-y-1/2 w-full text-center"
+          className="absolute top-1/2 left-15 transform -translate-y-1/2 text-left"
           style={{ transform: "scaleX(-1)" }}
         >
-          <div className="bg-white text-black p-6 rounded-lg shadow-lg max-w-2xl mx-auto opacity-90">
-            <p className="text-3xl font-semibold text-black">
+          <div className="bg-white text-black md:p-16 p-6 rounded-lg shadow-lg max-w-xl opacity-90">
+            <p className="md:text-3xl text-xl font-semibold text-black">
               About <span className="text-red-600">Us</span>
             </p>
-            <p className="text-xl text-black mt-4 max-w-xl mx-auto">
+            <p className="md:text-xl text-md text-black mt-4">
               We are committed to transforming dreams into reality by creating
               exceptional living and working spaces.
             </p>

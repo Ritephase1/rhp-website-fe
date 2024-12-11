@@ -1,53 +1,3 @@
-// import React from "react";
-// import {
-//   FaFacebook,
-//   FaTwitter,
-//   FaShareAltSquare,
-//   FaLinkedin,
-// } from "react-icons/fa";
-
-// export default function Team() {
-//   return (
-//     <section className="bg-black text-white py-12 px-16">
-//       <h2 className="text-2xl text-left mb-8">OUR TEAM</h2>
-
-//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-//         {/* Team Member */}
-//         <div className="relative w-full sm:w-80 mx-auto">
-//           {/* Image */}
-//           <img
-//             src="/images/team2.png"
-//             alt="Team Member"
-//             className="w-full h-auto rounded-md"
-//           />
-
-//           {/* Social Icons */}
-//           <div className="absolute top-2 right-2 flex flex-col space-y-2">
-//             <div className="p-1 border border-[#7C7878] bg-red-800 rounded-md">
-//               <FaShareAltSquare className="text-white text-lg" />
-//             </div>
-//             <div className="p-1 border border-[#7C7878] rounded-md">
-//               <FaFacebook className="text-black text-lg" />
-//             </div>
-//             <div className="p-1 border border-[#7C7878] rounded-md">
-//               <FaLinkedin className="text-black text-lg" />
-//             </div>
-//             <div className="p-1 border border-[#7C7878] rounded-md">
-//               <FaTwitter className="text-black text-lg" />
-//             </div>
-//           </div>
-
-//           {/* Name */}
-//           <div className="absolute bottom-2 left-2 bg-black/50 text-white p-2 rounded-md">
-//             <h2 className="text-sm font-light">ENGR</h2>
-//             <h3 className="text-base font-bold">Mercy Tolibabo</h3>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 
 import React from "react";
@@ -61,12 +11,16 @@ import {
 
 export default function Team() {
   return (
-    <section className="bg-white text-white m-auto w-[80%] py-12 px-16">
-      <h2 className="text-2xl text-left mb-8">OUR TEAM</h2>
+    <section className="bg-white text-white m-auto w-[80%] py-12 px-4">
+      <h2 className="text-2xl text-black text-left mb-8">OUR TEAM</h2>
 
-      <div className="grid grid-cols-2  sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Responsive grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {teamData.map((member) => (
-          <div key={member.id} className="relative w-full sm:w-80 mx-auto">
+          <div
+            key={member.id}
+            className="relative w-full mx-auto bg-white rounded-md shadow-lg p-4 flex flex-col items-center space-y-4"
+          >
             {/* Image */}
             <img
               src={member.imageSrc}
@@ -74,13 +28,21 @@ export default function Team() {
               className="w-full h-auto rounded-md"
             />
 
+            {/* Name and Occupation */}
+            <div className="text-center">
+              <h3 className="text-base font-bold text-black">{member.name}</h3>
+              <h2 className="text-sm font-light text-gray-600">
+                {member.occupation}
+              </h2>
+            </div>
+
             {/* Social Icons */}
-            <div className="absolute top-2 right-2 flex flex-col space-y-2">
+            <div className="flex justify-center space-x-4">
               <a
                 href={member.socialLinks.share}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1 border border-[#7C7878] bg-red-800 rounded-md"
+                className="p-2 border border-gray-300 rounded-md bg-red-800"
               >
                 <FaShareAltSquare className="text-white text-lg" />
               </a>
@@ -88,32 +50,26 @@ export default function Team() {
                 href={member.socialLinks.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1 border border-[#7C7878] rounded-md"
+                className="p-2 border border-gray-300 rounded-md"
               >
-                <FaFacebook className="text-black text-lg" />
+                <FaFacebook className="text-blue-600 text-lg" />
               </a>
               <a
                 href={member.socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1 border border-[#7C7878] rounded-md"
+                className="p-2 border border-gray-300 rounded-md"
               >
-                <FaLinkedin className="text-black text-lg" />
+                <FaLinkedin className="text-blue-500 text-lg" />
               </a>
               <a
                 href={member.socialLinks.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-1 border border-[#7C7878] rounded-md"
+                className="p-2 border border-gray-300 rounded-md"
               >
-                <FaTwitter className="text-black text-lg" />
+                <FaTwitter className="text-blue-400 text-lg" />
               </a>
-            </div>
-
-            {/* Name and Occupation */}
-            <div className="absolute bottom-2 left-2 bg-black/50 text-white p-2 rounded-md">
-              <h2 className="text-sm font-light">{member.occupation}</h2>
-              <h3 className="text-base font-bold">{member.name}</h3>
             </div>
           </div>
         ))}
