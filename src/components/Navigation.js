@@ -1,5 +1,3 @@
-// Navigation.js
-
 "use client";
 
 import dynamic from "next/dynamic"; // Import dynamic from Next.js
@@ -27,15 +25,12 @@ const MdPhoneLazy = dynamic(
   { ssr: false }
 );
 
-// import { FaChevronDownLazy,  } from "react-icons/fa";
-
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const modalRef = useRef();
 
   const links = [
-    // { name: "Home", href: "#home" },
     {
       name: "About Us",
       href: "/about",
@@ -60,26 +55,27 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
+      if (
+        isMenuOpen &&
+        modalRef.current &&
+        !modalRef.current.contains(event.target)
+      ) {
         setIsMenuOpen(false);
       }
     };
 
-    // Listen for both mouse and touch events
     document.addEventListener("mousedown", handleClickOutside);
     document.addEventListener("touchstart", handleClickOutside);
 
-    // Clean up event listeners on component unmount
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
     };
-  }, []);
+  }, [isMenuOpen]);
 
   return (
     <nav className="bg-white max-w-[90%] w-[90%] items-center m-auto text-black sticky top-0 z-50 border-b shadow-md rounded-full">
       <div className="flex justify-between items-center px-6 py-2 max-w-screen-xl mx-auto">
-        {/* Logo */}
         <div>
           <img
             src="/images/rhp_logo.png"
@@ -155,11 +151,11 @@ export default function Navigation() {
 
       {/* Mobile Modal */}
       {isMenuOpen && (
-        <div
-          ref={modalRef}
-          className="fixed inset-0 bg-black bg-opacity-70 z-40 flex flex-col items-center justify-center"
-        >
-          <ul className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 space-y-4">
+        <div className="fixed inset-0 bg-black bg-opacity-70 z-40 flex flex-col items-center w-full justify-center">
+          <ul
+            ref={modalRef}
+            className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 space-y-4"
+          >
             {links.map((link) => (
               <li
                 key={link.name}
@@ -169,8 +165,6 @@ export default function Navigation() {
                   onClick={() => toggleDropdown(link.name)}
                   className="flex items-center justify-between w-full text-left text-black font-semibold"
                 >
-                  {/* {link.name} */}
-
                   <a
                     href={link.href}
                     className="hover:text-gray-700 transition"
@@ -191,7 +185,7 @@ export default function Navigation() {
                       <li key={subLink.name}>
                         <a
                           href={subLink.href}
-                          className="block px-4 py-2  text-gray-700 hover:bg-gray-200 rounded-md"
+                          className="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
                         >
                           {subLink.name}
                         </a>

@@ -20,10 +20,16 @@ export default function About() {
       {/* Background Image Container */}
       <div
         className="relative min-h-screen flex items-center justify-center text-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/about_image.png')" }}
+        style={{
+          backgroundImage: "url('/images/about_image.png')",
+          transform: "scaleX(-1)",
+        }}
       >
         {/* Text Section */}
-        <div className="absolute top-1/2 transform -translate-y-1/2 w-full text-center">
+        <div
+          className="absolute top-1/2 transform -translate-y-1/2 w-full text-center"
+          style={{ transform: "scaleX(-1)" }}
+        >
           <div className="bg-white text-black p-6 rounded-lg shadow-lg max-w-2xl mx-auto opacity-90">
             <p className="text-3xl font-semibold text-black">
               About <span className="text-red-600">Us</span>
