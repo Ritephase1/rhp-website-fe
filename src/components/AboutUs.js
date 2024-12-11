@@ -1,7 +1,7 @@
 export default function AboutUs({ imageUrl }) {
   return (
     <section className="text-black bg-white text-center py-12">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[90%] mx-auto">
         {/* Image Section */}
         <div className="p-10 rounded-lg text-left flex justify-center">
           <img
@@ -17,7 +17,7 @@ export default function AboutUs({ imageUrl }) {
           <h1 className="font-bold text-3xl mb-4">
             Rhino Properties & Homes Ltd.
           </h1>
-          <small className="block mb-6 text-md text-black leading-relaxed max-w-prose mx-auto">
+          <small className="block mb-6 text-md md:text-lg lg:text-xl text-black leading-relaxed  mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
