@@ -5,7 +5,6 @@ import { Suspense, lazy } from "react";
 // Lazy load the components
 const MissionVision = lazy(() => import("../components/MissionVision"));
 const Team = lazy(() => import("../components/Team"));
-// const Navbar = lazy(() => import("../components/Navbar"));
 const AboutUs = lazy(() => import("../components/AboutUs"));
 const Footer = lazy(() => import("../components/Footer"));
 const Testimonial = lazy(() => import("../components/Testimonial"));

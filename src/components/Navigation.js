@@ -4,8 +4,6 @@
 
 import dynamic from "next/dynamic"; // Import dynamic from Next.js
 import { useState, useEffect, useRef } from "react";
-// import { FaChevronDown, FaTimes, FaBars, FaUserCircle } from "react-icons/fa";
-// import { MdPhone } from "react-icons/md";
 
 // Lazy load the icons (optional to enhance performance)
 const FaChevronDownLazy = dynamic(
@@ -28,6 +26,8 @@ const MdPhoneLazy = dynamic(
   () => import("react-icons/md").then((mod) => mod.MdPhone),
   { ssr: false }
 );
+
+// import { FaChevronDownLazy,  } from "react-icons/fa";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,12 +65,19 @@ export default function Navigation() {
       }
     };
 
+    // Listen for both mouse and touch events
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    // Clean up event listeners on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
   }, []);
 
   return (
-    <nav className="bg-white max-w-md w-[90%] items-center m-auto text-black sticky top-0 z-50 border-b shadow-md rounded-full">
+    <nav className="bg-white max-w-[90%] w-[90%] items-center m-auto text-black sticky top-0 z-50 border-b shadow-md rounded-full">
       <div className="flex justify-between items-center px-6 py-2 max-w-screen-xl mx-auto">
         {/* Logo */}
         <div>
@@ -107,7 +114,7 @@ export default function Navigation() {
               )}
             </li>
           ))}
-          <li className="flex space-flex-2">
+          <li className="flex space-flex-2 text-center">
             <MdPhoneLazy /> + 3490-2734
           </li>
           <li>
@@ -162,7 +169,14 @@ export default function Navigation() {
                   onClick={() => toggleDropdown(link.name)}
                   className="flex items-center justify-between w-full text-left text-black font-semibold"
                 >
-                  {link.name}
+                  {/* {link.name} */}
+
+                  <a
+                    href={link.href}
+                    className="hover:text-gray-700 transition"
+                  >
+                    {link.name}
+                  </a>
                   {link.subLinks && (
                     <FaChevronDownLazy
                       className={`ml-2 transition-transform ${

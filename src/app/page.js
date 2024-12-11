@@ -1,17 +1,16 @@
-// import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import MissionVision from "@/components/MissionVision";
-import AboutUs from "@/components/AboutUs";
-import RecentAdditions from "@/components/RecentAdditions";
-import Footer from "@/components/Footer";
-import Projects from "@/components/Project";
-import SignupCard from "@/components/SignupCard";
-import RHP from "@/components/RHP";
-import "../styles/globals.css";
-import Team from "@/components/Team";
-// import Testimonial from "@/components/Testimonial";
-import TrustedByBrands from "@/components/TrustedByBrands";
+const Hero = lazy(() => import("../components/Hero"));
+const MissionVision = lazy(() => import("../components/MissionVision"));
+const AboutUs = lazy(() => import("../components/AboutUs"));
+const RecentAdditions = lazy(() => import("../components/RecentAdditions"));
+const Footer = lazy(() => import("../components/Footer"));
+const Projects = lazy(() => import("../components/Project"));
 
+const SignupCard = lazy(() => import("../components/SignupCard"));
+const RHP = lazy(() => import("../components/RHP"));
+
+const Team = lazy(() => import("../components/Team"));
+const TrustedByBrands = lazy(() => import("../components/TrustedByBrands"));
+import { lazy, Suspense } from "react";
 export default function Home() {
   const bookedProperties = [
     {
@@ -69,9 +68,13 @@ export default function Home() {
       <AboutUs imageUrl="/images/about.png" />
       <RecentAdditions properties={recentAdditionProperties} />
       <SignupCard />
-
       {/* <Testimonial /> */}
-      <TrustedByBrands />
+      {/* <TrustedByBrands /> */}
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <TrustedByBrands />
+      </Suspense>
+
       <RHP />
       <Footer />
     </div>

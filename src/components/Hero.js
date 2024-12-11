@@ -14,16 +14,16 @@ export default function Hero() {
       </div>
 
       <div className="bg-white text-black p-1 rounded-full border-2 border-white mb-10">
-        <small className="text-sm  font-bold md:text-lg">
+        <small className="text-sm font-bold md:text-lg">
           LET US GUIDE YOUR HOME
         </small>
       </div>
 
       {/* Hero Content */}
-      <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">
+      <h1 className="text-2xl md:text-5xl font-bold text-white mb-4">
         Rhino Homes & Properties
       </h1>
-      <p className="text-sm w-[80%] md:text-xl text-white mx-auto mb-8">
+      <p className="text-sm w-[80%] md:text-xl text-white mx-auto mb-10">
         We are committed to transforming dreams into reality by creating
         exceptional living and working spaces.
       </p>
