@@ -70,8 +70,8 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className="bg-white text-black sticky top-0 z-50 border-b shadow-md rounded-full mx-20">
-      <div className="flex justify-between items-center px-6 py-4 max-w-screen-xl mx-auto">
+    <nav className="bg-white max-w-md w-[90%] items-center m-auto text-black sticky top-0 z-50 border-b shadow-md rounded-full">
+      <div className="flex justify-between items-center px-6 py-2 max-w-screen-xl mx-auto">
         {/* Logo */}
         <div>
           <img
@@ -129,7 +129,7 @@ export default function Navigation() {
         <div className="md:hidden flex items-center space-x-4">
           <a
             href="#invest"
-            className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition"
+            className="bg-red-500 text-white text-sm py-2 px-2 rounded-md hover:bg-green-600 transition"
           >
             Invest
           </a>
@@ -156,7 +156,7 @@ export default function Navigation() {
             {links.map((link) => (
               <li
                 key={link.name}
-                className="border-b-2 border-gray-300 last:border-b-0 py-2"
+                className="border-b-2 ml-7 border-gray-300 last:border-b-0 py-2"
               >
                 <button
                   onClick={() => toggleDropdown(link.name)}
