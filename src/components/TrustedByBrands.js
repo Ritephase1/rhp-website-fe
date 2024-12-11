@@ -16,7 +16,7 @@ export default function TrustedByBrands() {
           {brands.map((brand, index) => (
             <div
               key={brand.id}
-              className="bg-red p-2 rounded-lg text-center w-[90%] flex-shrink-0"
+              className="bg-red p-2 rounded-lg text-center w-80 flex-shrink-0"
             >
               <img
                 src={brand.image}
@@ -32,7 +32,7 @@ export default function TrustedByBrands() {
           {brands.map((brand, index) => (
             <div
               key={`duplicate-${brand.id}`}
-              className="bg-red p-2 rounded-lg text-center w-80 flex-shrink-0"
+              className="bg-red p-6 rounded-lg text-center w-80 flex-shrink-0"
             >
               <img
                 src={brand.image}
