@@ -2,7 +2,7 @@ import "../styles/home.css";
 
 export default function Projects() {
   return (
-    <section className="bg-black text-white py-10 px-10">
+    <section className="bg-black max-w-full text-white py-10 px-10">
       <img
         src="/icons/OUR_PROJECTS.png"
         alt="OUR PROJECTS"
