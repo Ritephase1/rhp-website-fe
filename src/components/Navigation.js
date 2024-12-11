@@ -152,9 +152,12 @@ export default function Navigation() {
           ref={modalRef}
           className="fixed inset-0 bg-black bg-opacity-70 z-40 flex flex-col items-center justify-center"
         >
-          <ul className="bg-white rounded-lg shadow-lg w-3/4 max-w-md p-6 space-y-4">
+          <ul className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 space-y-4">
             {links.map((link) => (
-              <li key={link.name}>
+              <li
+                key={link.name}
+                className="border-b-2 border-gray-300 last:border-b-0 py-2"
+              >
                 <button
                   onClick={() => toggleDropdown(link.name)}
                   className="flex items-center justify-between w-full text-left text-black font-semibold"
@@ -174,7 +177,7 @@ export default function Navigation() {
                       <li key={subLink.name}>
                         <a
                           href={subLink.href}
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                          className="block px-4 py-2  text-gray-700 hover:bg-gray-200 rounded-md"
                         >
                           {subLink.name}
                         </a>
