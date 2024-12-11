@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import Link from "next/link"; // Import Link from next/link
 
 export default function Footer() {
   return (
@@ -25,8 +26,10 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto relative">
         {/* First Grid Layout */}
         <div>
-          <h3 className="font-bold text-lg mb-4">Rhino Homes & Properties</h3>
-          <p className="text-sm leading-relaxed">
+          <h3 className="font-bold md:text-2xl text-lg mb-4">
+            Rhino Homes & Properties
+          </h3>
+          <p className="text-sm md:text-md leading-relaxed">
             We build luxury and affordable homes for our clients at competitive
             costs and enable investors to partner with us at different stages of
             our projects.
@@ -35,8 +38,8 @@ export default function Footer() {
 
         {/* Second Grid Layout */}
         <div>
-          <h3 className="font-bold text-lg mb-4">Offers</h3>
-          <ul className="text-sm space-y-2">
+          <h3 className="font-bold text-lg mb-4 md:text-xl ">Offers</h3>
+          <ul className="text-sm  space-y-2">
             <li>Residential Properties</li>
             <li>Commercial Properties</li>
             <li>Investment Opportunities</li>
@@ -48,20 +51,52 @@ export default function Footer() {
 
         {/* Third Grid Layout */}
         <div>
-          <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+          <h3 className="font-bold text-lg mb-4 md:text-xl ">Quick Links</h3>
           <ul className="text-sm space-y-2">
-            <li>About Us</li>
+            {/* <li>About Us</li>
             <li>News</li>
             <li>FAQs</li>
             <li>Terms & Conditions</li>
             <li>Privacy Policy</li>
-            <li>Contact Us</li>
+            <li>Contact Us</li> */}
+            <li>
+              <Link href="/about" className="text-white">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="#projects" className="text-white">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link href="#agent" className="text-white">
+                Agent
+              </Link>
+            </li>
+            <li>
+              <Link href="#blog" className="text-white">
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/faq" className="text-white">
+                FAQ
+              </Link>
+            </li>
+            <li>
+              <Link href="#contact" className="text-white">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
         {/* Fourth Grid Layout */}
         <div>
-          <h3 className="font-bold text-lg mb-4">Join Our Newsletter</h3>
+          <h3 className="md:text-xl  font-bold text-lg mb-4">
+            Join Our Newsletter
+          </h3>
           <p className="text-sm mb-4">Your Email</p>
           <div className="flex flex-col space-y-4">
             <input
@@ -88,13 +123,13 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="bg-[#0A1229] border-t border-[#7C7878] text-white mt-10 flex flex-col md:flex-row md:justify-between items-center ">
+      <div className="bg-[#0A1229]  border border-t border-[#7C7878] text-white mt-10 flex flex-col md:flex-row md:justify-between items-center absolute bottom-0 left-0 w-full">
         {/* Logo and Rights */}
         <div className="flex items-center space-x-4">
           <div className="bg-[#D02A1A] p-2">
             <img src="/icons/white_logo.png" alt="logo" className="w-35 h-10" />
           </div>
-          <p className="text-sm text-center md:text-left">
+          <p className="text-sm md:text-lg text-center md:text-left">
             © Rhino Homes & Properties Limited. All Rights Reserved.
           </p>
         </div>

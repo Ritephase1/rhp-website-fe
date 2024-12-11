@@ -75,7 +75,7 @@ export default function Home() {
     <div>
       {/* <Navigation /> */}
       <Hero />
-      <Projects properties={bookedProperties} />
+      {/* <Projects properties={bookedProperties} /> */}
       <MissionVision />
       {/* <Team /> */}
       <AboutUs imageUrl="/images/about.png" />
