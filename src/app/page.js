@@ -57,7 +57,7 @@ export default function Home() {
       roi: 6.8,
     },
     {
-      id: 1,
+      id: 3,
       imageUrl:
         "https://landmarkhomes.sgp1.digitaloceanspaces.com/plans/kawau/Kawau-2020.jpg",
       title: "Kawau Beach House",
@@ -84,11 +84,11 @@ export default function Home() {
       {/* <Testimonial /> */}
       {/* <TrustedByBrands /> */}
 
+      <RHP />
+
       <Suspense fallback={<div>Loading...</div>}>
         <TrustedByBrands />
       </Suspense>
-
-      <RHP />
       <Footer />
     </div>
   );
