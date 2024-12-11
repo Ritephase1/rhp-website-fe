@@ -13,25 +13,27 @@ export default function Hero() {
         <Navigation />
       </div>
 
-      <div className="bg-white text-black p-2 rounded-full border-2 border-white mb-10">
-        <p className="text-sm">LET US GUIDE YOUR HOME</p>
+      <div className="bg-white text-black p-1 rounded-full border-2 border-white mb-10">
+        <small className="text-sm  font-bold md:text-lg">
+          LET US GUIDE YOUR HOME
+        </small>
       </div>
 
       {/* Hero Content */}
-      <h1 className="text-5xl md:text-5xl font-bold text-white mb-4">
+      <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">
         Rhino Homes & Properties
       </h1>
-      <p className="text-xl md:text-lg text-white max-w-xl mx-auto mb-8">
+      <p className="text-sm w-[80%] md:text-xl text-white mx-auto mb-8">
         We are committed to transforming dreams into reality by creating
         exceptional living and working spaces.
       </p>
 
       {/* Search Bar */}
-      <div className="flex items-center max-w-md w-full border-2 rounded-full overflow-hidden bg-white mx-auto">
+      <div className="flex items-center w-[90%] max-w-md border-2 rounded-full overflow-hidden bg-white mx-auto">
         <input
           type="text"
           placeholder="Enter Name, Keywords..."
-          className="flex-1 px-6 py-3 text-gray-800 text-sm outline-none rounded-l-full"
+          className="flex-1 px-6 py-3 text-gray-800text-sm outline-none rounded-l-full"
         />
         <button className="bg-red-600 p-3 rounded-r-full flex items-center justify-center">
           <svg
