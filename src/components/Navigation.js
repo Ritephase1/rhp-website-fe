@@ -43,7 +43,7 @@ export default function Navigation() {
         { name: "Commercial", href: "#commercial" },
       ],
     },
-    { name: "Agent", href: "#agent" },
+    { name: "Agent", href: "/agent" },
     { name: "Blog", href: "#blog" },
     { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },

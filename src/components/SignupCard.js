@@ -12,7 +12,8 @@ export default function SignupCard() {
       }}
     >
       {/* Red Background Overlay with reduced opacity */}
-      <div className="absolute top-0 left-0 right-0 bottom-0 bg-red-600 opacity-70 z-[-1]"></div>
+      {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-red-600 opacity-70 z-[-1]"></div> */}
+      <div className="absolute inset-0 bg-gradient-to-r to-[#000000D1] from-[#C4C4C400] " />
 
       <div
         className="relative z-10 flex items-center gap-4"

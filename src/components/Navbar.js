@@ -45,7 +45,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="#agent" className="text-black">
+            <Link href="/agent" className="text-black">
               Agent
             </Link>
           </li>
@@ -114,7 +114,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="border-b border-gray-300 pb-2">
-            <Link href="#agent" className="text-black">
+            <Link href="/agent" className="text-black">
               Agent
             </Link>
           </li>
