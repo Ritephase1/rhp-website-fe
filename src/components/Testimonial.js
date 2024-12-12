@@ -80,7 +80,7 @@ const Testimonial = () => {
         </div>
 
         {/* Right Card (Hidden on Small Screens) */}
-        <div className="hidden  md:h-80 border-b-4 border-red-500 md:flex w-full md:w-1/2 p-4 rounded-md bg-white text-gray-900">
+        <div className="hidden shadow-lg  md:h-80 border-b-4 border-red-500 md:flex w-full md:w-1/2 p-4 rounded-md bg-white text-gray-900">
           <div className="flex-shrink-0 w-1/3">
             <img
               src={getVisibleTestimonial().image}

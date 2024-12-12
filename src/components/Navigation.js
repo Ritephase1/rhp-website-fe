@@ -46,7 +46,7 @@ export default function Navigation() {
     { name: "Agent", href: "#agent" },
     { name: "Blog", href: "#blog" },
     { name: "FAQ", href: "/faq" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const toggleDropdown = (name) => {

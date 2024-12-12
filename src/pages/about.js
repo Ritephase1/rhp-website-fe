@@ -17,28 +17,30 @@ export default function About() {
   return (
     <section>
       <Navbar />
-      {/* Background Image Container */}
+      {/* Hero Section */}
       <div
-        className="relative min-h-screen flex items-center justify-center text-center bg-cover bg-center"
+        className="relative w-full h-[60vh] bg-cover bg-center"
         style={{
           backgroundImage: "url('/images/about_image.png')",
           transform: "scaleX(-1)",
         }}
       >
-        {/* Text Section */}
+        {/* <div className="absolute inset-0 bg-gradient-to-r to-[#000000D1] from-[#C4C4C400]" /> */}
         <div
-          className="absolute top-1/2 left-15 transform -translate-y-1/2 text-left"
-          style={{ transform: "scaleX(-1)" }}
+          className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white space-y-4"
+          style={{
+            transform: "scaleX(-1)",
+          }}
         >
-          <div className="bg-white text-black md:p-16 p-6 rounded-lg shadow-lg max-w-xl opacity-90">
-            <p className="md:text-3xl text-xl font-semibold text-black">
-              About <span className="text-red-600">Us</span>
-            </p>
-            <p className="md:text-xl text-md text-black mt-4">
-              We are committed to transforming dreams into reality by creating
-              exceptional living and working spaces.
-            </p>
-          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-black">
+            Contact{" "}
+            <span className="text-4xl md:text-6xl text-red-800"> Us</span>
+          </h1>
+          <p className="text-base md:text-lg    bg-white text-black md:p-16 p-6 rounded-lg shadow-lg max-w-xl opacity-90 border-l-4 border-red-500 pl-4">
+            We build luxury and affordable homes for our clients at competitive
+            costs, and we enable investors partner with us at different stages
+            of our projects..
+          </p>
         </div>
       </div>
 
