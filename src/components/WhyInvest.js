@@ -84,6 +84,14 @@ const WhyInvestWithUs = () => {
           ))}
         </div>
       </div>
+      <div className="flex flex-wrap justify-center gap-10">
+        <button className="bg-red-600 text-white py-3 rounded-md hover:bg-white hover:text-red-600 p-6 transition hover:border-2 hover:border-red-600">
+          Current Opportunities
+        </button>
+        <button className="bg-white border-2 border-red-800 text-red py-3 rounded-md hover:bg-red-700 hover:text-white hover:border-white p-8 transition">
+          Learn More About Investing
+        </button>
+      </div>
     </section>
   );
 };
