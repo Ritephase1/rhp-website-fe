@@ -11,6 +11,8 @@ const Testimonial = lazy(() => import("../components/Testimonial"));
 const TrustedByBrands = lazy(() => import("../components/TrustedByBrands"));
 
 const WhyInvestWithUs = lazy(() => import("../components/WhyInvest"));
+const PropertyCategory = lazy(() => import("../components/PropertyCategory"));
+
 import Navbar from "@/components/Navbar";
 
 export default function About() {
@@ -18,8 +20,9 @@ export default function About() {
     <section>
       <Navbar />
       {/* Hero Section */}
+
       <div
-        className="relative w-full h-[60vh] bg-cover bg-center"
+        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/images/about_image.png')",
           transform: "scaleX(-1)",
@@ -32,11 +35,10 @@ export default function About() {
             transform: "scaleX(-1)",
           }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-black">
-            Contact{" "}
-            <span className="text-4xl md:text-6xl text-red-800"> Us</span>
+          <h1 className="text-2xl md:text-6xl font-bold text-black">
+            About <span className="text-2xl md:text-6xl text-red-800"> Us</span>
           </h1>
-          <p className="text-base md:text-lg    bg-white text-black md:p-16 p-6 rounded-lg shadow-lg max-w-xl opacity-90 border-l-4 border-red-500 pl-4">
+          <p className="text-sm md:text-lg mr-5 bg-white text-black md:p-16 p-6 rounded-lg shadow-lg max-w-xl opacity-90 border-l-4 border-red-500 pl-4">
             We build luxury and affordable homes for our clients at competitive
             costs, and we enable investors partner with us at different stages
             of our projects..
@@ -59,6 +61,7 @@ export default function About() {
         <Suspense fallback={<div>Loading...</div>}>
           <WhyInvestWithUs />
         </Suspense>
+
         <Suspense fallback={<div>Loading...</div>}>
           <Testimonial />
         </Suspense>

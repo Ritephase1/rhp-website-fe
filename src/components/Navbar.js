@@ -4,6 +4,7 @@ import { VscAccount } from "react-icons/vsc";
 import Image from "next/image"; // Import Image from next/image
 import Link from "next/link"; // Import Link from next/link
 import { FaUser, FaBars } from "react-icons/fa"; // Import icons from react-icons
+// import Link from "next/link"; // Import Link component from next/link
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,9 +70,13 @@ const Navbar = () => {
         <div className="flex items-center mr-5 space-x-4">
           <VscAccount className="text-2xl" />{" "}
           {/* Using React Icon for user icon */}
-          <button className="bg-red-600 text-white py-2 px-4 rounded-md md:rounded-full hover:bg-red-700">
-            Investment
-          </button>
+          <Link href="/investment">
+            {/* <a> */}
+            <button className="bg-red-600 text-white py-2 px-4 rounded-md md:rounded-full hover:bg-red-700">
+              Investment
+            </button>
+            {/* </a> */}
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
