@@ -36,6 +36,15 @@ body {
   }
 }
 
+html, body{
+  margin: 0;
+  padding:0;
+  overflow-x: hidden;
+  
+}
+
+
+
 .project-card {
   background-color: #1a1a1a;
   padding: 20px;

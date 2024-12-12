@@ -10,7 +10,7 @@ export default function Projects() {
       />
       <h2 className="text-lg text-left pt-3 mb-3 md:mb-8">OUR PROJECTS</h2>
 
-      <div className="overflow-hidden animate-slide max-w-full relative">
+      <div className="overflow-hidden animate-slide relative">
         {/* Sliding container */}
         <div className="flex space-x-8 w-max">
           {/* Duplicate cards for continuous sliding effect */}

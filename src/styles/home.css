@@ -8,6 +8,7 @@
 }
 
 .animate-slide {
+  display: flex;
   animation: slide 100s linear infinite;
 }
 
@@ -31,3 +32,8 @@
     transform: scale(1.05); /* Slight zoom on hover */
     transition: transform 0.3s ease-in-out;
   }
+
+  /* Sliding container adjustments */
+.overflow-hidden {
+  overflow: hidden; /* Prevent content from exceeding container */
+}
