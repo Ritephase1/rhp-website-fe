@@ -7,30 +7,33 @@ const PropertyCategory = () => {
   const categories = [
     {
       icon: <FaHome size={30} />, // React Icon
-      title: "Home",
-      description: "Find your dream home with us.",
+      title: "Luxury Residential Estates",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Ante pellentesque tristique et lobortis interdum mollis..",
       linkText: "Check it",
     },
     {
       icon: <FaCar size={30} />,
-      title: "Car",
-      description: "Browse cars for every need.",
+      title: "Commercial Spaces",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Ante pellentesque tristique et lobortis interdum mollis..",
       linkText: "Check it",
     },
     {
       icon: <FaTree size={30} />,
-      title: "Land",
-      description: "Explore available lands.",
+      title: "Affordable Housing Scheme",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Ante pellentesque tristique et lobortis interdum mollis..",
       linkText: "Check it",
     },
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 hover:text-white">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 p-6 hover:text-white">
       {categories.map((category, index) => (
         <div
           key={index}
-          className="flex flex-col items-center justify-center p-4 bg-white text-black rounded-b-lg shadow-md transition-all duration-300 hover:bg-red-500 hover:text-white"
+          className="flex flex-col items-left justify-center p-4 bg-white text-black rounded-b-xl shadow-md transition-all duration-300 hover:bg-red-500 hover:text-white"
         >
           <div className="mb-2">{category.icon}</div>
           <h2 className="text-lg font-semibold mb-2">{category.title}</h2>

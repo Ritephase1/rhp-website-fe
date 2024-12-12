@@ -30,8 +30,8 @@ export default function Investment() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#000000D1] to-[#C4C4C400]" />
         <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white space-y-4 ">
-          <h1 className="text-4xl md:text-6xl font-bold">Investment</h1>
-          <p className="text-base md:text-lg  max-w-xl border-l-4 border-red-500 pl-4">
+          <h1 className="text-2xl md:text-6xl font-bold">Investment</h1>
+          <p className="text-sm md:text-lg  max-w-sm md:max-w-xl border-l-4 border-red-500 pl-4">
             Our projects are strategically designed to maximize value, offering
             you the chance to grow your wealth through safe and reliable
             ventures in Nigeria’s dynamic real estate market.
