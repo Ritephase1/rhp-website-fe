@@ -12,7 +12,7 @@ export default function MissionVision() {
             />
             <h3 className="text-2xl font-bold mb-4">Mission Statement</h3>
           </div>
-          <p className="text-sm md:text-lg  leading-relaxed">
+          <p className="text-sm md:text-lg  text-justify leading-relaxed">
             We are committed to transforming dreams into reality by creating
             exceptional living and working spaces. Our mission is to be a
             leading residential and commercial real estate developer, dedicated
@@ -32,7 +32,7 @@ export default function MissionVision() {
             />
             <h3 className="text-2xl font-bold mb-4">Vision</h3>
           </div>
-          <p className="text-sm md:text-lg leading-relaxed">
+          <p className="text-sm text-justify md:text-lg leading-relaxed">
             We are committed to transforming dreams into reality by creating
             exceptional living and working spaces. Our mission is to be a
             leading residential and commercial real estate developer, dedicated
