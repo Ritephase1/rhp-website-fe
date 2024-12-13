@@ -38,7 +38,7 @@ export default function About() {
           <h1 className="text-2xl md:text-6xl font-bold text-black">
             About <span className="text-2xl md:text-6xl text-red-800"> Us</span>
           </h1>
-          <p className="text-sm md:text-lg mr-5 bg-white text-black md:p-16 p-6 rounded-lg shadow-lg max-w-xl opacity-90 border-l-4 border-red-500 pl-4">
+          <p className="text-sm md:text-lg mr-5 bg-white text-black md:p-16 p-6 rounded-lg shadow-lg max-w-sm md:max-w-xl opacity-90 border-l-4 border-red-500 pl-4">
             We build luxury and affordable homes for our clients at competitive
             costs, and we enable investors partner with us at different stages
             of our projects..
