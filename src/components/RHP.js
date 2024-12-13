@@ -7,15 +7,15 @@ export default function RHP() {
           <img
             src="/images/RHP_agent.png" // Replace with the path to your about icon
             alt="About Icon"
-            className="w-3/4 h-auto object-cover"
+            className="w-3/4 h-auto object-contain md:object-cover"
           />
         </div>
 
         {/* Text Section */}
-        <div className="p-1 rounded-lg bg-white text-left">
+        <div className="p-5 rounded-lg bg-white text-left">
           <h3 className="text-md md:text-xl text-red-600 mb-4">RHP AGENT</h3>
           <h1 className="font-bold text-3xl mb-4">Who is an RHP agent</h1>
-          <small className="block text-black bg-white mb-6 text-md md:text-xl leading-relaxed mx-auto text-justify">
+          <small className="block text-black bg-white mb-6 text-md md:text-xl leading-relaxed mx-auto  text-justify">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

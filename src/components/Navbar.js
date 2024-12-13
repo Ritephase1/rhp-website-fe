@@ -71,11 +71,9 @@ const Navbar = () => {
           <VscAccount className="text-2xl" />{" "}
           {/* Using React Icon for user icon */}
           <Link href="/investment">
-            {/* <a> */}
             <button className="bg-red-600 text-white py-2 px-4 rounded-md md:rounded-full hover:bg-red-700">
               Investment
             </button>
-            {/* </a> */}
           </Link>
         </div>
 
