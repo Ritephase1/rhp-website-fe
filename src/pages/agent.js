@@ -16,7 +16,9 @@ export default function Agent() {
           // transform: "scaleX(-1)",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#000000D1] to-[#C4C4C400]" />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-[#000000D1] to-[#C4C4C400]" /> */}
+
+        <div className="absolute inset-0 bg-gradient-to-r to-[#C4C4C400] from-[#D02A1AD1]" />
         <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white space-y-4 ">
           <h1 className="text-2xl md:text-6xl font-bold">Agent</h1>
           <p className="text-sm md:text-lg  max-w-[80%] md:max-w-xl border-l-4 border-red-500 pl-4">

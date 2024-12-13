@@ -1,6 +1,6 @@
 import React from "react";
 
-const WhyBecomeAgent = () => {
+const HowToBecome = () => {
   const points = [
     {
       title: "Attractive Commission Structure",
@@ -81,4 +81,4 @@ const WhyBecomeAgent = () => {
   );
 };
 
-export default WhyBecomeAgent;
+export default HowToBecome;

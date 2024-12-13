@@ -17,7 +17,7 @@ export default function AboutUs({ imageUrl }) {
           <h1 className="font-bold text-3xl mb-4">
             Rhino Properties & Homes Ltd.
           </h1>
-          <small className="block mb-6 text-md md:text-lg lg:text-xl text-black leading-relaxed  mx-auto">
+          <small className="block mb-6 text-md md:text-lg lg:text-xl text-black leading-relaxed text-justify  mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

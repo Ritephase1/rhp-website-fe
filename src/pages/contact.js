@@ -41,7 +41,7 @@ const ContactPage = () => {
       </div>
 
       {/* Contact Section */}
-      <div className="container mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="container my-7 mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-8 shadow-lg">
         {/* Contact Form */}
         <div>
           <h2 className="text-2xl font-semibold mb-6">Leave us a message</h2>

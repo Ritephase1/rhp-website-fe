@@ -1,8 +1,16 @@
+"use client";
+
 import React from "react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link"; // Import Link from next/link
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <footer
       className="relative text-white px-6 py-10 md:py-16"
@@ -53,12 +61,6 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-lg mb-4 md:text-xl ">Quick Links</h3>
           <ul className="text-sm space-y-2">
-            {/* <li>About Us</li>
-            <li>News</li>
-            <li>FAQs</li>
-            <li>Terms & Conditions</li>
-            <li>Privacy Policy</li>
-            <li>Contact Us</li> */}
             <li>
               <Link href="/about" className="text-white">
                 About Us

@@ -7,7 +7,7 @@ export default function RHP() {
           <img
             src="/images/RHP_agent.png" // Replace with the path to your about icon
             alt="About Icon"
-            className="w-3/4 h-auto object-contain"
+            className="w-3/4 h-auto object-cover"
           />
         </div>
 
