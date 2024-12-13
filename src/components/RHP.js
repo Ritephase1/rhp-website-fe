@@ -15,7 +15,7 @@ export default function RHP() {
         <div className="p-1 rounded-lg bg-white text-left">
           <h3 className="text-md md:text-xl text-red-600 mb-4">RHP AGENT</h3>
           <h1 className="font-bold text-3xl mb-4">Who is an RHP agent</h1>
-          <small className="block text-black bg-white mb-6 text-md md:text-xl leading-relaxed mx-auto">
+          <small className="block text-black bg-white mb-6 text-md md:text-xl leading-relaxed mx-auto text-justify">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
