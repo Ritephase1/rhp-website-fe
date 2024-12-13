@@ -68,10 +68,10 @@ const HowToBecome = () => {
   return (
     <section className="py-12 bg-gray-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-md md:text-xl font-bold text-center mb-8 text-red-800">
+        <h2 className="text-md md:text-xl font-bold text-center mb-4 md:mb-8 text-red-800">
           How to become an Agent
         </h2>
-        <h1 className="font-bold text-xl md:text-3xl text-center text-black pb-8">
+        <h1 className="font-bold text-lg md:text-3xl text-center text-black pb-8">
           To become an agent with Rhino Homes and Properties, follow these
           steps:
         </h1>
@@ -84,20 +84,20 @@ const HowToBecome = () => {
               <div className="grid grid-cols-3 items-center">
                 {/* Icon aligned to the left */}
                 <div className="flex justify-start">
-                  <MdCoPresent className="group-hover:text-white text-2xl" />
+                  <MdCoPresent className="group-hover:text-white text-7xl" />
                 </div>
 
                 {/* Content spanning two columns */}
                 <div className="col-span-2 flex flex-col justify-end p-4 gap-4 text-left">
                   <div className="flex justify-between items-center gap-4">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-white">
+                    <h3 className="md:text-xl text-lg font-semibold text-gray-800 md:mb-2 mb-0 group-hover:text-white">
                       {point.title}
                     </h3>
                     <h2 className="text-xl font-bold text-red-800 ml-3 group-hover:text-white">
                       {point.sn}
                     </h2>
                   </div>
-                  <p className="text-gray-600 group-hover:text-white">
+                  <p className="text-gray-600 group-hover:text-white md:text-base text-sm text-justify">
                     {point.description}
                   </p>
                 </div>
