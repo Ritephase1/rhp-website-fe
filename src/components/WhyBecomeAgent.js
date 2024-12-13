@@ -63,17 +63,17 @@ const WhyBecomeAgent = () => {
         <h1 className="font-bold text-xl md:text-3xl text-center text-black pb-8">
           Benefits of becoming an RHP agent
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div>
           {points.map((point, index) => (
-            <div
+            <ol
               key={index}
-              className="border border-gray-300 rounded-lg p-6 bg-white shadow hover:shadow-md transition"
+              className="border border-gray-300 rounded-lg p-6 bg-white shadow hover:shadow-md my-4 transition"
             >
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <li className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
                 {point.title}
-              </h3>
-              <p className="text-gray-600">{point.description}</p>
-            </div>
+              </li>
+              <p className="text-gray-600 text-sm">{point.description}</p>
+            </ol>
           ))}
         </div>
       </div>

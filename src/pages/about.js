@@ -11,7 +11,7 @@ const Testimonial = lazy(() => import("../components/Testimonial"));
 const TrustedByBrands = lazy(() => import("../components/TrustedByBrands"));
 
 const WhyInvestWithUs = lazy(() => import("../components/WhyInvest"));
-const PropertyCategory = lazy(() => import("../components/PropertyCategory"));
+// const PropertyCategory = lazy(() => import("../components/PropertyCategory"));
 
 import Navbar from "@/components/Navbar";
 

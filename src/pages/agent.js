@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import "../styles/globals.css";
 import RHP from "@/components/RHP";
 import WhyBecomeAgent from "@/components/WhyBecomeAgent";
+import HowToBecome from "@/components/HowToBecomeAgent";
 
 export default function Agent() {
   return (
@@ -29,6 +30,8 @@ export default function Agent() {
       </div>
       <RHP />
       <WhyBecomeAgent />
+      <hr />
+      <HowToBecome />
       <Footer />
     </div>
   );
