@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic"; // Import dynamic from Next.js
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link"; // Import Link from Next.js
 
 // Lazy load the icons (optional to enhance performance)
 const FaChevronDownLazy = dynamic(
@@ -88,21 +89,21 @@ export default function Navigation() {
         <ul className="hidden md:flex items-center space-x-6 font-medium">
           {links.map((link) => (
             <li key={link.name} className="relative group">
-              <a href={link.href} className="hover:text-gray-700 transition">
+              <Link href={link.href} className="hover:text-gray-700 transition">
                 {link.name}
-              </a>
+              </Link>
               {link.subLinks && (
                 <>
                   <FaChevronDownLazy className="ml-2 inline-block text-sm text-gray-500 group-hover:text-gray-700 transition" />
                   <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md border w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
                     {link.subLinks.map((subLink) => (
                       <li key={subLink.name} className="hover:bg-gray-100">
-                        <a
+                        <Link
                           href={subLink.href}
                           className="block px-4 py-2 text-sm text-gray-700"
                         >
                           {subLink.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -114,31 +115,31 @@ export default function Navigation() {
             <MdPhoneLazy /> + 3490-2734
           </li>
           <li>
-            <a
+            <Link
               href="/investment"
               className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition"
             >
               Invest
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#profile" className="text-2xl">
+            <Link href="#profile" className="text-2xl">
               <FaUserCircleLazy />
-            </a>
+            </Link>
           </li>
         </ul>
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center space-x-4">
-          <a
+          <Link
             href="#invest"
             className="bg-red-500 text-white text-sm py-2 px-2 rounded-md hover:bg-green-600 transition"
           >
             Invest
-          </a>
-          <a href="#profile" className="text-2xl">
+          </Link>
+          <Link href="#profile" className="text-2xl">
             <FaUserCircleLazy />
-          </a>
+          </Link>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="text-2xl text-black"
@@ -165,12 +166,12 @@ export default function Navigation() {
                   onClick={() => toggleDropdown(link.name)}
                   className="flex items-center justify-between w-full text-left text-black font-semibold"
                 >
-                  <a
+                  <Link
                     href={link.href}
                     className="hover:text-gray-700 transition"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                   {link.subLinks && (
                     <FaChevronDownLazy
                       className={`ml-2 transition-transform ${
@@ -183,12 +184,12 @@ export default function Navigation() {
                   <ul className="mt-2 bg-gray-100 rounded-md">
                     {link.subLinks.map((subLink) => (
                       <li key={subLink.name}>
-                        <a
+                        <Link
                           href={subLink.href}
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
                         >
                           {subLink.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

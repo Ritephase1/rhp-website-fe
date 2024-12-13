@@ -1,6 +1,5 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-
 import "../styles/globals.css";
 import RHP from "@/components/RHP";
 import WhyBecomeAgent from "@/components/WhyBecomeAgent";

@@ -1,6 +1,6 @@
 import React from "react";
-import { FcVoicePresentation } from "react-icons/fc";
-
+// Importation of icons
+import { MdCoPresent } from "react-icons/md";
 const HowToBecome = () => {
   const points = [
     {
@@ -81,19 +81,26 @@ const HowToBecome = () => {
               key={index}
               className="group border-gray-300 p-6 bg-white shadow hover:shadow-md transition border-red-800 border-b-4 hover:border-white hover:bg-[#7D1910F7]"
             >
-              <div>
-                <div></div>
-                <div className="flex justify-between items-center p-4 gap-4">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-white">
-                    {point.title}
-                  </h3>
-                  <h2 className="text-xl font-bold text-red-800 ml-3 group-hover:text-white ml-auto t">
-                    {point.sn}
-                  </h2>
+              <div className="grid grid-cols-3 items-center">
+                {/* Icon aligned to the left */}
+                <div className="flex justify-start">
+                  <MdCoPresent className="group-hover:text-white text-2xl" />
                 </div>
-                <p className="text-gray-600 group-hover:text-white">
-                  {point.description}
-                </p>
+
+                {/* Content spanning two columns */}
+                <div className="col-span-2 flex flex-col justify-end p-4 gap-4 text-left">
+                  <div className="flex justify-between items-center gap-4">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-white">
+                      {point.title}
+                    </h3>
+                    <h2 className="text-xl font-bold text-red-800 ml-3 group-hover:text-white">
+                      {point.sn}
+                    </h2>
+                  </div>
+                  <p className="text-gray-600 group-hover:text-white">
+                    {point.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
