@@ -4,6 +4,8 @@ import "../styles/globals.css";
 import RHP from "@/components/RHP";
 import WhyBecomeAgent from "@/components/WhyBecomeAgent";
 import HowToBecome from "@/components/HowToBecomeAgent";
+import SignupCard from "@/components/SignupCard";
+import TrustedByBrands from "@/components/TrustedByBrands";
 
 export default function Agent() {
   return (
@@ -29,8 +31,9 @@ export default function Agent() {
       </div>
       <RHP />
       <WhyBecomeAgent />
-      <hr />
       <HowToBecome />
+      <SignupCard />
+      <TrustedByBrands />
       <Footer />
     </div>
   );

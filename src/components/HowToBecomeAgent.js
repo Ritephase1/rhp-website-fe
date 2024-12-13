@@ -84,7 +84,7 @@ const HowToBecome = () => {
               <div className="grid grid-cols-3 items-center">
                 {/* Icon aligned to the left */}
                 <div className="flex justify-start">
-                  <MdCoPresent className="group-hover:text-white text-7xl" />
+                  <MdCoPresent className="group-hover:text-white text-7xl text-red-800" />
                 </div>
 
                 {/* Content spanning two columns */}
