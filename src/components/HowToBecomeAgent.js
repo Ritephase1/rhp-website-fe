@@ -79,7 +79,7 @@ const HowToBecome = () => {
           {points.map((point, index) => (
             <div
               key={index}
-              className="group border-gray-300 p-6 bg-white shadow hover:shadow-md transition border-red-800 border-b-4 hover:border-white hover:bg-[#7D1910F7]"
+              className="group border-gray-300 p-6 bg-white shadow hover:shadow-md transition border-red-800 shadow-xl border-b-4 hover:border-white hover:bg-[#7D1910F7]"
             >
               <div className="grid grid-cols-3 items-center">
                 {/* Icon aligned to the left */}
