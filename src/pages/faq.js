@@ -17,16 +17,6 @@ export default function FAQ() {
 
   return (
     <section>
-      {/* <Navbar /> */}
-
-      {/* Image Section */}
-
-      {/* <div
-        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/faq.png')",
-        }}
-      ></div> */}
       <div
         className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
         style={{
