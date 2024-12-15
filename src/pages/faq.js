@@ -3,6 +3,7 @@ import { useState } from "react";
 import "../../src/styles/globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import Navigation from "@/components/Navigation";
 
 export default function FAQ() {
   const [expanded, setExpanded] = useState({});
@@ -16,19 +17,55 @@ export default function FAQ() {
 
   return (
     <section>
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* Image Section */}
 
-      <div
+      {/* <div
         className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/images/faq.png')",
         }}
+      ></div> */}
+      <div
+        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/images/faq.png')",
+          // transform: "scaleX(-1)",
+        }}
       >
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-[#000000D1] to-[#C4C4C400] flex items-center justify-center">
-          <h1 className="text-white text-4xl md:text-5xl font-bold">FAQ</h1>
-        </div> */}
+        {/* <div
+          className="absolute top-0 left-0 w-full z-10 mt-4"
+          style={{
+            transform: "scaleX(-1)",
+          }}
+        >   */}
+
+        <section
+          className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
+          style={
+            {
+              // transform: "scaleX(-1)",
+            }
+          }
+        >
+          <div className="absolute top-0 left-0 w-full z-10 mt-4">
+            {/* ADD NAVIGATION HERE */}
+            <Navigation />
+
+            {/* <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white space-y-4">
+              <h1 className="text-2xl md:text-6xl font-bold text-black mt-10">
+                About
+                <span className="text-2xl md:text-6xl text-red-800"> Us</span>
+              </h1>
+              <p className="text-sm md:text-lg mr-5 bg-white text-black md:p-16 p-6 rounded-lg shadow-lg max-w-sm md:max-w-xl opacity-90 border-l-4 border-red-500 pl-4">
+                We build luxury and affordable homes for our clients at
+                competitive costs, and we enable investors partner with us at
+                different stages of our projects..
+              </p>
+            </div> */}
+          </div>
+        </section>
       </div>
 
       {/* FAQ Content Section */}
