@@ -30,37 +30,58 @@ const Navbar = () => {
         {/* Navigation Links (for desktop and mobile) */}
         <ul className="hidden md:flex space-x-6">
           <li>
-            <Link href="/" className="text-black">
+            <Link
+              href="/"
+              className="relative text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full hover:p-2 p-2"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about" className="text-black">
+            <Link
+              href="/about"
+              className="relative text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full hover:p-2 p-2"
+            >
               About Us
             </Link>
           </li>
           <li>
-            <Link href="#projects" className="text-black">
+            <Link
+              href="#projects"
+              className="relative text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full hover:p-2 p-2"
+            >
               Projects
             </Link>
           </li>
           <li>
-            <Link href="/agent" className="text-black">
+            <Link
+              href="/agent"
+              className="relative text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full hover:p-2 p-2"
+            >
               Agent
             </Link>
           </li>
           <li>
-            <Link href="#blog" className="text-black">
+            <Link
+              href="#blog"
+              className="relative text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full hover:p-2 p-2"
+            >
               Blog
             </Link>
           </li>
           <li>
-            <Link href="/faq" className="text-black">
+            <Link
+              href="/faq"
+              className="relative text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full hover:p-2 p-2"
+            >
               FAQ
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="text-black">
+            <Link
+              href="/contact"
+              className="relative text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full hover:p-2 p-2"
+            >
               Contact
             </Link>
           </li>

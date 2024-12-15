@@ -1,12 +1,23 @@
+import Image from "next/image";
+
 export default function AboutUs({ imageUrl }) {
   return (
     <section className="text-black bg-white text-center py-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[90%] mx-auto">
         {/* Image Section */}
         <div className="p-10 rounded-lg text-left flex justify-center">
-          <img
+          {/* <img
             src={imageUrl} // Use the passed image URL prop
             alt="About Icon"
+            className="w-full h-auto object-contain"
+          /> */}
+          <Image
+            src={imageUrl}
+            alt="About icon"
+            width={40}
+            height={40}
+            layout="responsive"
+            quality={100}
             className="w-full h-auto object-contain"
           />
         </div>

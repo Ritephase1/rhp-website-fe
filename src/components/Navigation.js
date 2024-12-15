@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic"; // Import dynamic from Next.js
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link"; // Import Link from Next.js
+import Image from "next/image";
 
 // Lazy load the icons (optional to enhance performance)
 const FaChevronDownLazy = dynamic(
@@ -32,6 +33,7 @@ export default function Navigation() {
   const modalRef = useRef();
 
   const links = [
+    { name: "Home", href: "/" },
     {
       name: "About Us",
       href: "/about",
@@ -78,9 +80,18 @@ export default function Navigation() {
     <nav className="bg-white max-w-[90%] w-[90%] items-center m-auto text-black sticky top-0 z-50 border-b shadow-md rounded-full">
       <div className="flex justify-between items-center px-6 py-2 max-w-screen-xl mx-auto">
         <div>
-          <img
+          {/* <img
             src="/images/rhp_logo.png"
             alt="Real Estate Logo"
+            className="h-10 object-contain"
+          /> */}
+
+          <Image
+            src="/images/rhp_logo.png"
+            alt="Real Estate Logo"
+            width={60}
+            height={60}
+            layout="responsive"
             className="h-10 object-contain"
           />
         </div>

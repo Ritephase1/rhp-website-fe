@@ -3,19 +3,21 @@ export default function RHP() {
     <section className="text-black bg-white text-center py-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:max-w-[90%] mx-auto">
         {/* Image Section */}
-        <div className="p-3 rounded-lg text-left flex justify-center">
+        <div className="rounded-lg text-left flex justify-center">
           <img
             src="/images/RHP_agent.png" // Replace with the path to your about icon
             alt="About Icon"
-            className="w-3/4 h-auto object-contain md:object-cover"
+            className="w-full sm:w-[100%] h-auto object-contain md:object-cover rounded-lg"
           />
         </div>
 
         {/* Text Section */}
-        <div className="p-5 rounded-lg bg-white text-left">
-          <h3 className="text-md md:text-xl text-red-600 mb-4">RHP AGENT</h3>
+        <div className="px-5 py-2 rounded-lg bg-white text-left">
+          <h3 className="text-md md:text-xl font-bold text-red-600 mb-4">
+            RHP AGENT
+          </h3>
           <h1 className="font-bold text-3xl mb-4">Who is an RHP agent</h1>
-          <small className="block text-black bg-white mb-6 text-md md:text-xl leading-relaxed mx-auto  text-justify">
+          <small className="block text-black bg-white mb-6 text-md md:text-xl leading-relaxed mx-auto text-justify">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

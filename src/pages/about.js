@@ -11,16 +11,13 @@ const Testimonial = lazy(() => import("../components/Testimonial"));
 const TrustedByBrands = lazy(() => import("../components/TrustedByBrands"));
 
 const WhyInvestWithUs = lazy(() => import("../components/WhyInvest"));
-// const PropertyCategory = lazy(() => import("../components/PropertyCategory"));
 
 import Navbar from "@/components/Navbar";
+import Navigation from "@/components/Navigation";
 
 export default function About() {
   return (
     <section>
-      <Navbar />
-      {/* Hero Section */}
-
       <div
         className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
         style={{
@@ -28,22 +25,36 @@ export default function About() {
           transform: "scaleX(-1)",
         }}
       >
-        {/* <div className="absolute inset-0 bg-gradient-to-r to-[#000000D1] from-[#C4C4C400]" /> */}
-        <div
-          className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white space-y-4"
+        {/* <div
+          className="absolute top-0 left-0 w-full z-10 mt-4"
+          style={{
+            transform: "scaleX(-1)",
+          }}
+        >   */}
+
+        <section
+          className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
           style={{
             transform: "scaleX(-1)",
           }}
         >
-          <h1 className="text-2xl md:text-6xl font-bold text-black">
-            About <span className="text-2xl md:text-6xl text-red-800"> Us</span>
-          </h1>
-          <p className="text-sm md:text-lg mr-5 bg-white text-black md:p-16 p-6 rounded-lg shadow-lg max-w-sm md:max-w-xl opacity-90 border-l-4 border-red-500 pl-4">
-            We build luxury and affordable homes for our clients at competitive
-            costs, and we enable investors partner with us at different stages
-            of our projects..
-          </p>
-        </div>
+          <div className="absolute top-0 left-0 w-full z-10 mt-4">
+            {/* ADD NAVIGATION HERE */}
+            <Navigation />
+
+            <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white space-y-4">
+              <h1 className="text-2xl md:text-6xl font-bold text-black mt-10">
+                About
+                <span className="text-2xl md:text-6xl text-red-800"> Us</span>
+              </h1>
+              <p className="text-sm md:text-lg mr-5 bg-white text-black md:p-16 p-6 rounded-lg shadow-lg max-w-sm md:max-w-xl opacity-90 border-l-4 border-red-500 pl-4">
+                We build luxury and affordable homes for our clients at
+                competitive costs, and we enable investors partner with us at
+                different stages of our projects..
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
 
       <div>
