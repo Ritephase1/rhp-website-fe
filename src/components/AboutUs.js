@@ -3,9 +3,9 @@ import Image from "next/image";
 export default function AboutUs({ imageUrl }) {
   return (
     <section className="text-black bg-white text-center py-12">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[90%] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[90%] mx-auto my-0">
         {/* Image Section */}
-        <div className="p-10 rounded-lg text-left flex justify-center">
+        <div className="md:px-5 md:py-2  p-2 bg-red-800 rounded-lg text-left flex justify-center">
           {/* <img
             src={imageUrl} // Use the passed image URL prop
             alt="About Icon"
@@ -18,7 +18,7 @@ export default function AboutUs({ imageUrl }) {
             height={40}
             layout="responsive"
             quality={100}
-            className="w-full h-auto object-contain"
+            className="w-full md:h-auto  object-contain"
           />
         </div>
 
