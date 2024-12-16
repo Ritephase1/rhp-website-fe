@@ -9,6 +9,7 @@ import TrustedByBrands from "@/components/TrustedByBrands";
 import WhyInvestWithUs from "@/components/WhyInvest";
 
 import "../styles/globals.css";
+import Navigation from "@/components/Navigation";
 export default function Investment() {
   const recentAdditionProperties = [
     {
@@ -60,13 +61,6 @@ export default function Investment() {
         width: "100%", // Full width
       }}
     >
-      {/* Navigation bar */}
-      <Navbar />
-      {/* 
-      <div
-        className="relative w-full h-[60vh] bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/investment.jpeg')" }}
-      > */}
       <div
         className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
         style={{
@@ -75,16 +69,29 @@ export default function Investment() {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#000000D1] to-[#C4C4C400]" />
-        <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white space-y-4 ">
-          <h1 className="text-2xl md:text-6xl font-bold">Investment</h1>
-          <p className="text-sm md:text-lg  max-w-sm md:max-w-xl border-l-4 border-red-500 pl-4">
-            Our projects are strategically designed to maximize value, offering
-            you the chance to grow your wealth through safe and reliable
-            ventures in Nigeria’s dynamic real estate market.
-          </p>
-        </div>
-      </div>
 
+        <section
+          className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
+          style={
+            {
+              // transform: "scaleX(-1)",
+            }
+          }
+        >
+          <div className="absolute top-0 left-0 w-full z-10 mt-4">
+            {/* ADD NAVIGATION HERE */}
+            <Navigation />
+
+            <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white mt-20 md:mt-60 space-y-4 ">
+              <h1 className="text-2xl md:text-6xl font-bold">Investment</h1>
+              <p className="text-sm md:text-lg  max-w-[60%] md:max-w-xl border-l-4 border-red-500 text-left pl-4">
+                Etiam scelerisque tortor at lectus dapibus, nec fermentum diam
+                feugiat. Morbi rutrum magna et dui.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
       <WhyInvestWithUs />
       <PropertyCategory />
       <RecentAdditions properties={recentAdditionProperties} />
