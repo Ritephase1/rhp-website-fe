@@ -5,6 +5,7 @@ import blogData from "../../src/app/api/blog_card.json";
 import BlogCard from "@/components/BlogCard";
 import Navigation from "@/components/Navigation";
 import BlogRightSection from "@/components/BlogRightSection";
+import Footer from "@/components/Footer";
 
 const Blog = () => {
   const categories = ["Commercial", "Residential", "Construction", "Materials"];
@@ -91,6 +92,10 @@ const Blog = () => {
         <div className="w-full lg:w-[30%] order-2 lg:order-1">
           <BlogRightSection categories={categories} latestPosts={latestPosts} />
         </div>
+      </div>
+
+      <div>
+        <Footer />
       </div>
     </div>
   );
