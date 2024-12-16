@@ -15,7 +15,8 @@ export default function Team() {
       <h2 className="text-2xl text-left mb-8 text-black">OUR TEAM</h2>
 
       {/* Responsive grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"> */}
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
         {teamData.map((member) => (
           <div
             key={member.id}
