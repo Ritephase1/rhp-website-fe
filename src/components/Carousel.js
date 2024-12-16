@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Image from "next/image";
 const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -28,9 +28,11 @@ const Carousel = ({ items }) => {
                 : "-translate-x-full"
             }`}
           >
-            <img
+            <Image
               src={item.image}
               alt={item.title}
+              width={700} // Replace with appropriate dimensions
+              height={400} // Replace with appropriate dimensions
               className="w-full h-full object-cover rounded-lg"
             />
             <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-8">

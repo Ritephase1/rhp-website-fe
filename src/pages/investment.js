@@ -8,6 +8,7 @@ import SignupCard from "@/components/SignupCard";
 import TrustedByBrands from "@/components/TrustedByBrands";
 import WhyInvestWithUs from "@/components/WhyInvest";
 
+import "../styles/globals.css";
 export default function Investment() {
   const recentAdditionProperties = [
     {

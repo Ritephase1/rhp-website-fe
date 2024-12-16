@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function MissionVision() {
   return (
     <section className="bg-[#7D1910] text-white md:p-40 py-12 text-center">
@@ -5,10 +7,12 @@ export default function MissionVision() {
         {/* Mission Section */}
         <div className="bg-[#7D1910] p-8 rounded-lg text-left w-full flex flex-col items-center">
           <div className="flex gap-6">
-            <img
+            <Image
               src="/icons/mission.png" // Replace with the path to your mission icon
               alt="Mission Icon"
-              className="w-10 h-10 mb-4"
+              width={40} // Equivalent to the Tailwind class "w-10"
+              height={40} // Equivalent to the Tailwind class "h-10"
+              className="mb-4"
             />
             <h3 className="text-2xl font-bold mb-4">Mission Statement</h3>
           </div>
@@ -25,10 +29,12 @@ export default function MissionVision() {
         {/* Vision Section */}
         <div className="bg-[#7D1910] p-8 rounded-lg text-left w-full flex flex-col items classna-center">
           <div className="flex gap-6">
-            <img
-              src="/icons/vision.png" // Replace with the path to your vision icon
+            <Image
+              src="/icons/vision.png" // Replace with the path to your mission icon
               alt="Vision Icon"
-              className="w-10 h-10 mb-4"
+              width={40} // Equivalent to the Tailwind class "w-10"
+              height={40} // Equivalent to the Tailwind class "h-10"
+              className="mb-4"
             />
             <h3 className="text-2xl font-bold mb-4">Vision</h3>
           </div>

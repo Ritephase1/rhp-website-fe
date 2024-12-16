@@ -29,13 +29,12 @@ const BlogRightSection = ({ categories, latestPosts }) => {
               alt={post.title}
               style={styles.postImage}
             /> */}
-
             <Image
               src={post.imageUrl}
               alt={post.title}
               style={styles.postImage} // Apply the inline styles
-              width={700} // Replace with actual dimensions or set dynamically
-              height={400}
+              width={700} // Replace with actual dimensions or adjust dynamically
+              height={400} // Replace with actual dimensions
               className="object-cover" // Optional for styling, use Tailwind classes
             />
             <div style={styles.postContent}>
