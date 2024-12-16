@@ -6,20 +6,15 @@ export default function AboutUs({ imageUrl }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[90%] mx-auto my-0">
         {/* Image Section */}
         <div className="md:px-5 md:py-2  p-2 bg-red-800 rounded-lg text-left flex justify-center">
-          {/* <img
-            src={imageUrl} // Use the passed image URL prop
-            alt="About Icon"
-            className="w-full h-auto object-contain"
-          /> */}
-          <Image
-            src={imageUrl}
-            alt="About icon"
-            width={40}
-            height={40}
-            layout="responsive"
-            quality={100}
-            className="w-full md:h-auto  object-contain"
-          />
+          <div className="relative w-full h-full z-0">
+            <Image
+              src="/images/about2.png"
+              alt="RHP Logo"
+              width={300} // Replace with actual width
+              height={200} // Replace with actual height
+              style={{ marginTop: 10, zIndex: -1 }}
+            />
+          </div>
         </div>
 
         {/* Text Section */}

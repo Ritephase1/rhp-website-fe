@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import React from "react";
 import teamData from "../app/api/teamData.json"; // Adjust the path as needed
 import {
@@ -23,10 +23,17 @@ export default function Team() {
           >
             {/* Image */}
             <div className="relative">
-              <img
+              <Image
                 src={member.imageSrc}
                 alt={member.name}
-                className="w-full h-auto"
+                width={400} // Default width for larger screens
+                height={300} // Default height for larger screens
+                className="w-full h-auto sm:w-40 sm:h-30" // Adjust size for mobile
+                sizes="(max-width: 640px) 160px, 400px" // Responsive sizes
+                style={{
+                  width: "100%", // Fallback styles
+                  height: "auto",
+                }}
               />
 
               {/* Social Icons */}
