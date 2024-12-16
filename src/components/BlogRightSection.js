@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const BlogRightSection = ({ categories, latestPosts }) => {
@@ -23,10 +24,19 @@ const BlogRightSection = ({ categories, latestPosts }) => {
         <h3 style={styles.heading}>Latest Posts</h3>
         {latestPosts.map((post, index) => (
           <div key={index} style={styles.latestPostCard}>
-            <img
+            {/* <img
               src={post.imageUrl}
               alt={post.title}
               style={styles.postImage}
+            /> */}
+
+            <Image
+              src={post.imageUrl}
+              alt={post.title}
+              style={styles.postImage} // Apply the inline styles
+              width={700} // Replace with actual dimensions or set dynamically
+              height={400}
+              className="object-cover" // Optional for styling, use Tailwind classes
             />
             <div style={styles.postContent}>
               <h4 style={styles.postTitle}>{post.title}</h4>
