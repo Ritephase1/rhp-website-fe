@@ -2,6 +2,9 @@
 
 import Navigation from "./Navigation";
 import Image from "next/image";
+import { FaSearch } from "react-icons/fa";
+// import { SearchIcon } from "@heroicons/react/24/solid";
+// import { BeakerIcon } from "@heroicons/react/24/solid";
 
 export default function Hero() {
   return (
@@ -37,19 +40,7 @@ export default function Hero() {
           className="flex-1 px-6 py-3 text-gray-800text-sm outline-none rounded-l-full"
         />
         <button className="bg-red-600 p-3 rounded-r-full flex items-center justify-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="white"
-            color="white"
-            viewBox="0 0 24 24"
-            width="20px"
-            height="20px"
-          >
-            <path
-              d="M10 2a8 8 0 105.293 14.707l4 4a1 1 0 001.414-1.414l-4-4A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"
-              fill="currentColor"
-            />
-          </svg>
+          <FaSearch className="size-6 text-white" />
         </button>
       </div>
 

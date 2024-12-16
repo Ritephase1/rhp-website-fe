@@ -1,0 +1,33 @@
+[
+    {
+      "imageUrl": "https://via.placeholder.com/700x400",
+      "date": "December 16, 2024",
+      "houseType": "Apartment",
+      "propertyOwner": "John Doe",
+      "ownerName": "John Doe",
+      "description": "A beautiful apartment located in the heart of the city with stunning views and modern amenities.",
+      "likes": 35,
+      "comments": 12
+    },
+    {
+      "imageUrl": "https://via.placeholder.com/700x400",
+      "date": "November 25, 2024",
+      "houseType": "Villa",
+      "propertyOwner": "Jane Smith",
+      "ownerName": "Jane Smith",
+      "description": "Luxurious villa with a private pool and garden, perfect for family vacations or a peaceful retreat.",
+      "likes": 50,
+      "comments": 20
+    },
+    {
+      "imageUrl": "https://via.placeholder.com/700x400",
+      "date": "October 10, 2024",
+      "houseType": "Cottage",
+      "propertyOwner": "Alice Johnson",
+      "ownerName": "Alice Johnson",
+      "description": "Charming countryside cottage with a rustic feel and beautiful surrounding landscapes.",
+      "likes": 15,
+      "comments": 5
+    }
+  ]
+  

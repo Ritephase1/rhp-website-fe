@@ -63,7 +63,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="#blog"
+              href="/blog"
               className="relative text-black after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full hover:p-2 p-2"
             >
               Blog
@@ -138,7 +138,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="border-b border-gray-300 pb-2">
-            <Link href="#blog" className="text-black">
+            <Link href="/blog" className="text-black">
               Blog
             </Link>
           </li>
