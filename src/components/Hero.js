@@ -1,6 +1,7 @@
 "use client";
 
 import Navigation from "./Navigation";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -14,7 +15,7 @@ export default function Hero() {
       </div>
 
       <div className="bg-white text-black p-1 rounded-full border-2 border-white mb-10">
-        <small className="text-sm font-bold md:text-lg">
+        <small className="text-sm font-bold md:text-lg md:p-5">
           LET US GUIDE YOUR HOME
         </small>
       </div>
@@ -60,19 +61,25 @@ export default function Hero() {
       <div className="flex flex-wrap justify-center gap-8 mt-10">
         {/* Commercial Image */}
         <div className="flex-1 max-w-[150px] text-center">
-          <img
+          <Image
             src="/icons/commercial.png"
             alt="commercial button"
-            className="w-full h-auto max-w-[120px] rounded-lg"
+            layout="intrinsic"
+            width={120}
+            height={120}
+            className="rounded-lg"
           />
         </div>
 
         {/* Residential Image */}
         <div className="flex-1 max-w-[150px] text-center">
-          <img
+          <Image
             src="/icons/residential.png"
-            alt="residential"
-            className="w-full h-auto max-w-[120px] rounded-lg"
+            alt="residential button"
+            layout="intrinsic"
+            width={120}
+            height={120}
+            className="rounded-lg"
           />
         </div>
       </div>
