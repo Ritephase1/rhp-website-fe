@@ -2,13 +2,13 @@
 import Image from "next/image";
 import React from "react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import Link from "next/link"; // Import Link from next/link
+import Link from "next/link";
 
 export default function Footer() {
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth", // Smooth scroll to top
     });
   };
 
@@ -16,14 +16,13 @@ export default function Footer() {
     <footer
       className="relative text-white px-6 py-10 md:py-16"
       style={{
-        backgroundColor: "#0A1229", // Background color
+        backgroundColor: "#0A1229", // Footer background color
       }}
     >
       {/* Background Image Overlay */}
       <div
         className="absolute inset-0"
         style={{
-          // backgroundImage: "url('/images/footer_img.png')",
           backgroundColor: "navy",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -34,22 +33,20 @@ export default function Footer() {
 
       {/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto relative">
-        {/* First Grid Layout */}
+        {/* Section 1 */}
         <div>
-          <h3 className="font-bold md:text-2xl text-xl mb-4">
-            Rhino Homes & Properties
-          </h3>
-          <p className="text-sm md:text-md leading-relaxed">
+          <h3 className="font-bold text-xl mb-4">Rhino Homes & Properties</h3>
+          <p className="text-sm leading-relaxed">
             We build luxury and affordable homes for our clients at competitive
             costs and enable investors to partner with us at different stages of
             our projects.
           </p>
         </div>
 
-        {/* Second Grid Layout */}
+        {/* Section 2 */}
         <div>
-          <h3 className="font-bold text-xl mb-4 md:text-xl ">Offers</h3>
-          <ul className="text-md space-y-2">
+          <h3 className="font-bold text-xl mb-4">Offers</h3>
+          <ul className="space-y-2">
             <li>Residential Properties</li>
             <li>Commercial Properties</li>
             <li>Investment Opportunities</li>
@@ -59,114 +56,107 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Third Grid Layout */}
+        {/* Section 3 */}
         <div>
-          <h3 className="font-bold text-2xl mb-4 md:text-xl ">Quick Links</h3>
-          <ul className="text-sm space-y-2">
+          <h3 className="font-bold text-xl mb-4">Quick Links</h3>
+          <ul className="space-y-2">
             <li>
-              <Link href="/about" className="text-white text-lg md:text-md">
+              <Link href="/about" className="hover:underline">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="#projects" className="text-white text-lg md:text-md">
+              <Link href="#projects" className="hover:underline">
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/agent" className="text-white text-lg md:text-md">
+              <Link href="/agent" className="hover:underline">
                 Agent
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="text-white text-lg md:text-md">
+              <Link href="/blog" className="hover:underline">
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="text-white text-lg md:text-md">
+              <Link href="/faq" className="hover:underline">
                 FAQ
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-white text-lg md:text-md">
+              <Link href="/contact" className="hover:underline">
                 Contact
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Fourth Grid Layout */}
+        {/* Section 4 */}
         <div>
-          <h3 className="md:text-xl  font-bold text-xl mb-4 md:text-lg">
-            Join Our Newsletter
-          </h3>
-          <p className="md:text-sm text-md mb-4">Your Email</p>
-          <div className="flex flex-col space-y-4">
-            <input
-              type="email"
-              placeholder="Enter Your Email"
-              className="p-3 w-full rounded-md text-black"
-            />
-            <button className="bg-red-600 w-full py-3 text-white rounded-md">
-              Subscribe
-            </button>
-          </div>
-          <ul className="flex py-5 items-center space-x-4">
-            <li className="p-3 bg-[#0A1229] border border-[#7C7878] rounded-full">
-              <FaFacebook className="text-white text-lg" />
+          <h3 className="font-bold text-xl mb-4">Join Our Newsletter</h3>
+          <input
+            type="email"
+            placeholder="Enter Your Email"
+            className="p-3 w-full rounded-md text-black mb-3"
+          />
+          <button className="bg-red-600 w-full py-2 text-white rounded-md">
+            Subscribe
+          </button>
+          {/* Social Media Links */}
+          <ul className="flex space-x-4 mt-4">
+            <li className="p-3 bg-[#0A1229] border rounded-full">
+              <FaFacebook />
             </li>
-            <li className="p-3 bg-[#0A1229] border border-[#7C7878] rounded-full">
-              <FaInstagram className="text-white text-lg" />
+            <li className="p-3 bg-[#0A1229] border rounded-full">
+              <FaInstagram />
             </li>
-            <li className="p-3 bg-[#0A1229] border border-[#7C7878] rounded-full">
-              <FaWhatsapp className="text-white text-lg" />
+            <li className="p-3 bg-[#0A1229] border rounded-full">
+              <FaWhatsapp />
             </li>
           </ul>
         </div>
       </div>
+
       {/* Footer Bottom */}
-      <div className="bg-[#0A1229] border-t border-[#7C7878] text-white mt-10 flex flex-col md:flex-row justify-between items-center bottom-0 left-0 right-0">
-        {/* Logo and Rights */}
-        <div className="flex flex-col md:flex-row items-center md:space-x-4 space-y-2 md:space-y-0 p-4">
-          <div className="bg-[#D02A1A] p-2">
+      <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left mt-10 py-4 bg-[#0A1229] border-t border-[#7C7878]">
+        {/* Logo */}
+        <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+          <div className="bg-[#D02A1A] p-2 rounded-md">
             <Image
-              src="/icons/white_logo.png" // Path to your image
-              alt="logo"
-              width={140} // Default width (adjust as needed)
-              height={32} // Default height (adjust as needed)
-              className="w-28 h-8 md:w-36 md:h-10"
-              style={{ objectFit: "contain" }} // Ensures the image maintains aspect ratio
-              priority // Optional: Loads the image immediately for critical assets like logos
+              src="/icons/white_logo.png"
+              alt="Rhino Homes Logo"
+              width={140}
+              height={32}
+              className="w-28 md:w-36"
             />
           </div>
-          <p className="text-sm md:text-lg text-center md:text-left">
+          <p className="text-sm md:text-md">
             © Rhino Homes & Properties Limited. All Rights Reserved.
           </p>
         </div>
 
-        {/* Social Links */}
-        <ul className="flex flex-wrap justify-center items-center md:space-x-4">
-          <li className="p-3 bg-[#0A1229] border border-[#7C7878]">
-            <FaFacebook className="text-white text-lg" />
+        {/* Social Links & Up Button */}
+        <ul className="flex items-center space-x-4 mt-4 md:mt-0">
+          <li className="p-3 bg-[#0A1229] border rounded-full">
+            <FaFacebook />
           </li>
-          <li className="p-3 bg-[#0A1229] border border-[#7C7878]">
-            <FaInstagram className="text-white text-lg" />
+          <li className="p-3 bg-[#0A1229] border rounded-full">
+            <FaInstagram />
           </li>
-          <li className="p-3 bg-[#0A1229] border border-[#7C7878]">
-            <FaWhatsapp className="text-white text-lg" />
+          <li className="p-3 bg-[#0A1229] border rounded-full">
+            <FaWhatsapp />
           </li>
           <li
             onClick={handleScrollToTop}
-            className="p-3 bg-[#D02A1A] border border-[#7C7878] cursor-pointer"
+            className="p-3 bg-[#D02A1A] rounded-full cursor-pointer hover:opacity-90"
           >
             <Image
-              src="/icons/move_up.png" // Path to the image
-              alt="go up"
-              width={16} // Default width in pixels (4 * 4)
-              height={16} // Default height in pixels (4 * 4)
-              className="w-4 h-4"
-              style={{ objectFit: "contain" }} // Ensures proper scaling
+              src="/icons/move_up.png"
+              alt="Scroll Up"
+              width={16}
+              height={16}
             />
           </li>
         </ul>

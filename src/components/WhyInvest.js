@@ -50,8 +50,8 @@ const WhyInvestWithUs = () => {
   ];
 
   return (
-    <section className="py-12 bg-[#FAECEC]">
-      <div className="container mx-auto px-4">
+    <section className="py-12 bg-[#FAECEC] ">
+      <div className="container mx-auto px-4 ">
         <div className="text-center max-w-3xl mx-auto my-10 ">
           <h2 className="text-3xl font-bold text-center mb-8">
             Why Invest With Us
@@ -64,7 +64,7 @@ const WhyInvestWithUs = () => {
             Nigeria’s dynamic real estate market.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-[90%] m-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-[100%] m-auto">
           {features.map((feature, index) => (
             <div
               key={index}
