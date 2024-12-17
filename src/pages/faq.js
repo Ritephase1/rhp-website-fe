@@ -16,52 +16,26 @@ export default function FAQ() {
 
   return (
     <section>
+      {/* Hero Section */}
       <div
         className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/faq.png')",
-          // transform: "scaleX(-1)",
-        }}
+        style={{ backgroundImage: "url('/images/faq.png')" }}
       >
-        {/* <div
-          className="absolute top-0 left-0 w-full z-10 mt-4"
-          style={{
-            transform: "scaleX(-1)",
-          }}
-        >   */}
-
-        <section
-          className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
-          style={
-            {
-              // transform: "scaleX(-1)",
-            }
-          }
-        >
+        <section className="relative min-h-screen flex flex-col items-center justify-center text-center">
           <div className="absolute top-0 left-0 w-full z-10 mt-4">
-            {/* ADD NAVIGATION HERE */}
             <Navigation />
-
-            {/* <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white space-y-4">
-              <h1 className="text-2xl md:text-6xl font-bold text-black mt-10">
-                About
-                <span className="text-2xl md:text-6xl text-red-800"> Us</span>
-              </h1>
-              <p className="text-sm md:text-lg mr-5 bg-white text-black md:p-16 p-6 rounded-lg shadow-lg max-w-sm md:max-w-xl opacity-90 border-l-4 border-red-500 pl-4">
-                We build luxury and affordable homes for our clients at
-                competitive costs, and we enable investors partner with us at
-                different stages of our projects..
-              </p>
-            </div> */}
           </div>
         </section>
       </div>
 
-      {/* FAQ Content Section */}
-      <div className="px-6 lg:px-16 py-12">
-        <div className="flex flex-col lg:flex-row justify-between gap-12">
+      {/* FAQ Content */}
+      <div className="px-4 sm:px-8 md:px-16 py-8 md:py-12 lg:py-16">
+        <h1 className="text-center text-3xl md:text-4xl font-bold mb-8">
+          Frequently Asked Questions (FAQs)
+        </h1>
+        <div className="flex flex-col lg:flex-row justify-between gap-8">
           {/* Left Section */}
-          <div className="lg:w-1/2 mb-8 lg:mb-0">
+          <div className="lg:w-1/2">
             {faqData
               .slice(0, Math.ceil(faqData.length / 2))
               .map((item, index) => (
@@ -101,22 +75,18 @@ function ExpandableItem({ index, question, answer, expanded, toggleAnswer }) {
   return (
     <div className="mb-4 border-b border-gray-300 pb-4">
       <h2
-        className="text-md md:text-2xl font-semibold cursor-pointer"
+        className="text-lg md:text-xl font-semibold cursor-pointer flex justify-between items-center"
         onClick={() => toggleAnswer(index)}
       >
-        {question}
-        <span className="ml-2 text-lg md:text-xl">{expanded ? "-" : "+"}</span>
+        <span>{question}</span>
+        <span className="text-xl font-bold">{expanded ? "−" : "+"}</span>
       </h2>
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          expanded ? "max-h-[500px]" : "max-h-0"
+        className={`overflow-hidden transition-all duration-500 ease-in-out ${
+          expanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        {expanded && (
-          <p className="mt-2 text-sm md:text-base text-gray-600 transition-all duration-300">
-            {answer}
-          </p>
-        )}
+        <p className="mt-2 text-gray-600 text-sm md:text-base">{answer}</p>
       </div>
     </div>
   );
@@ -131,21 +101,46 @@ const faqData = [
   {
     question: "Why should I invest with Rhino Homes?",
     answer:
-      "Investing with Rhino Homes offers reliable returns, secure investment opportunities, and access to premium real estate options in both residential and commercial sectors.",
+      "We offer:\n• Prime property locations.\n• Transparent processes and legal documentation.\n• High ROI through property appreciation and rental income.\n• Sustainable and innovative developments that align with market trends.",
   },
   {
-    question: "What is Residential and Commercial property?",
+    question: "What is the expected ROI on investments with Rhino Homes?",
     answer:
-      "Residential property refers to buildings intended for housing, while commercial property is used for business activities like offices, shops, and industrial spaces.",
+      "Our projects typically deliver ROI ranging from 10–20% annually, with rental-focused investments yielding up to 12% per annum. Actual ROI depends on the specific property and market conditions.",
   },
   {
-    question: "What are the various investments available at RHP?",
+    question: "How do I start investing with Rhino Homes?",
     answer:
-      "At Rhino Homes, you can invest in residential and commercial properties, real estate development projects, and leasing opportunities, each tailored to your investment needs.",
+      "Getting started is easy:\n• Explore our current projects on our website or by contacting us.\n• Schedule a consultation with our investment advisors.\n• Complete the necessary paperwork and payment processes to secure your investment.",
   },
   {
-    question: "How can I invest with Rhino Homes?",
+    question: "Do you offer flexible payment plans?",
     answer:
-      "To invest, simply reach out to our sales team, sign the necessary agreements, and choose your preferred investment package based on your budget and preferences.",
+      "Yes, we provide flexible payment plans tailored to suit your financial goals, ensuring you can invest comfortably.",
+  },
+  {
+    question: "Are Rhino Homes' projects located in prime areas?",
+    answer:
+      "Absolutely! Our properties are strategically located in high-demand areas across Nigeria, such as Lekki, Abuja, Abia, and Port Harcourt, offering strong potential for appreciation.",
+  },
+  {
+    question: "How secure are investments with Rhino Homes?",
+    answer:
+      "All our transactions are legally backed, and we ensure full transparency. We also provide proper documentation, including Certificates of Occupancy (C of O) and other relevant property titles.",
+  },
+  {
+    question: "Can I visit the properties before investing?",
+    answer:
+      "Yes, we encourage property tours for all prospective investors. Contact us to schedule a guided visit to any of our ongoing or completed projects.",
+  },
+  {
+    question: "Do you provide property management services?",
+    answer:
+      "Yes, we offer professional property management services, including tenant sourcing, maintenance, and rent collection, to ensure your investment remains hassle-free.",
+  },
+  {
+    question: "How can I contact Rhino Homes for more information?",
+    answer:
+      "You can reach us through:\n• Phone: +234 810 139 3279\n• Email: sales@rhp.ng\n• Website: www.rhp.ng\n• Or visit our office at Lekki Lagos.",
   },
 ];
