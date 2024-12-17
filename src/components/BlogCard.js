@@ -64,6 +64,8 @@ const styles = {
   },
   imageContainer: {
     borderRadius: "8px",
+    margin: "auto",
+    width: "90%",
     overflow: "hidden",
   },
   meta: {
@@ -90,7 +92,8 @@ const styles = {
   readMoreButton: {
     backgroundColor: "transparent",
     border: "none",
-    color: "#0070f3",
+    color: "teal",
+    fontWeight: "bold",
     fontSize: "14px",
     cursor: "pointer",
   },

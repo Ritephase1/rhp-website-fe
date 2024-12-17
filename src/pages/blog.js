@@ -11,17 +11,17 @@ const Blog = () => {
   const categories = ["Commercial", "Residential", "Construction", "Materials"];
   const latestPosts = [
     {
-      imageUrl: "https://via.placeholder.com/80",
+      imageUrl: "/images/project3.png",
       title: "Modern Apartments",
       description: "Discover the latest in urban living.",
     },
     {
-      imageUrl: "https://via.placeholder.com/80",
+      imageUrl: "/images/footer_img.png",
       title: "Eco-Friendly Homes",
       description: "Sustainable housing for a better future.",
     },
     {
-      imageUrl: "https://via.placeholder.com/80",
+      imageUrl: "/images/project4.png",
       title: "Luxury Villas",
       description: "Experience opulence and comfort.",
     },
@@ -33,7 +33,6 @@ const Blog = () => {
         className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/images/blog.jpeg')",
-          // transform: "scaleX(-1)",
         }}
       >
         {/* <div className="absolute inset-0 bg-gradient-to-r from-[#000000D1] to-[#C4C4C400]" /> */}
@@ -73,18 +72,8 @@ const Blog = () => {
         </section>
       </div>
 
-      {/* <div style={{ display: "flex", flexWrap: "wrap" }}>
-        <div style={{ width: "100%", order: 1 }}>
-          {blogData.map((data, index) => (
-            <BlogCard key={index} {...data} />
-          ))}
-        </div>
-        <div style={{ width: "100%", order: 2 }}>
-          <BlogRightSection categories={categories} latestPosts={latestPosts} />
-        </div>
-      </div> */}
       <div className="flex flex-wrap">
-        <div className="w-full lg:w-[70%] order-1">
+        <div className="w-full lg:w-[70%]  order-1">
           {blogData.map((data, index) => (
             <BlogCard key={index} {...data} />
           ))}

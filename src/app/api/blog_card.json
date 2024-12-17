@@ -1,6 +1,6 @@
 [
     {
-      "imageUrl": "https://via.placeholder.com/700x400",
+      "imageUrl": "/images/project1.png",
       "date": "December 16, 2024",
       "houseType": "Apartment",
       "propertyOwner": "John Doe",
@@ -10,7 +10,7 @@
       "comments": 12
     },
     {
-      "imageUrl": "https://via.placeholder.com/700x400",
+      "imageUrl": "/images/project4.png",
       "date": "November 25, 2024",
       "houseType": "Villa",
       "propertyOwner": "Jane Smith",
@@ -20,7 +20,7 @@
       "comments": 20
     },
     {
-      "imageUrl": "https://via.placeholder.com/700x400",
+      "imageUrl": "/images/project3.png",
       "date": "October 10, 2024",
       "houseType": "Cottage",
       "propertyOwner": "Alice Johnson",
