@@ -30,7 +30,7 @@ export default function FAQ() {
 
       {/* FAQ Content */}
       <div className="px-4 sm:px-8 md:px-16 py-8 md:py-12 lg:py-16">
-        <h1 className="text-center text-3xl md:text-4xl font-bold mb-8">
+        <h1 className="text-center text-xl md:text-4xl font-bold mb-8">
           Frequently Asked Questions (FAQs)
         </h1>
         <div className="flex flex-col lg:flex-row justify-between gap-8">
@@ -75,7 +75,7 @@ function ExpandableItem({ index, question, answer, expanded, toggleAnswer }) {
   return (
     <div className="mb-4 border-b border-gray-300 pb-4">
       <h2
-        className="text-lg md:text-xl font-semibold cursor-pointer flex justify-between items-center"
+        className="text-md md:text-xl font-semibold cursor-pointer flex justify-between items-center"
         onClick={() => toggleAnswer(index)}
       >
         <span>{question}</span>
