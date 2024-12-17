@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaBed, FaShower, FaCar, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function RecentAdditions({ properties }) {
@@ -19,13 +20,16 @@ export default function RecentAdditions({ properties }) {
           >
             {/* Image Section */}
             <div className="w-1/3 relative">
-              <img
-                src={property.imageUrl}
-                alt={property.title}
-                className="w-full h-full object-cover rounded-bl-lg"
-              />
+              <div className="relative w-full h-full rounded-bl-lg overflow-hidden">
+                <Image
+                  src={property.imageUrl}
+                  alt={property.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
             </div>
-
             {/* Text Section */}
             <div className="w-2/3 p-4 bg-[#FFFBR8] text-left">
               <h3 className="text-lg text-black font-bold mb-2">

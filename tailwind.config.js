@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        50: "12.5rem",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -23,5 +26,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };

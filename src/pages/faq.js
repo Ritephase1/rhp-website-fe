@@ -2,7 +2,6 @@
 import { useState } from "react";
 import "../../src/styles/globals.css";
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import Navigation from "@/components/Navigation";
 
 export default function FAQ() {

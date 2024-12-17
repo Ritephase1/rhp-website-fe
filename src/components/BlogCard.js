@@ -20,7 +20,7 @@ const BlogCard = ({
         <Image
           src={imageUrl}
           alt={houseType}
-          layout="responsive"
+          // layout="responsive"
           width={700}
           height={400}
         />

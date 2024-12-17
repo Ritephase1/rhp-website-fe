@@ -91,7 +91,7 @@ export default function Navigation() {
             alt="Real Estate Logo"
             width={60}
             height={60}
-            layout="responsive"
+            // layout="responsive"
             className="h-10 object-contain"
           />
         </div>

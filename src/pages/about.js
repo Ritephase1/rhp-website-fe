@@ -1,3 +1,4 @@
+"use client";
 import "../../src/styles/globals.css";
 
 import { Suspense, lazy } from "react";

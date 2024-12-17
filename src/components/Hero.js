@@ -55,7 +55,7 @@ export default function Hero() {
           <Image
             src="/icons/commercial.png"
             alt="commercial button"
-            layout="intrinsic"
+            // layout="intrinsic"
             width={120}
             height={120}
             className="rounded-lg"
@@ -67,7 +67,7 @@ export default function Hero() {
           <Image
             src="/icons/residential.png"
             alt="residential button"
-            layout="intrinsic"
+            // layout="intrinsic"
             width={120}
             height={120}
             className="rounded-lg"

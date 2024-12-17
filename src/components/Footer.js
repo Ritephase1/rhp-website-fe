@@ -23,7 +23,8 @@ export default function Footer() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "url('/images/footer_img.png')",
+          // backgroundImage: "url('/images/footer_img.png')",
+          backgroundColor: "navy",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -35,7 +36,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto relative">
         {/* First Grid Layout */}
         <div>
-          <h3 className="font-bold md:text-2xl text-lg mb-4">
+          <h3 className="font-bold md:text-2xl text-xl mb-4">
             Rhino Homes & Properties
           </h3>
           <p className="text-sm md:text-md leading-relaxed">
@@ -47,8 +48,8 @@ export default function Footer() {
 
         {/* Second Grid Layout */}
         <div>
-          <h3 className="font-bold text-lg mb-4 md:text-xl ">Offers</h3>
-          <ul className="text-sm  space-y-2">
+          <h3 className="font-bold text-xl mb-4 md:text-xl ">Offers</h3>
+          <ul className="text-md space-y-2">
             <li>Residential Properties</li>
             <li>Commercial Properties</li>
             <li>Investment Opportunities</li>
@@ -60,35 +61,35 @@ export default function Footer() {
 
         {/* Third Grid Layout */}
         <div>
-          <h3 className="font-bold text-lg mb-4 md:text-xl ">Quick Links</h3>
+          <h3 className="font-bold text-2xl mb-4 md:text-xl ">Quick Links</h3>
           <ul className="text-sm space-y-2">
             <li>
-              <Link href="/about" className="text-white">
+              <Link href="/about" className="text-white text-lg md:text-md">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="#projects" className="text-white">
+              <Link href="#projects" className="text-white text-lg md:text-md">
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="#agent" className="text-white">
+              <Link href="/agent" className="text-white text-lg md:text-md">
                 Agent
               </Link>
             </li>
             <li>
-              <Link href="#blog" className="text-white">
+              <Link href="/blog" className="text-white text-lg md:text-md">
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="text-white">
+              <Link href="/faq" className="text-white text-lg md:text-md">
                 FAQ
               </Link>
             </li>
             <li>
-              <Link href="#contact" className="text-white">
+              <Link href="/contact" className="text-white text-lg md:text-md">
                 Contact
               </Link>
             </li>
@@ -97,10 +98,10 @@ export default function Footer() {
 
         {/* Fourth Grid Layout */}
         <div>
-          <h3 className="md:text-xl  font-bold text-lg mb-4">
+          <h3 className="md:text-xl  font-bold text-xl mb-4 md:text-lg">
             Join Our Newsletter
           </h3>
-          <p className="text-sm mb-4">Your Email</p>
+          <p className="md:text-sm text-md mb-4">Your Email</p>
           <div className="flex flex-col space-y-4">
             <input
               type="email"

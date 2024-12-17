@@ -29,47 +29,44 @@ export default function Home() {
     },
   ];
 
-  const recentAdditionProperties = [
-    {
-      id: 1,
-      imageUrl:
-        "https://landmarkhomes.sgp1.digitaloceanspaces.com/plans/kawau/Kawau-2020.jpg",
-      title: "Kawau Beach House",
-      address: "123 Kawau Island Rd, Kawau Island, New Zealand",
-      beds: 3,
-      size: 250,
-      bathrooms: 2,
-      parking: 2,
-      features: "Sea View, Private Beach Access, Fully Furnished",
-      roi: 5.2,
-    },
-    {
-      id: 2,
-      imageUrl:
-        "https://landmarkhomes.sgp1.digitaloceanspaces.com/plans/kawau/Kawau-2020.jpg", // Sample image, replace with another image if you want multiple properties
-      title: "Bayview Mansion",
-      address: "456 Bayview St, Auckland, New Zealand",
-      beds: 4,
-      size: 350,
-      bathrooms: 3,
-      parking: 3,
-      features: "Ocean View, Spacious Living, Pool",
-      roi: 6.8,
-    },
-    {
-      id: 3,
-      imageUrl:
-        "https://landmarkhomes.sgp1.digitaloceanspaces.com/plans/kawau/Kawau-2020.jpg",
-      title: "Kawau Beach House",
-      address: "123 Kawau Island Rd, Kawau Island, New Zealand",
-      beds: 3,
-      size: 250,
-      bathrooms: 2,
-      parking: 2,
-      features: "Sea View, Private Beach Access, Fully Furnished",
-      roi: 5.2,
-    },
-  ];
+  // const recentAdditionProperties = [
+  //   {
+  //     id: 1,
+  //     imageUrl: "/public/images/building1.jpg",
+  //     title: "Kawau Beach House",
+  //     address: "123 Kawau Island Rd, Kawau Island, New Zealand",
+  //     beds: 3,
+  //     size: 250,
+  //     bathrooms: 2,
+  //     parking: 2,
+  //     features: "Sea View, Private Beach Access, Fully Furnished",
+  //     roi: 5.2,
+  //   },
+  //   {
+  //     id: 2,
+  //     imageUrl: "/public/images/building1.jpg", // Sample image, replace with another image if you want multiple properties
+  //     title: "Bayview Mansion",
+  //     address: "456 Bayview St, Auckland, New Zealand",
+  //     beds: 4,
+  //     size: 350,
+  //     bathrooms: 3,
+  //     parking: 3,
+  //     features: "Ocean View, Spacious Living, Pool",
+  //     roi: 6.8,
+  //   },
+  //   {
+  //     id: 3,
+  //     imageUrl: "/public/images/building1.jpg",
+  //     title: "Kawau Beach House",
+  //     address: "123 Kawau Island Rd, Kawau Island, New Zealand",
+  //     beds: 3,
+  //     size: 250,
+  //     bathrooms: 2,
+  //     parking: 2,
+  //     features: "Sea View, Private Beach Access, Fully Furnished",
+  //     roi: 5.2,
+  //   },
+  // ];
 
   return (
     <div>
@@ -79,7 +76,7 @@ export default function Home() {
       <MissionVision />
       {/* <Team /> */}
       <AboutUs imageUrl="/images/about.png" />
-      <RecentAdditions properties={recentAdditionProperties} />
+      {/* <RecentAdditions properties={recentAdditionProperties} /> */}
       <SignupCard />
       {/* <Testimonial /> */}
       {/* <TrustedByBrands /> */}
