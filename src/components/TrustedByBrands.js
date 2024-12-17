@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function TrustedByBrands() {
   return (
     <section className="bg-[#7D1910F7] text-white py-3 md:p-4 px-14">
-      <h2 className="md:text-2xl text-sm gap-1 text-left md:text-center mb-8">
+      <h2 className="md:text-2xl text-sm gap-1 font-bold text-center md:text-center mb-8">
         Trusted by leading Brands
         <span className="text-sm md:text-2xl"> nationwide</span>
       </h2>

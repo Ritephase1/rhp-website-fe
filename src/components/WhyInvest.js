@@ -15,42 +15,42 @@ const WhyInvestWithUs = () => {
       icon: <FaMapMarkerAlt className="text-brick-red" />,
       title: "Prime Locations",
       description:
-        "We bring our members high quality commercial investment opportunities that are normally hidden away in country clubs or investment firms. Investors through Equity Street Capital get access to a diverse range of retail.",
+        "We select properties in high-demand areas with proven potential for rapid appreciation.",
     },
     {
       icon: <FaChartPie className="text-brick-red" />,
       title: "Diverse Portfolio",
       description:
-        "We bring our members high quality commercial investment opportunities that are normally hidden away in country clubs or investment firms. Investors through Equity Street Capital get access to a diverse range of retail.",
+        "From residential estates to commercial properties, our projects cater to every investment need.",
     },
     {
       icon: <FaSeedling className="text-brick-red" />,
       title: "Sustainable Development",
       description:
-        "We bring our members high quality commercial investment opportunities that are normally hidden away in country clubs or investment firms. Investors through Equity Street Capital get access to a diverse range of retail.",
+        "All our projects adhere to eco-friendly practices, ensuring long-term viability.",
     },
     {
       icon: <FaHandsHelping className="text-brick-red" />,
-      title: "Hassle Free Investing",
+      title: "Transparent Processes",
       description:
-        "We bring our members high quality commercial investment opportunities that are normally hidden away in country clubs or investment firms. Investors through Equity Street Capital get access to a diverse range of retail.",
+        "We maintain complete transparency, offering investors a seamless and secure journey",
     },
     {
       icon: <FaCoins className="text-brick-red" />,
       title: "Proven Returns",
       description:
-        "We bring our members high quality commercial investment opportunities that are normally hidden away in country clubs or investment firms. Investors through Equity Street Capital get access to a diverse range of retail.",
+        " Our track record speaks for itself—consistently delivering value to our investors.",
     },
     {
       icon: <FaEye className="text-brick-red" />,
-      title: "Transparent Processes",
+      title: "Hassle Free Investing",
       description:
-        "We bring our members high quality commercial investment opportunities that are normally hidden away in country clubs or investment firms. Investors through Equity Street Capital get access to a diverse range of retail.",
+        "We bring our members high quality commercial investment opportunities that are normally hidden away in country clubs or investment firms.",
     },
   ];
 
   return (
-    <section className="py-12 bg-gray-100">
+    <section className="py-12 bg-[#FAECEC]">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto my-10 ">
           <h2 className="text-3xl font-bold text-center mb-8">
@@ -65,14 +65,14 @@ const WhyInvestWithUs = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-[90%] m-auto">
-          {features.slice(0, 3).map((feature, index) => (
+          {features.map((feature, index) => (
             <div
               key={index}
               className="border border-gray-300 rounded-lg p-6 my-7 bg-white shadow hover:shadow-md transition"
             >
               <div className="flex items-center justify-center mb-4 relative">
                 {/* Container with negative margin to position icon outside */}
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 -top-14">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 border-2 border-white -top-14">
                   {feature.icon}
                 </div>
               </div>

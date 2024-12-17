@@ -14,14 +14,14 @@ export default function Investment() {
     {
       id: 1,
       imageUrl: "/images/building1.jpg",
-      title: "Kawau Beach House",
-      address: "123 Kawau Island Rd, Kawau Island, New Zealand",
-      beds: 3,
+      title: "Kings Court",
+      address: "Aba Abia Sate",
+      beds: 2,
       size: 250,
-      bathrooms: 2,
-      parking: 2,
-      features: "Sea View, Private Beach Access, Fully Furnished",
-      roi: 5.2,
+      bathrooms: 1,
+      parking: 0,
+      features: "Modern architecture, 24/7 security, smart home technology.",
+      roi: "Up to 15% annual growth.",
     },
     {
       id: 2,
@@ -81,8 +81,8 @@ export default function Investment() {
             <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white mt-20 md:mt-60 space-y-4 ">
               <h1 className="text-2xl md:text-6xl font-bold">Investment</h1>
               <p className="text-sm md:text-lg  max-w-[60%] md:max-w-xl border-l-4 border-red-500 text-left pl-4">
-                Etiam scelerisque tortor at lectus dapibus, nec fermentum diam
-                feugiat. Morbi rutrum magna et dui.
+                Discover lucrative investment opportunities with Rhino Homes and
+                Properties Ltd, your trusted partner in real estate.
               </p>
             </div>
           </div>

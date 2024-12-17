@@ -29,8 +29,8 @@ const PropertyCategory = () => {
   ];
 
   return (
-    <div>
-      <div className="items-center py-5 text-center w-[60%] m-auto">
+    <div className="bg-[#FAECEC]">
+      <div className="items-center  py-5 text-center w-[60%] m-auto">
         <p className="text-base text-red-600 font-bold">Property Category</p>
         <h2 className="md:text-3xl text-md font-bold text-black p-5">
           Choose Property by Category{" "}
