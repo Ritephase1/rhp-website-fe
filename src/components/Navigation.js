@@ -77,8 +77,9 @@ export default function Navigation() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="bg-white max-w-[90%] w-[90%] items-center m-auto text-black sticky top-0 z-50 border-b shadow-lg border border-red-800 rounded-full">
+    <nav className="bg-white max-w-[90%] w-[90%] m-auto text-black sticky top-0 z-50 border-b shadow-lg border border-red-800 rounded-full">
       <div className="flex justify-between items-center px-6 py-2 max-w-screen-xl mx-auto">
+        {/* Left Section - Logo */}
         <div>
           <Image
             src="/images/rhp_logo.png"
@@ -89,11 +90,14 @@ export default function Navigation() {
           />
         </div>
 
-        {/* Desktop Links */}
-        <ul className="hidden md:flex items-center space-x-6 font-medium">
+        {/* Center Section - Desktop Links */}
+        <ul className="hidden md:flex items-center justify-center space-x-6 font-medium">
           {links.map((link) => (
             <li key={link.name} className="relative group">
-              <Link href={link.href} className="hover:text-gray-700 transition">
+              <Link
+                href={link.href}
+                className="hover:text-gray-700 transition cursor-pointer"
+              >
                 {link.name}
               </Link>
               {link.subLinks && (
@@ -104,7 +108,7 @@ export default function Navigation() {
                       <li key={subLink.name} className="hover:bg-gray-100">
                         <Link
                           href={subLink.href}
-                          className="block px-4 py-2 text-sm text-gray-700"
+                          className="block px-4 py-2 text-sm text-gray-700 cursor-pointer"
                         >
                           {subLink.name}
                         </Link>
@@ -115,39 +119,47 @@ export default function Navigation() {
               )}
             </li>
           ))}
-          <li className="flex items-center space-x-2 text-center">
-            <MdPhoneLazy />
-            <span>+ 3490-2734</span>
-          </li>
-          <li>
-            <Link
-              href="/investment"
-              className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition"
-            >
-              Invest
-            </Link>
-          </li>
-          <li>
-            <Link href="#profile" className="text-2xl">
-              <FaUserCircleLazy />
-            </Link>
-          </li>
         </ul>
+
+        {/* Right Section - Phone Number, Invest Button, and User Icon */}
+        <div className="hidden md:flex items-center space-x-6">
+          <ul className="flex items-center space-x-6 font-medium cursor-pointer">
+            <li className="flex items-center space-x-2 cursor-pointer">
+              <MdPhoneLazy />
+              <span>+ 3490-2734</span>
+            </li>
+            <li>
+              <Link
+                href="/investment"
+                className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition cursor-pointer"
+              >
+                Invest
+              </Link>
+            </li>
+            <li>
+              <Link href="#profile" className="text-2xl cursor-pointer">
+                <FaUserCircleLazy />
+              </Link>
+            </li>
+          </ul>
+        </div>
+        {/* </div> */}
+        {/* </nav> */}
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center space-x-4">
           <Link
             href="#invest"
-            className="bg-red-500 text-white text-sm py-2 px-2 rounded-md hover:bg-green-600 transition"
+            className="bg-red-500 text-white text-sm py-2 px-2 rounded-md hover:bg-green-600 transition cursor-pointer"
           >
             Invest
           </Link>
-          <Link href="#profile" className="text-2xl">
+          <Link href="#profile" className="text-2xl cursor-pointer">
             <FaUserCircleLazy />
           </Link>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-2xl text-black"
+            className="text-2xl text-black cursor-pointer"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <FaTimesLazy /> : <FaBarsLazy />}
@@ -172,11 +184,11 @@ export default function Navigation() {
               >
                 <button
                   onClick={() => toggleDropdown(link.name)}
-                  className="flex items-center justify-between w-full text-left text-black font-semibold transition-all duration-300 hover:bg-gray-200 hover:rounded-md px-2 py-1"
+                  className="flex items-center justify-between w-full text-left text-black font-semibold transition-all duration-300 hover:bg-gray-200 hover:rounded-md px-2 py-1 cursor-pointer"
                 >
                   <Link
                     href={link.href}
-                    className="hover:text-gray-700 transition"
+                    className="hover:text-gray-700 transition cursor-pointer"
                   >
                     {link.name}
                   </Link>
@@ -201,7 +213,7 @@ export default function Navigation() {
                       >
                         <Link
                           href={subLink.href}
-                          className="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-300 hover:rounded-md"
+                          className="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-300 hover:rounded-md cursor-pointer"
                         >
                           {subLink.name}
                         </Link>
