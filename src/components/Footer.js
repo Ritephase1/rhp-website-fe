@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import React from "react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link"; // Import Link from next/link
@@ -130,10 +130,14 @@ export default function Footer() {
         {/* Logo and Rights */}
         <div className="flex flex-col md:flex-row items-center md:space-x-4 space-y-2 md:space-y-0 p-4">
           <div className="bg-[#D02A1A] p-2">
-            <img
-              src="/icons/white_logo.png"
+            <Image
+              src="/icons/white_logo.png" // Path to your image
               alt="logo"
-              className="w-28 h-8 md:w-35 md:h-10"
+              width={140} // Default width (adjust as needed)
+              height={32} // Default height (adjust as needed)
+              className="w-28 h-8 md:w-36 md:h-10"
+              style={{ objectFit: "contain" }} // Ensures the image maintains aspect ratio
+              priority // Optional: Loads the image immediately for critical assets like logos
             />
           </div>
           <p className="text-sm md:text-lg text-center md:text-left">
@@ -156,7 +160,14 @@ export default function Footer() {
             onClick={handleScrollToTop}
             className="p-3 bg-[#D02A1A] border border-[#7C7878] cursor-pointer"
           >
-            <img src="/icons/move_up.png" alt="go up" className="w-4 h-4" />
+            <Image
+              src="/icons/move_up.png" // Path to the image
+              alt="go up"
+              width={16} // Default width in pixels (4 * 4)
+              height={16} // Default height in pixels (4 * 4)
+              className="w-4 h-4"
+              style={{ objectFit: "contain" }} // Ensures proper scaling
+            />
           </li>
         </ul>
       </div>

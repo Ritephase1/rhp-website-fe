@@ -1,13 +1,17 @@
+import Image from "next/image";
 export default function RHP() {
   return (
     <section className="text-black bg-white text-center py-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:max-w-[90%] mx-auto">
         {/* Image Section */}
         <div className="rounded-lg text-left flex justify-center">
-          <img
-            src="/images/RHP_agent.png" // Replace with the path to your about icon
+          <Image
+            src="/images/RHP_agent.png" // Image path
             alt="About Icon"
+            width={500} // Adjust width as needed, here set to 500px (replace with your preferred size)
+            height={300} // Adjust height accordingly
             className="w-full sm:w-[100%] h-auto object-contain md:object-cover rounded-lg"
+            layout="intrinsic" // Maintains the aspect ratio of the image
           />
         </div>
 

@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { RiDoubleQuotesR } from "react-icons/ri";
 
@@ -57,10 +57,13 @@ const Testimonial = () => {
         {/* Left Card */}
         <div className="flex w-full md:h-80 md:w-1/2 p-4 md:p-7 rounded-md bg-red-800 text-white">
           <div className="flex-shrink-0 w-1/3">
-            <img
-              src={getVisibleTestimonial().image}
+            <Image
+              src={getVisibleTestimonial().image} // Dynamically passed image source
               alt={getVisibleTestimonial().name}
-              className="w-24 h-24 rounded-md object-contain mb-4"
+              width={96} // Equivalent to w-24 (24 * 4 for responsive sizing)
+              height={96} // Equivalent to h-24 (24 * 4 for responsive sizing)
+              className="rounded-md object-contain mb-4"
+              layout="intrinsic" // Ensures the image maintains its aspect ratio
             />
           </div>
           <div className="flex flex-col w-2/3 ml-4">
@@ -82,10 +85,13 @@ const Testimonial = () => {
         {/* Right Card (Hidden on Small Screens) */}
         <div className="hidden shadow-lg  md:h-80 border-b-4 border-red-500 md:flex w-full md:w-1/2 p-4 rounded-md bg-white text-gray-900">
           <div className="flex-shrink-0 w-1/3">
-            <img
-              src={getVisibleTestimonial().image}
+            <Image
+              src={getVisibleTestimonial().image} // Dynamically passed image source
               alt={getVisibleTestimonial().name}
-              className="w-24 h-24 rounded-md object-contain mb-4"
+              width={96} // Equivalent to w-24 (24 * 4 for responsive sizing)
+              height={96} // Equivalent to h-24 (24 * 4 for responsive sizing)
+              className="rounded-md object-contain mb-4"
+              layout="intrinsic" // Ensures the image maintains its aspect ratio
             />
           </div>
           <div className="flex flex-col w-2/3 ml-4">

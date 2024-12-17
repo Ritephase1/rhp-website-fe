@@ -1,6 +1,6 @@
 import "../styles/home.css";
 import brands from "../app/api/brands.json"; // Import JSON data
-
+import Image from "next/image";
 export default function TrustedByBrands() {
   return (
     <section className="bg-[#7D1910F7] text-white py-3 md:p-4 px-14">
@@ -18,10 +18,13 @@ export default function TrustedByBrands() {
               key={brand.id}
               className="bg-red p-2 rounded-lg text-center w-80 flex-shrink-0"
             >
-              <img
-                src={brand.image}
+              <Image
+                src={brand.image} // Dynamically passed image path
                 alt={`Brand ${brand.name}`}
-                className="w-full h-5 object-contain"
+                width={0} // Width set to scale responsively
+                height={20} // Corresponds to h-5 (20px)
+                className="w-full object-contain"
+                style={{ height: "20px", width: "100%" }} // Ensures full width responsiveness
               />
               <div className="text-center">
                 <h2 className="text-md md:text-lg font-light">{brand.name}</h2>
@@ -34,10 +37,13 @@ export default function TrustedByBrands() {
               key={`duplicate-${brand.id}`}
               className="bg-red p-6 rounded-lg text-center w-80 flex-shrink-0"
             >
-              <img
-                src={brand.image}
+              <Image
+                src={brand.image} // Dynamically passed image source
                 alt={`Brand ${brand.name}`}
-                className="w-full h-5 object-contain"
+                width={0} // Set width to auto, responsive
+                height={20} // Set height (h-5 corresponds to 20px)
+                className="w-full object-contain"
+                style={{ height: "20px", width: "100%" }} // Ensure responsiveness
               />
               <div className="text-left">
                 <h2 className="text-md text-center font-light">{brand.name}</h2>
@@ -51,10 +57,13 @@ export default function TrustedByBrands() {
               key={`duplicate-${brand.id}`}
               className="bg-red p-6 rounded-lg text-center w-80 flex-shrink-0"
             >
-              <img
-                src={brand.image}
+              <Image
+                src={brand.image} // Dynamically passed image source
                 alt={`Brand ${brand.name}`}
-                className="w-full h-5 object-contain"
+                width={0} // Set width to 0 for responsive behavior
+                height={20} // Set height to 20px (equivalent to h-5)
+                className="w-full object-contain"
+                style={{ height: "20px", width: "100%" }} // Ensure responsiveness
               />
               <div className="text-left">
                 <h2 className="text-md text-center font-light">{brand.name}</h2>
