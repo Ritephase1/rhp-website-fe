@@ -80,18 +80,11 @@ export default function Navigation() {
     <nav className="bg-white max-w-[90%] w-[90%] items-center m-auto text-black sticky top-0 z-50 border-b shadow-lg border border-red-800 rounded-full">
       <div className="flex justify-between items-center px-6 py-2 max-w-screen-xl mx-auto">
         <div>
-          {/* <img
-            src="/images/rhp_logo.png"
-            alt="Real Estate Logo"
-            className="h-10 object-contain"
-          /> */}
-
           <Image
             src="/images/rhp_logo.png"
             alt="Real Estate Logo"
             width={60}
             height={60}
-            // layout="responsive"
             className="h-10 object-contain"
           />
         </div>
@@ -168,14 +161,17 @@ export default function Navigation() {
             ref={modalRef}
             className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 space-y-4"
           >
-            {links.map((link) => (
+            {links.map((link, index) => (
               <li
                 key={link.name}
                 className="border-b-2 ml-7 border-gray-300 last:border-b-0 py-2"
+                style={{
+                  animation: `fadeInDown 0.5s ease-out ${index * 0.1}s both`, // Staggered animation
+                }}
               >
                 <button
                   onClick={() => toggleDropdown(link.name)}
-                  className="flex items-center justify-between w-full text-left text-black font-semibold"
+                  className="flex items-center justify-between w-full text-left text-black font-semibold transition-all duration-300 hover:bg-gray-200 hover:rounded-md px-2 py-1"
                 >
                   <Link
                     href={link.href}
@@ -193,11 +189,18 @@ export default function Navigation() {
                 </button>
                 {activeDropdown === link.name && link.subLinks && (
                   <ul className="mt-2 bg-gray-100 rounded-md">
-                    {link.subLinks.map((subLink) => (
-                      <li key={subLink.name}>
+                    {link.subLinks.map((subLink, subIndex) => (
+                      <li
+                        key={subLink.name}
+                        style={{
+                          animation: `fadeInDown 0.5s ease-out ${
+                            index * 0.1 + 0.2 + subIndex * 0.1
+                          }s both`, // Staggered sublink animation
+                        }}
+                      >
                         <Link
                           href={subLink.href}
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                          className="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-300 hover:rounded-md"
                         >
                           {subLink.name}
                         </Link>

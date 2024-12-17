@@ -6,7 +6,6 @@ import RecentAdditions from "@/components/RecentAdditions";
 import SignupCard from "@/components/SignupCard";
 import TrustedByBrands from "@/components/TrustedByBrands";
 import WhyInvestWithUs from "@/components/WhyInvest";
-import hello from "../../public/images/building1.png";
 
 import "../styles/globals.css";
 import Navigation from "@/components/Navigation";
@@ -14,7 +13,7 @@ export default function Investment() {
   const recentAdditionProperties = [
     {
       id: 1,
-      imageUrl: "/public/images/building1.jpg",
+      imageUrl: "/images/building1.jpg",
       title: "Kawau Beach House",
       address: "123 Kawau Island Rd, Kawau Island, New Zealand",
       beds: 3,
@@ -26,7 +25,7 @@ export default function Investment() {
     },
     {
       id: 2,
-      imageUrl: "/public/images/building1.jpg", // Sample image, replace with another image if you want multiple properties
+      imageUrl: "/images/building1.jpg", // Sample image, replace with another image if you want multiple properties
       title: "Bayview Mansion",
       address: "456 Bayview St, Auckland, New Zealand",
       beds: 4,
@@ -38,7 +37,7 @@ export default function Investment() {
     },
     {
       id: 3,
-      imageUrl: "/public/images/building1.jpg",
+      imageUrl: "/images/building1.jpg",
       title: "Kawau Beach House",
       address: "123 Kawau Island Rd, Kawau Island, New Zealand",
       beds: 3,
