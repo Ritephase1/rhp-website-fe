@@ -115,8 +115,9 @@ export default function Navigation() {
               )}
             </li>
           ))}
-          <li className="flex space-flex-2 text-center">
-            <MdPhoneLazy /> + 3490-2734
+          <li className="flex items-center space-x-2 text-center">
+            <MdPhoneLazy />
+            <span>+ 3490-2734</span>
           </li>
           <li>
             <Link
