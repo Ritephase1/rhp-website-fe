@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "category": "RESIDENTIAL",
+      "title": "Kingsdale Court",
+      "description": "A luxury residential apartment designed with modern aesthetics.",
+      "image": "/images/project1.png"
+    },
+    {
+      "id": 2,
+      "category": "COMMERCIAL",
+      "title": "Ekeoha Textile Market",
+      "description": "A well-structured textile market in the heart of the city.",
+      "image": "/images/project2.png"
+    },
+    {
+      "id": 3,
+      "category": "RESIDENTIAL",
+      "title": "Oakview Apartments",
+      "description": "Affordable housing with great amenities for families.",
+      "image": "/images/project3.png"
+    },
+    {
+      "id": 4,
+      "category": "COMMERCIAL",
+      "title": "Central Business Plaza",
+      "description": "A hub for commercial businesses in a prime location.",
+      "image": "/images/project4.png"
+    },
+    {
+      "id": 5,
+      "category": "RESIDENTIAL",
+      "title": "Maplewood Estate",
+      "description": "A serene residential estate with green spaces and playgrounds.",
+      "image": "/images/project5.png"
+    }
+  ]
+  

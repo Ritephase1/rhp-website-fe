@@ -122,7 +122,7 @@ const styles = {
   },
   readMoreButton: {
     padding: "8px 16px",
-    backgroundColor: "#007BFF",
+    backgroundColor: "teal",
     color: "#fff",
     border: "none",
     borderRadius: "4px",
