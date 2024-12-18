@@ -149,7 +149,7 @@ export default function Navigation() {
         {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center space-x-4">
           <Link
-            href="#invest"
+            href="/investment"
             className="bg-red-500 text-white text-sm py-2 px-2 rounded-md hover:bg-green-600 transition cursor-pointer"
           >
             Invest
