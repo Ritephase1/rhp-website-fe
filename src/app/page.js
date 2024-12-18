@@ -1,16 +1,15 @@
+import React, { lazy, Suspense } from "react";
+import Loader from "../components/Loader";
+
 const Hero = lazy(() => import("../components/Hero"));
+const Projects = lazy(() => import("../components/Project"));
 const MissionVision = lazy(() => import("../components/MissionVision"));
 const AboutUs = lazy(() => import("../components/AboutUs"));
-// const RecentAdditions = lazy(() => import("../components/RecentAdditions"));
-const Footer = lazy(() => import("../components/Footer"));
-const Projects = lazy(() => import("../components/Project"));
-
 const SignupCard = lazy(() => import("../components/SignupCard"));
 const RHP = lazy(() => import("../components/RHP"));
-
-const Team = lazy(() => import("../components/Team"));
+const Footer = lazy(() => import("../components/Footer"));
 const TrustedByBrands = lazy(() => import("../components/TrustedByBrands"));
-import { lazy, Suspense } from "react";
+
 export default function Home() {
   const bookedProperties = [
     {
@@ -31,22 +30,32 @@ export default function Home() {
 
   return (
     <div>
-      {/* <Navigation /> */}
-      <Hero />
-      <Projects properties={bookedProperties} />
-      <MissionVision />
-      {/* <Team /> */}
-      <AboutUs imageUrl="/images/about.png" />
-      {/* <RecentAdditions properties={recentAdditionProperties} /> */}
+      <Suspense fallback={<Loader />}>
+        <Hero />
+      </Suspense>
+
+      <Suspense fallback={<Loader image="/images/logo.png" />}>
+        <Projects properties={bookedProperties} />
+      </Suspense>
+
+      <Suspense fallback={<Loader />}>
+        <MissionVision />
+      </Suspense>
+
+      <Suspense fallback={<Loader />}>
+        <AboutUs imageUrl="/images/about.png" />
+      </Suspense>
+
       <SignupCard />
-      {/* <Testimonial /> */}
-      {/* <TrustedByBrands /> */}
 
-      <RHP />
+      <Suspense fallback={<Loader />}>
+        <RHP />
+      </Suspense>
 
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <TrustedByBrands />
       </Suspense>
+
       <Footer />
     </div>
   );
