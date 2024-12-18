@@ -49,8 +49,8 @@ const Blog = () => {
             {/* ADD NAVIGATION HERE */}
             <Navigation />
 
-            <div className="flex justify-between items-center gap-4 px-4 md:px-16 mt-20 md:mt-60">
-              <div className="flex flex-col justify-center items-start text-black space-y-4">
+            <div className="flex justify-between items-center gap-4 px-4 md:px-16 mt-10  md:mt-60">
+              <div className="flex flex-col justify-center items-start text-black md:space-y-4 space-y-2">
                 <h1 className="text-2xl md:text-6xl font-bold">Our Blog</h1>
                 <p className="text-sm md:text-lg text-left max-w-[60%] md:max-w-xl border-l-4 border-red-500 pl-4">
                   Etiam scelerisque tortor at lectus dapibus, nec fermentum diam
