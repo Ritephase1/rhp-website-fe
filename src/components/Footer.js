@@ -35,8 +35,10 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto relative">
         {/* Section 1 */}
         <div>
-          <h3 className="font-bold text-xl mb-4">Rhino Homes & Properties</h3>
-          <p className="text-sm leading-relaxed">
+          <h3 className="font-bold text-xl sm:text-lg mb-4">
+            Rhino Homes & Properties
+          </h3>
+          <p className="text-sm sm:text-base leading-relaxed">
             We build luxury and affordable homes for our clients at competitive
             costs and enable investors to partner with us at different stages of
             our projects.
@@ -45,48 +47,66 @@ export default function Footer() {
 
         {/* Section 2 */}
         <div>
-          <h3 className="font-bold text-xl mb-4">Offers</h3>
+          <h3 className="font-bold text-xl sm:text-lg mb-4">Offers</h3>
           <ul className="space-y-2">
-            <li>Residential Properties</li>
-            <li>Commercial Properties</li>
-            <li>Investment Opportunities</li>
-            <li>Commission</li>
-            <li>Agent</li>
-            <li>Projects</li>
+            <li className="text-sm sm:text-base">Residential Properties</li>
+            <li className="text-sm sm:text-base">Commercial Properties</li>
+            <li className="text-sm sm:text-base">Investment Opportunities</li>
+            <li className="text-sm sm:text-base">Commission</li>
+            <li className="text-sm sm:text-base">Agent</li>
+            <li className="text-sm sm:text-base">Projects</li>
           </ul>
         </div>
 
         {/* Section 3 */}
         <div>
-          <h3 className="font-bold text-xl mb-4">Quick Links</h3>
+          <h3 className="font-bold text-xl sm:text-lg mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <Link href="/about" className="hover:underline">
+              <Link
+                href="/about"
+                className="hover:underline text-sm sm:text-base"
+              >
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="#projects" className="hover:underline">
+              <Link
+                href="#projects"
+                className="hover:underline text-sm sm:text-base"
+              >
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="/agent" className="hover:underline">
+              <Link
+                href="/agent"
+                className="hover:underline text-sm sm:text-base"
+              >
                 Agent
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="hover:underline">
+              <Link
+                href="/blog"
+                className="hover:underline text-sm sm:text-base"
+              >
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="hover:underline">
+              <Link
+                href="/faq"
+                className="hover:underline text-sm sm:text-base"
+              >
                 FAQ
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:underline">
+              <Link
+                href="/contact"
+                className="hover:underline text-sm sm:text-base"
+              >
                 Contact
               </Link>
             </li>
@@ -95,7 +115,9 @@ export default function Footer() {
 
         {/* Section 4 */}
         <div>
-          <h3 className="font-bold text-xl mb-4">Join Our Newsletter</h3>
+          <h3 className="font-bold text-xl sm:text-lg mb-4">
+            Join Our Newsletter
+          </h3>
           <input
             type="email"
             placeholder="Enter Your Email"
@@ -104,18 +126,6 @@ export default function Footer() {
           <button className="bg-red-600 w-full py-2 text-white rounded-md">
             Subscribe
           </button>
-          {/* Social Media Links */}
-          {/* <ul className="flex space-x-4 mt-4">
-            <li className="p-3 bg-[#0A1229] border rounded-full">
-              <FaFacebook />
-            </li>
-            <li className="p-3 bg-[#0A1229] border rounded-full">
-              <FaInstagram />
-            </li>
-            <li className="p-3 bg-[#0A1229] border rounded-full">
-              <FaWhatsapp />
-            </li>
-          </ul> */}
         </div>
       </div>
 
@@ -134,7 +144,7 @@ export default function Footer() {
                 className="w-28 md:w-36"
               />
             </div>
-            <p className="text-sm md:text-md">
+            <p className="text-sm md:text-md sm:text-xs">
               © Rhino Homes & Properties Limited. All Rights Reserved.
             </p>
           </div>
