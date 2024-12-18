@@ -1,7 +1,7 @@
 const Hero = lazy(() => import("../components/Hero"));
 const MissionVision = lazy(() => import("../components/MissionVision"));
 const AboutUs = lazy(() => import("../components/AboutUs"));
-const RecentAdditions = lazy(() => import("../components/RecentAdditions"));
+// const RecentAdditions = lazy(() => import("../components/RecentAdditions"));
 const Footer = lazy(() => import("../components/Footer"));
 const Projects = lazy(() => import("../components/Project"));
 
@@ -28,45 +28,6 @@ export default function Home() {
       imageUrl: "/images/apartment.jpg",
     },
   ];
-
-  // const recentAdditionProperties = [
-  //   {
-  //     id: 1,
-  //     imageUrl: "/public/images/building1.jpg",
-  //     title: "Kawau Beach House",
-  //     address: "123 Kawau Island Rd, Kawau Island, New Zealand",
-  //     beds: 3,
-  //     size: 250,
-  //     bathrooms: 2,
-  //     parking: 2,
-  //     features: "Sea View, Private Beach Access, Fully Furnished",
-  //     roi: 5.2,
-  //   },
-  //   {
-  //     id: 2,
-  //     imageUrl: "/public/images/building1.jpg", // Sample image, replace with another image if you want multiple properties
-  //     title: "Bayview Mansion",
-  //     address: "456 Bayview St, Auckland, New Zealand",
-  //     beds: 4,
-  //     size: 350,
-  //     bathrooms: 3,
-  //     parking: 3,
-  //     features: "Ocean View, Spacious Living, Pool",
-  //     roi: 6.8,
-  //   },
-  //   {
-  //     id: 3,
-  //     imageUrl: "/public/images/building1.jpg",
-  //     title: "Kawau Beach House",
-  //     address: "123 Kawau Island Rd, Kawau Island, New Zealand",
-  //     beds: 3,
-  //     size: 250,
-  //     bathrooms: 2,
-  //     parking: 2,
-  //     features: "Sea View, Private Beach Access, Fully Furnished",
-  //     roi: 5.2,
-  //   },
-  // ];
 
   return (
     <div>
