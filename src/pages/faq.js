@@ -76,6 +76,7 @@ function ExpandableItem({ index, question, answer, expanded, toggleAnswer }) {
 }
 
 const faqData = [
+  { question: "", answer: "" },
   {
     question: "What does Rhino Homes and Properties Ltd specialize in?",
     answer:

@@ -105,7 +105,42 @@ export default function Footer() {
             Subscribe
           </button>
           {/* Social Media Links */}
-          <ul className="flex space-x-4 mt-4">
+          {/* <ul className="flex space-x-4 mt-4">
+            <li className="p-3 bg-[#0A1229] border rounded-full">
+              <FaFacebook />
+            </li>
+            <li className="p-3 bg-[#0A1229] border rounded-full">
+              <FaInstagram />
+            </li>
+            <li className="p-3 bg-[#0A1229] border rounded-full">
+              <FaWhatsapp />
+            </li>
+          </ul> */}
+        </div>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="relative bg-[#0A1229] border-t border-[#7C7878]">
+        {/* Footer Content */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left mt-10 py-4">
+          {/* Logo */}
+          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+            <div className="bg-[#D02A1A] p-2 rounded-md">
+              <Image
+                src="/icons/white_logo.png"
+                alt="Rhino Homes Logo"
+                width={140}
+                height={32}
+                className="w-28 md:w-36"
+              />
+            </div>
+            <p className="text-sm md:text-md">
+              © Rhino Homes & Properties Limited. All Rights Reserved.
+            </p>
+          </div>
+
+          {/* Social Links */}
+          <ul className="flex items-center space-x-4 mt-4 md:mt-0">
             <li className="p-3 bg-[#0A1229] border rounded-full">
               <FaFacebook />
             </li>
@@ -117,49 +152,20 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-      </div>
 
-      {/* Footer Bottom */}
-      <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left mt-10 py-4 bg-[#0A1229] border-t border-[#7C7878]">
-        {/* Logo */}
-        <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
-          <div className="bg-[#D02A1A] p-2 rounded-md">
-            <Image
-              src="/icons/white_logo.png"
-              alt="Rhino Homes Logo"
-              width={140}
-              height={32}
-              className="w-28 md:w-36"
-            />
-          </div>
-          <p className="text-sm md:text-md">
-            © Rhino Homes & Properties Limited. All Rights Reserved.
-          </p>
-        </div>
-
-        {/* Social Links & Up Button */}
-        <ul className="flex items-center space-x-4 mt-4 md:mt-0">
-          <li className="p-3 bg-[#0A1229] border rounded-full">
-            <FaFacebook />
-          </li>
-          <li className="p-3 bg-[#0A1229] border rounded-full">
-            <FaInstagram />
-          </li>
-          <li className="p-3 bg-[#0A1229] border rounded-full">
-            <FaWhatsapp />
-          </li>
-          <li
-            onClick={handleScrollToTop}
-            className="p-3 bg-[#D02A1A] rounded-full cursor-pointer hover:opacity-90"
-          >
-            <Image
-              src="/icons/move_up.png"
-              alt="Scroll Up"
-              width={16}
-              height={16}
-            />
-          </li>
-        </ul>
+        {/* Scroll-to-Top Button */}
+        <button
+          onClick={handleScrollToTop}
+          className="fixed bottom-4 right-4 bg-[#D02A1A] p-3 rounded-full shadow-lg cursor-pointer hover:opacity-90"
+          aria-label="Scroll to Top"
+        >
+          <Image
+            src="/icons/move_up.png"
+            alt="Scroll Up"
+            width={16}
+            height={16}
+          />
+        </button>
       </div>
     </footer>
   );
