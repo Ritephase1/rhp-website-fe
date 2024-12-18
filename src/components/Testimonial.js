@@ -55,7 +55,7 @@ const Testimonial = () => {
       {/* Carousel Wrapper */}
       <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
         {/* Left Card */}
-        <div className="flex w-full md:h-80 md:w-1/2 p-4 md:p-7 rounded-md bg-red-800 text-white">
+        <div className="flex w-full md:h-40 lg:h-80 md:w-1/2 p-4 md:p-4 rounded-md bg-red-800 text-white">
           <div className="flex-shrink-0 w-1/3">
             <Image
               src={getVisibleTestimonial().image} // Dynamically passed image source
@@ -83,7 +83,7 @@ const Testimonial = () => {
         </div>
 
         {/* Right Card (Hidden on Small Screens) */}
-        <div className="hidden shadow-lg  md:h-80 border-b-4 border-red-500 md:flex w-full md:w-1/2 p-4 rounded-md bg-white text-gray-900">
+        <div className="hidden shadow-lg  md:h-40 lg:h-80 border-b-4 border-red-500 md:flex w-full md:w-1/2 p-4 rounded-md bg-white text-gray-900">
           <div className="flex-shrink-0 w-1/3">
             <Image
               src={getVisibleTestimonial().image} // Dynamically passed image source
