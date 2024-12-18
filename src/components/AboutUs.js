@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function AboutUs({ imageUrl }) {
   return (
     <section className="text-black bg-white text-center py-12">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[90%] mx-auto my-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[95%] mx-auto my-0">
         {/* Image Section */}
         <div className="md:px-5 md:py-2  p-2 bg-gray-200 rounded-lg text-left flex justify-center">
           <div className="relative w-full h-full z-0">
@@ -21,7 +21,7 @@ export default function AboutUs({ imageUrl }) {
         </div>
 
         {/* Text Section */}
-        <div className="p-8 rounded-lg bg-white text-left">
+        <div className="p-4 md:p-8 rounded-lg bg-white  text-left">
           <h3 className="text-xl text-red-600 mb-4">About Us</h3>
           <h1 className="font-bold text-3xl mb-4">
             Rhino Properties & Homes Ltd.
