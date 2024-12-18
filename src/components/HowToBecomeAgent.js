@@ -94,16 +94,20 @@ const HowToBecome = () => {
             >
               <div className="grid grid-cols-3 items-center ">
                 {/* Icon aligned to the left */}
-                <div className="flex justify-start ">
+                <div className="flex justify-start sm:w-3/4 md:w-3/4 w-3/4 lg:w-3/4 xl:w-3/4">
                   <Image
                     src={point.img}
                     alt="RHP Logo"
-                    width={300} // Replace with actual width
-                    height={200} // Replace with actual height style=
+                    width={300}
+                    height={200}
                     quality={100}
-                    objectFit="cover"
-                    className="w-[100%] h-[auto] text-red-800
-                  rounded-md group-hover:text-white "
+                    className="
+      w-full 
+      h-auto 
+      max-w-[300px] 
+      rounded-md 
+      group-hover:text-white
+    "
                   />
                 </div>
 
