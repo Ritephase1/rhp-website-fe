@@ -14,7 +14,7 @@ export default function AboutUs({ imageUrl }) {
               height={200} // Replace with actual height
               style={{ marginTop: 10, zIndex: -1 }}
               quality={100}
-              objectFit="cover"
+              // objectFit="cover"
               className="w-[100%] h-[auto] rounded-md "
             />
           </div>

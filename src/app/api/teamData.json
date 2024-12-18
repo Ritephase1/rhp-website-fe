@@ -25,7 +25,19 @@
     },
 
     {
-      "id": 2,
+      "id": 3,
+      "name": "Angela Deo",
+      "occupation": "Cheif   Executive Officer",
+      "imageSrc": "/images/team4.png",
+      "socialLinks": {
+        "facebook": "https://facebook.com/john",
+        "twitter": "https://twitter.com/john",
+        "linkedin": "https://linkedin.com/in/john",
+        "share": "https://example.com/share"
+      }
+    },
+    {
+      "id": 3,
       "name": "Angela Deo",
       "occupation": "Deputy Director",
       "imageSrc": "/images/team4.png",

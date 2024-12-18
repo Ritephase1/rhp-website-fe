@@ -104,7 +104,7 @@ const styles = {
     width: "80px",
     height: "80px",
     borderRadius: "4px",
-    objectFit: "cover",
+    // objectFit: "cover",
     marginRight: "16px",
   },
   postContent: {

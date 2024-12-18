@@ -63,7 +63,7 @@ const Testimonial = () => {
               width={96} // Equivalent to w-24 (24 * 4 for responsive sizing)
               height={96} // Equivalent to h-24 (24 * 4 for responsive sizing)
               className="rounded-md object-contain mb-4"
-              layout="intrinsic" // Ensures the image maintains its aspect ratio
+              // layout="intrinsic" // Ensures the image maintains its aspect ratio
             />
           </div>
           <div className="flex flex-col w-2/3 ml-4">
@@ -91,7 +91,7 @@ const Testimonial = () => {
               width={96} // Equivalent to w-24 (24 * 4 for responsive sizing)
               height={96} // Equivalent to h-24 (24 * 4 for responsive sizing)
               className="rounded-md object-contain mb-4"
-              layout="intrinsic" // Ensures the image maintains its aspect ratio
+              // layout="intrinsic" // Ensures the image maintains its aspect ratio
             />
           </div>
           <div className="flex flex-col w-2/3 ml-4">
