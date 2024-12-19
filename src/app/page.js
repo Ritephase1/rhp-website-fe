@@ -43,7 +43,7 @@ export default function Home() {
       </Suspense>
 
       <Suspense fallback={<Loader />}>
-        <AboutUs imageUrl="/images/about.png" />
+        <AboutUs imageUrl="/images/building1.jpg" />
       </Suspense>
 
       <SignupCard />

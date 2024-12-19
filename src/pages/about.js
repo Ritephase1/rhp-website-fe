@@ -11,7 +11,7 @@ const Footer = lazy(() => import("../components/Footer"));
 const Testimonial = lazy(() => import("../components/Testimonial"));
 const TrustedByBrands = lazy(() => import("../components/TrustedByBrands"));
 const WhyInvestWithUs = lazy(() => import("../components/WhyInvest"));
-const preferImage = "/images/agent.jpeg";
+// const preferImage = "/images/agent.jpeg";
 import Navigation from "@/components/Navigation";
 
 export default function About() {
@@ -51,7 +51,8 @@ export default function About() {
 
       <div>
         <Suspense>
-          <AboutUs imageUrl={preferImage} />
+          {/* <AboutUs imageUrl={preferImage} /> */}
+          <AboutUs imageUrl="/images/agent.jpeg" />
         </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
           <MissionVision />

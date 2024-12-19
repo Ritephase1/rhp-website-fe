@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function MissionVision() {
   return (
-    <section className="bg-[#7D1910] text-white md:p-40 py-12 text-center">
+    <section className="bg-[#7D1910] text-white md:p-20 py-12 text-center">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[90%] mx-auto">
         {/* Mission Section */}
         <div className="bg-[#7D1910] p-8 rounded-lg text-left w-full flex flex-col items-center">
@@ -10,7 +10,7 @@ export default function MissionVision() {
             <Image
               src="/icons/mission.png" // Replace with the path to your mission icon
               alt="Mission Icon"
-              width={40} // Equivalent to the Tailwind class "w-10"
+              width={50} // Equivalent to the Tailwind class "w-10"
               height={40} // Equivalent to the Tailwind class "h-10"
               className="mb-4"
             />
