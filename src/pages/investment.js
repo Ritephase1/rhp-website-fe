@@ -25,6 +25,7 @@ export default function Investment() {
     {
       id: 2,
       title: "Bayview Mansion",
+      imageUrl: "/images/project1.png",
       address: "456 Bayview St, Auckland, New Zealand",
       beds: 4,
       size: 350,

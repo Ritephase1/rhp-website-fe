@@ -11,12 +11,12 @@ import {
 
 export default function Team() {
   return (
-    <section className="bg-white text-white m-auto w-[90%] sm:w-[80%] py-12 px-4">
+    <section className="bg-white text-white m-auto w-[95%] sm:w-[80%] py-12 px-4">
       <h2 className="text-2xl text-left mb-8 text-black">OUR TEAM</h2>
 
       {/* Responsive grid */}
       {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"> */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
         {teamData.map((member) => (
           <div
             key={member.id}
@@ -77,7 +77,7 @@ export default function Team() {
             {/* Name and Occupation */}
             <div className="absolute bottom-2 left-2 bg-black/50 text-white p-2 rounded-md">
               <h2 className="text-sm font-light">{member.occupation}</h2>
-              <h3 className="text-base font-bold">{member.name}</h3>
+              <h3 className="text-sm font-bold">{member.name}</h3>
             </div>
           </div>
         ))}
