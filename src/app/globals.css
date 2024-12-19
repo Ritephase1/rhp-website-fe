@@ -45,7 +45,6 @@ html, body{
 }
 
 
-
 .project-card {
   background-color: #1a1a1a;
   padding: 20px;
@@ -94,4 +93,13 @@ html, body{
   }
 }
 
-
+@media (max-width: 768px) {
+  .modal-container {
+    z-index: 9999; /* Make sure modal is always above other elements */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

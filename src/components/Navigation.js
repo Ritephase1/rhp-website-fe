@@ -391,7 +391,67 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Modal */}
+        {/* Mobile Modal */}
         {isMenuOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-70 z-40 flex flex-col items-center w-full justify-center">
+            <ul
+              ref={modalRef}
+              className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 space-y-4 z-50" // Increased z-index here
+            >
+              {links.map((link, index) => (
+                <li
+                  key={link.name}
+                  className="border-b-2 ml-7 border-gray-300 last:border-b-0 py-2"
+                  style={{
+                    animation: `fadeInDown 0.5s ease-out ${index * 0.1}s both`,
+                  }}
+                >
+                  <button
+                    onClick={() => toggleDropdown(link.name)}
+                    className="flex items-center justify-between w-full text-left text-black font-semibold transition-all duration-300 hover:bg-gray-200 hover:rounded-md px-2 py-1 cursor-pointer"
+                  >
+                    <Link
+                      href={link.href}
+                      className="hover:text-gray-700 transition cursor-pointer"
+                    >
+                      {link.name}
+                    </Link>
+                    {link.subLinks && (
+                      <IoChevronDownSharp
+                        className={`ml-2 transition-transform ${
+                          activeDropdown === link.name ? "rotate-180" : ""
+                        }`}
+                      />
+                    )}
+                  </button>
+                  {activeDropdown === link.name && link.subLinks && (
+                    <ul className="mt-2 bg-gray-100 rounded-md">
+                      {link.subLinks.map((subLink, subIndex) => (
+                        <li
+                          key={subLink.name}
+                          style={{
+                            animation: `fadeInDown 0.5s ease-out ${
+                              index * 0.1 + 0.2 + subIndex * 0.1
+                            }s both`,
+                          }}
+                        >
+                          <Link
+                            href={subLink.href}
+                            className="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-300 hover:rounded-md cursor-pointer"
+                          >
+                            {subLink.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* {isMenuOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-70 z-40 flex flex-col items-center w-full justify-center">
             <ul
               ref={modalRef}
@@ -448,7 +508,7 @@ export default function Navigation() {
               ))}
             </ul>
           </div>
-        )}
+        )} */}
       </nav>
     </>
   );
