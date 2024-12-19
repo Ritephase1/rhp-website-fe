@@ -18,7 +18,7 @@ export default function Hero() {
       </div>
 
       <div className="bg-white text-black p-1 rounded-full border-2 border-white mb-10">
-        <small className="text-sm font-bold md:text-lg md:p-5">
+        <small className="text-xm p-3 font-bold md:text-lg md:p-5">
           LET US GUIDE YOUR HOME
         </small>
       </div>
