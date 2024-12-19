@@ -68,7 +68,7 @@ export default function Investment() {
             {/* ADD NAVIGATION HERE */}
             <Navigation />
 
-            <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white mt-20 md:mt-60 space-y-4 ">
+            <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white mt-10 md:mt-60 space-y-4 ">
               <h1 className="text-2xl md:text-6xl font-bold">Investment</h1>
               <p className="text-sm md:text-lg  max-w-[60%] md:max-w-xl border-l-4 border-red-500 text-left pl-4">
                 Discover lucrative investment opportunities with Rhino Homes and

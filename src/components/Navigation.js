@@ -229,6 +229,7 @@
 //     </nav>
 //   );
 // }
+
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -272,6 +273,26 @@ export default function Navigation() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isMenuOpen &&
+        modalRef.current &&
+        !modalRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <>
