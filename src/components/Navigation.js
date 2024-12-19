@@ -229,7 +229,6 @@
 //     </nav>
 //   );
 // }
-
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -242,37 +241,33 @@ import { MdPhone } from "react-icons/md";
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false); // Spinner state
   const modalRef = useRef();
 
   const links = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    {
-      name: "Projects",
-      href: "#projects",
-      subLinks: [
-        { name: "Residential", href: "#residential" },
-        { name: "Commercial", href: "#commercial" },
-      ],
-    },
+    // {
+    //   name: "Projects",
+    //   href: "#projects",
+    //   subLinks: [
+    //     { name: "Residential", href: "#residential" },
+    //     { name: "Commercial", href: "#commercial" },
+    //   ],
+    // },
     { name: "Agent", href: "/agent" },
     { name: "Blog", href: "/blog" },
     { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ];
 
+  const handleLinkClick = () => {
+    setIsLoading(true); // Show spinner
+  };
+
   const toggleDropdown = (name) => {
     setActiveDropdown((prev) => (prev === name ? null : name));
   };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -321,6 +316,7 @@ export default function Navigation() {
               <li key={link.name} className="relative group">
                 <Link
                   href={link.href}
+                  onClick={handleLinkClick} // Trigger spinner on link click
                   className="hover:text-gray-700 transition cursor-pointer"
                 >
                   {link.name}
@@ -333,6 +329,7 @@ export default function Navigation() {
                         <li key={subLink.name} className="hover:bg-gray-100">
                           <Link
                             href={subLink.href}
+                            onClick={handleLinkClick} // Trigger spinner on sub-link click
                             className="block px-4 py-2 text-sm text-gray-700 cursor-pointer"
                           >
                             {subLink.name}
@@ -356,13 +353,18 @@ export default function Navigation() {
               <li>
                 <Link
                   href="/investment"
+                  onClick={handleLinkClick}
                   className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition cursor-pointer"
                 >
                   Invest
                 </Link>
               </li>
               <li>
-                <Link href="#profile" className="text-2xl cursor-pointer">
+                <Link
+                  href="#profile"
+                  onClick={handleLinkClick}
+                  className="text-2xl cursor-pointer"
+                >
                   <FaUserCircle />
                 </Link>
               </li>
@@ -373,11 +375,16 @@ export default function Navigation() {
           <div className="md:hidden flex items-center space-x-4">
             <Link
               href="/investment"
+              onClick={handleLinkClick}
               className="bg-red-500 text-white text-sm py-2 px-2 rounded-md hover:bg-green-600 transition cursor-pointer"
             >
               Invest
             </Link>
-            <Link href="#profile" className="text-2xl cursor-pointer">
+            <Link
+              href="#profile"
+              onClick={handleLinkClick}
+              className="text-2xl cursor-pointer"
+            >
               <FaUserCircle />
             </Link>
             <button
@@ -391,27 +398,24 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Modal */}
-        {/* Mobile Modal */}
         {isMenuOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-70 z-40 flex flex-col items-center w-full justify-center">
             <ul
               ref={modalRef}
-              className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 space-y-4 z-50" // Increased z-index here
+              className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 space-y-4"
             >
-              {links.map((link, index) => (
+              {links.map((link) => (
                 <li
                   key={link.name}
                   className="border-b-2 ml-7 border-gray-300 last:border-b-0 py-2"
-                  style={{
-                    animation: `fadeInDown 0.5s ease-out ${index * 0.1}s both`,
-                  }}
                 >
                   <button
-                    onClick={() => toggleDropdown(link.name)}
+                    onClick={() => setIsMenuOpen(false)}
                     className="flex items-center justify-between w-full text-left text-black font-semibold transition-all duration-300 hover:bg-gray-200 hover:rounded-md px-2 py-1 cursor-pointer"
                   >
                     <Link
                       href={link.href}
+                      onClick={handleLinkClick} // Trigger spinner on link click
                       className="hover:text-gray-700 transition cursor-pointer"
                     >
                       {link.name}
@@ -426,17 +430,11 @@ export default function Navigation() {
                   </button>
                   {activeDropdown === link.name && link.subLinks && (
                     <ul className="mt-2 bg-gray-100 rounded-md">
-                      {link.subLinks.map((subLink, subIndex) => (
-                        <li
-                          key={subLink.name}
-                          style={{
-                            animation: `fadeInDown 0.5s ease-out ${
-                              index * 0.1 + 0.2 + subIndex * 0.1
-                            }s both`,
-                          }}
-                        >
+                      {link.subLinks.map((subLink) => (
+                        <li key={subLink.name}>
                           <Link
                             href={subLink.href}
+                            onClick={handleLinkClick}
                             className="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-300 hover:rounded-md cursor-pointer"
                           >
                             {subLink.name}
@@ -450,65 +448,6 @@ export default function Navigation() {
             </ul>
           </div>
         )}
-
-        {/* {isMenuOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-70 z-40 flex flex-col items-center w-full justify-center">
-            <ul
-              ref={modalRef}
-              className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 space-y-4"
-            >
-              {links.map((link, index) => (
-                <li
-                  key={link.name}
-                  className="border-b-2 ml-7 border-gray-300 last:border-b-0 py-2"
-                  style={{
-                    animation: `fadeInDown 0.5s ease-out ${index * 0.1}s both`,
-                  }}
-                >
-                  <button
-                    onClick={() => toggleDropdown(link.name)}
-                    className="flex items-center justify-between w-full text-left text-black font-semibold transition-all duration-300 hover:bg-gray-200 hover:rounded-md px-2 py-1 cursor-pointer"
-                  >
-                    <Link
-                      href={link.href}
-                      className="hover:text-gray-700 transition cursor-pointer"
-                    >
-                      {link.name}
-                    </Link>
-                    {link.subLinks && (
-                      <IoChevronDownSharp
-                        className={`ml-2 transition-transform ${
-                          activeDropdown === link.name ? "rotate-180" : ""
-                        }`}
-                      />
-                    )}
-                  </button>
-                  {activeDropdown === link.name && link.subLinks && (
-                    <ul className="mt-2 bg-gray-100 rounded-md">
-                      {link.subLinks.map((subLink, subIndex) => (
-                        <li
-                          key={subLink.name}
-                          style={{
-                            animation: `fadeInDown 0.5s ease-out ${
-                              index * 0.1 + 0.2 + subIndex * 0.1
-                            }s both`,
-                          }}
-                        >
-                          <Link
-                            href={subLink.href}
-                            className="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-300 hover:rounded-md cursor-pointer"
-                          >
-                            {subLink.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )} */}
       </nav>
     </>
   );

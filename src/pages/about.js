@@ -34,7 +34,7 @@ export default function About() {
             {/* ADD NAVIGATION HERE */}
             <Navigation />
 
-            <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white space-y-4">
+            <div className="relative h-full flex flex-col justify-center -ml-2 md:ml-0 md:mt-0 -mt-2 items-start pl-8 md:pl-16 text-white space-y-4">
               <h1 className="text-2xl md:text-6xl font-bold text-black mt-10">
                 About
                 <span className="text-2xl md:text-6xl text-red-800"> Us</span>
