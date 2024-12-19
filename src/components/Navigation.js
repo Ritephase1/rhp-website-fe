@@ -231,45 +231,22 @@
 // }
 "use client";
 
-import dynamic from "next/dynamic"; // Import dynamic from Next.js
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link"; // Import Link from Next.js
+import Link from "next/link";
 import Image from "next/image";
-
-// Lazy load the icons (optional to enhance performance)
-const FaChevronDownLazy = dynamic(
-  () => import("react-icons/fa").then((mod) => mod.FaChevronDown),
-  { ssr: false }
-);
-const FaTimesLazy = dynamic(
-  () => import("react-icons/fa").then((mod) => mod.FaTimes),
-  { ssr: false }
-);
-const FaBarsLazy = dynamic(
-  () => import("react-icons/fa").then((mod) => mod.FaBars),
-  { ssr: false }
-);
-const FaUserCircleLazy = dynamic(
-  () => import("react-icons/fa").then((mod) => mod.FaUserCircle),
-  { ssr: false }
-);
-const MdPhoneLazy = dynamic(
-  () => import("react-icons/md").then((mod) => mod.MdPhone),
-  { ssr: false }
-);
+import { IoChevronDownSharp } from "react-icons/io5";
+import { FaTimes, FaBars, FaUserCircle } from "react-icons/fa";
+import { MdPhone } from "react-icons/md";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [isLoading, setIsLoading] = useState(true); // State for loading
+  const [isLoading, setIsLoading] = useState(true);
   const modalRef = useRef();
 
   const links = [
     { name: "Home", href: "/" },
-    {
-      name: "About Us",
-      href: "/about",
-    },
+    { name: "About Us", href: "/about" },
     {
       name: "Projects",
       href: "#projects",
@@ -289,9 +266,8 @@ export default function Navigation() {
   };
 
   useEffect(() => {
-    // Simulate loading (you can replace this with actual loading logic)
     const timer = setTimeout(() => {
-      setIsLoading(false); // Set loading to false after 2 seconds
+      setIsLoading(false);
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -305,7 +281,7 @@ export default function Navigation() {
         </div>
       )}
 
-      <nav className="bg-white max-w-[90%] w-[90%] m-auto text-black sticky top-0 z-50 border-b shadow-lg border border-red-800 rounded-full">
+      <nav className="bg-white max-w-[90%] pb-[1rem] w-[90%] m-auto text-black sticky top-0 z-50 border-b shadow-lg border border-red-800 rounded-full">
         <div className="flex justify-between items-center px-6 py-2 max-w-screen-xl mx-auto">
           {/* Left Section - Logo */}
           <div>
@@ -330,7 +306,7 @@ export default function Navigation() {
                 </Link>
                 {link.subLinks && (
                   <>
-                    <FaChevronDownLazy className="ml-2 inline-block text-sm text-gray-500 group-hover:text-gray-700 transition" />
+                    <IoChevronDownSharp className="ml-2 inline-block text-sm text-gray-500 group-hover:text-gray-700 transition" />
                     <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md border w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
                       {link.subLinks.map((subLink) => (
                         <li key={subLink.name} className="hover:bg-gray-100">
@@ -353,7 +329,7 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-6">
             <ul className="flex items-center space-x-6 font-medium cursor-pointer">
               <li className="flex items-center space-x-2 cursor-pointer">
-                <MdPhoneLazy />
+                <MdPhone />
                 <span>+ 3490-2734</span>
               </li>
               <li>
@@ -366,7 +342,7 @@ export default function Navigation() {
               </li>
               <li>
                 <Link href="#profile" className="text-2xl cursor-pointer">
-                  <FaUserCircleLazy />
+                  <FaUserCircle />
                 </Link>
               </li>
             </ul>
@@ -381,14 +357,14 @@ export default function Navigation() {
               Invest
             </Link>
             <Link href="#profile" className="text-2xl cursor-pointer">
-              <FaUserCircleLazy />
+              <FaUserCircle />
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-2xl text-black cursor-pointer"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <FaTimesLazy /> : <FaBarsLazy />}
+              {isMenuOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
         </div>
@@ -405,7 +381,7 @@ export default function Navigation() {
                   key={link.name}
                   className="border-b-2 ml-7 border-gray-300 last:border-b-0 py-2"
                   style={{
-                    animation: `fadeInDown 0.5s ease-out ${index * 0.1}s both`, // Staggered animation
+                    animation: `fadeInDown 0.5s ease-out ${index * 0.1}s both`,
                   }}
                 >
                   <button
@@ -419,7 +395,7 @@ export default function Navigation() {
                       {link.name}
                     </Link>
                     {link.subLinks && (
-                      <FaChevronDownLazy
+                      <IoChevronDownSharp
                         className={`ml-2 transition-transform ${
                           activeDropdown === link.name ? "rotate-180" : ""
                         }`}
@@ -434,7 +410,7 @@ export default function Navigation() {
                           style={{
                             animation: `fadeInDown 0.5s ease-out ${
                               index * 0.1 + 0.2 + subIndex * 0.1
-                            }s both`, // Staggered sublink animation
+                            }s both`,
                           }}
                         >
                           <Link

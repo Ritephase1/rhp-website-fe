@@ -6,13 +6,13 @@ export default function AboutUs({ imageUrl }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[95%] mx-auto my-0">
         {/* Image Section */}
         <div className="md:px-5 md:py-2  p-2 bg-gray-200 rounded-lg text-left flex justify-center">
-          <div className="relative w-full h-full z-0">
+          <div className="relative w-full h-full">
             <Image
-              src="/images/agent.jpeg"
+              src={imageUrl}
               alt="RHP Logo"
               width={300} // Replace with actual width
               height={200} // Replace with actual height
-              style={{ marginTop: 10, zIndex: -1 }}
+              style={{ marginTop: 10 }}
               quality={100}
               // objectFit="cover"
               className="w-[100%] h-[auto] rounded-md "

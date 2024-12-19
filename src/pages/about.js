@@ -10,10 +10,8 @@ const AboutUs = lazy(() => import("../components/AboutUs"));
 const Footer = lazy(() => import("../components/Footer"));
 const Testimonial = lazy(() => import("../components/Testimonial"));
 const TrustedByBrands = lazy(() => import("../components/TrustedByBrands"));
-
 const WhyInvestWithUs = lazy(() => import("../components/WhyInvest"));
-
-import Navbar from "@/components/Navbar";
+const preferImage = "/images/agent.jpeg";
 import Navigation from "@/components/Navigation";
 
 export default function About() {
@@ -26,13 +24,6 @@ export default function About() {
           transform: "scaleX(-1)",
         }}
       >
-        {/* <div
-          className="absolute top-0 left-0 w-full z-10 mt-4"
-          style={{
-            transform: "scaleX(-1)",
-          }}
-        >   */}
-
         <section
           className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
           style={{
@@ -59,21 +50,18 @@ export default function About() {
       </div>
 
       <div>
-        {/* Lazy load the AboutUs component */}
-        <AboutUs imageUrl="/images/about2.png" />
-
-        {/* Suspense wrapper for MissionVision and Team components */}
+        <Suspense>
+          <AboutUs imageUrl={preferImage} />
+        </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
           <MissionVision />
         </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
           <Team />
         </Suspense>
-
         <Suspense fallback={<div>Loading...</div>}>
           <WhyInvestWithUs />
         </Suspense>
-
         <Suspense fallback={<div>Loading...</div>}>
           <Testimonial />
         </Suspense>
