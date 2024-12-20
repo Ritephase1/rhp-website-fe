@@ -1,9 +1,9 @@
 [
     {
       "id": 1,
-      "name": "Mercy Tolibabo",
+      "name": "Jordan Tolibabo",
       "occupation": "Engineer",
-      "imageSrc": "/images/team2.png",
+      "imageSrc": "/images/team1.png",
       "socialLinks": {
         "facebook": "https://facebook.com/mercy",
         "twitter": "https://twitter.com/mercy",
@@ -15,7 +15,7 @@
       "id": 2,
       "name": "John Doe",
       "occupation": "Developer",
-      "imageSrc": "/images/team3.png",
+      "imageSrc": "/images/team2.png",
       "socialLinks": {
         "facebook": "https://facebook.com/john",
         "twitter": "https://twitter.com/john",
@@ -28,7 +28,7 @@
       "id": 3,
       "name": "Angela Deo",
       "occupation": "Cheif   Executive Officer",
-      "imageSrc": "/images/team4.png",
+      "imageSrc": "/images/team3.png",
       "socialLinks": {
         "facebook": "https://facebook.com/john",
         "twitter": "https://twitter.com/john",
@@ -38,7 +38,7 @@
     },
     {
       "id": 3,
-      "name": "Angela Deo",
+      "name": "Martins Deo",
       "occupation": "Deputy Director",
       "imageSrc": "/images/team4.png",
       "socialLinks": {

@@ -53,7 +53,7 @@ export default function Team() {
                   rel="noopener noreferrer"
                   className="p-1 border border-gray-300 rounded-md"
                 >
-                  <FaFacebook className="text-black text-lg" />
+                  <FaFacebook className="text-white text-lg" />
                 </a>
                 <a
                   href={member.socialLinks.linkedin}
@@ -61,7 +61,7 @@ export default function Team() {
                   rel="noopener noreferrer"
                   className="p-1 border border-gray-300 rounded-md"
                 >
-                  <FaLinkedin className="text-black text-lg" />
+                  <FaLinkedin className="text-white text-lg" />
                 </a>
                 <a
                   href={member.socialLinks.twitter}
@@ -69,7 +69,7 @@ export default function Team() {
                   rel="noopener noreferrer"
                   className="p-1 border border-gray-300 rounded-md"
                 >
-                  <FaTwitter className="text-black text-lg" />
+                  <FaTwitter className="text-white text-lg" />
                 </a>
               </div>
             </div>
