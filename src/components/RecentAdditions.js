@@ -24,10 +24,9 @@ export default function RecentAdditions({ properties }) {
                 <Image
                   src={property.imageUrl}
                   alt={property.title}
-                  fill
-                  width={768}
-                  height={768}
-                  className="object-cover"
+                  layout="fill"
+                  objectFit="cover"
+                  className="object-cover h-full"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
