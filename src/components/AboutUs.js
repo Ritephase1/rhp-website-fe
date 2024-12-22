@@ -5,28 +5,25 @@ export default function AboutUs({ imageUrl }) {
     <section className="text-black bg-white text-center py-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[95%] mx-auto my-0">
         {/* Image Section */}
-        <div className="md:px-5 md:py-2  p-2 bg-gray-200 rounded-lg text-left flex justify-center">
-          {/* <div className="relative w-full h-full"> */}
+        <div className="md:px-5 md:py-2 p-2 bg-gray-200 rounded-lg text-left flex justify-center">
           <Image
             src={imageUrl}
             alt="RHP Logo"
-            width={300} // Replace with actual width
-            height={200} // Replace with actual height
-            style={{ marginTop: 10 }}
+            layout="responsive"
+            width={600}
+            height={300}
             quality={100}
-            objectFit="cover"
-            className="w-[100%] h-[auto] rounded-md "
+            className="rounded-md"
           />
-          {/* </div> */}
         </div>
 
         {/* Text Section */}
-        <div className="p-4 md:p-8 rounded-lg bg-white  text-left">
+        <div className="p-4 md:p-8 rounded-lg bg-white text-left">
           <h3 className="text-xl text-red-600 mb-4">About Us</h3>
           <h1 className="font-bold text-3xl mb-4">
             Rhino Properties & Homes Ltd.
           </h1>
-          <small className="block mb-6 text-md md:text-lg lg:text-xl text-black leading-relaxed text-justify  mx-auto">
+          <small className="block mb-6 text-md md:text-lg lg:text-xl text-black leading-relaxed text-justify mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

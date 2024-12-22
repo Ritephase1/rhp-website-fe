@@ -3,8 +3,6 @@
 import Navigation from "./Navigation";
 import Image from "next/image";
 import { FaSearch } from "react-icons/fa";
-// import { SearchIcon } from "@heroicons/react/24/solid";
-// import { BeakerIcon } from "@heroicons/react/24/solid";
 
 export default function Hero() {
   return (

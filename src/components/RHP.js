@@ -11,7 +11,7 @@ export default function RHP() {
             width={500} // Adjust width as needed, here set to 500px (replace with your preferred size)
             height={300} // Adjust height accordingly
             className="w-full sm:w-[100%] h-auto object-contain md:object-cover rounded-lg"
-            layout="intrinsic" // Maintains the aspect ratio of the image
+            // layout="intrinsic" // Maintains the aspect ratio of the image
           />
         </div>
 

@@ -4,7 +4,6 @@ import { VscAccount } from "react-icons/vsc";
 import Image from "next/image"; // Import Image from next/image
 import Link from "next/link"; // Import Link from next/link
 import { FaUser, FaBars } from "react-icons/fa"; // Import icons from react-icons
-// import Link from "next/link"; // Import Link component from next/link
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

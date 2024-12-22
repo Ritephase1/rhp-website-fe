@@ -51,7 +51,7 @@ export default function About() {
 
       <div>
         <Suspense>
-          <AboutUs imageUrl="/images/agent.jpeg" />
+          <AboutUs imageUrl="/images/singleAgent.png" />
         </Suspense>
         <Suspense fallback={<div>Loading...</div>}>
           <MissionVision />
