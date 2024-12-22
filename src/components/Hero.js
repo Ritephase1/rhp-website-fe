@@ -49,11 +49,10 @@ export default function Hero() {
       {/* Image Section */}
       <div className="flex flex-wrap justify-center gap-8 mt-10">
         {/* Commercial Image */}
-        <div className="flex-1 max-w-[150px] text-center">
+        <div className="flex-1 max-w-[150px] text-center ">
           <Image
-            src="/icons/commercial.png"
-            alt="commercial button"
-            // layout="intrinsic"
+            src="/icons/commerce.png"
+            alt="commerce button"
             width={120}
             height={120}
             className="rounded-lg"
@@ -65,7 +64,7 @@ export default function Hero() {
           <Image
             src="/icons/residential.png"
             alt="residential button"
-            // layout="intrinsic"
+            layout="intrinsic"
             width={120}
             height={120}
             className="rounded-lg"

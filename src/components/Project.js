@@ -52,11 +52,8 @@ export default function Projects() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={60}
-                  height={60}
-                  // width={}
-                  // layout="fill"
-                  // objectFit="cover"
+                  layout="fill"
+                  objectFit="cover"
                   quality={100} // Ensures clear images
                   className="brightness-110"
                 />
