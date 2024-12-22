@@ -67,7 +67,7 @@ export default function Navigation() {
       )}
 
       <nav className="bg-white max-w-[90%] md:py-[1rem] w-[90%] m-auto text-black sticky top-0 z-50 border-b shadow-lg border border-red-800 rounded-full">
-        <div className="flex justify-between items-center px-6 py-2 max-w-screen-xl mx-auto  ">
+        <div className="flex justify-between items-center px-6 py-2 max-w-screen-xl mx-auto">
           {/* Left Section - Logo */}
           <div>
             <Image
@@ -80,7 +80,7 @@ export default function Navigation() {
           </div>
 
           {/* Center Section - Desktop Links */}
-          <ul className="hidden  md:flex items-center justify-center space-x-6 font-medium">
+          <ul className="hidden lg:flex items-center justify-center space-x-6 font-medium">
             {links.map((link) => (
               <li key={link.name} className="relative group">
                 <Link
@@ -113,7 +113,7 @@ export default function Navigation() {
           </ul>
 
           {/* Right Section - Phone Number, Invest Button, and User Icon */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6">
             <ul className="flex items-center space-x-6 font-medium cursor-pointer">
               <li className="flex items-center space-x-2 cursor-pointer">
                 <MdPhone />
@@ -141,7 +141,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="lg:hidden flex items-center space-x-4">
             <Link
               href="/investment"
               onClick={handleLinkClick}
@@ -227,6 +227,17 @@ export default function Navigation() {
           </div>
         )}
       </nav>
+
+      <style jsx>{`
+        @media (max-width: 1024px) {
+          .lg\\:hidden {
+            display: flex !important;
+          }
+          .lg\\:flex {
+            display: none !important;
+          }
+        }
+      `}</style>
     </>
   );
 }
