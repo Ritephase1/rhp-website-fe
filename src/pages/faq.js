@@ -80,7 +80,9 @@ function ExpandableItem({ index, question, answer, expanded, toggleAnswer }) {
         transition={{ duration: 1, delay: 0.3 * index }}
       >
         <span>{question}</span>
-        <span className="text-xl font-bold">{expanded ? "−" : "+"}</span>
+        {question && (
+          <span className="text-xl font-bold">{expanded ? "−" : "+"}</span>
+        )}
       </motion.h2>
 
       {/* Answer */}
@@ -99,6 +101,9 @@ function ExpandableItem({ index, question, answer, expanded, toggleAnswer }) {
 }
 
 const faqData = [
+  { question: "", answer: "" },
+  { question: "", answer: "" },
+  { question: "", answer: "" },
   { question: "", answer: "" },
   {
     question: "What does Rhino Homes and Properties Ltd specialize in?",
