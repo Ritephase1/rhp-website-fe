@@ -1,5 +1,6 @@
-// pages/investment.js
+"use client";
 import { lazy, Suspense } from "react";
+import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 import PropertyCategory from "@/components/PropertyCategory";
 import RecentAdditions from "@/components/RecentAdditions";
@@ -8,6 +9,7 @@ import WhyInvestWithUs from "@/components/WhyInvest";
 const TrustedByBrands = lazy(() => import("../components/TrustedByBrands"));
 import "../styles/globals.css";
 import Navigation from "@/components/Navigation";
+
 export default function Investment() {
   const recentAdditionProperties = [
     {
@@ -52,41 +54,111 @@ export default function Investment() {
     <div
       style={{
         backgroundColor: "#ffcccc", // Light red color
-        height: "100vh", // Full viewport height
+        overflowX: "hidden", // Prevent horizontal overflow
         width: "100%", // Full width
       }}
     >
-      <div
+      {/* Hero Section with Scroll Animation */}
+      <motion.div
         className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/images//investment.jpeg')",
         }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#000000D1] to-[#C4C4C400]" />
-
         <section className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center">
           <div className="absolute top-0 left-0 w-full z-10 mt-4">
-            {/* ADD NAVIGATION HERE */}
             <Navigation />
-
-            <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white mt-10 md:mt-60 space-y-4 ">
-              <h1 className="text-2xl md:text-6xl font-bold">Investment</h1>
-              <p className="text-sm md:text-lg  max-w-[60%] md:max-w-xl border-l-4 border-red-500 text-left pl-4">
+            <motion.div
+              className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white mt-10 md:mt-60 space-y-4 "
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              {/* Hero Text Section */}
+              <motion.h1
+                className="text-2xl md:text-6xl font-bold"
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
+                Investment
+              </motion.h1>
+              <motion.p
+                className="text-sm md:text-lg max-w-[60%] md:max-w-xl border-l-4 border-red-500 text-left pl-4"
+                initial={{ x: 100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
                 Discover lucrative investment opportunities with Rhino Homes and
                 Properties Ltd, your trusted partner in real estate.
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           </div>
         </section>
-      </div>
-      <WhyInvestWithUs />
-      <PropertyCategory />
-      <RecentAdditions properties={recentAdditionProperties} />
-      <SignupCard />
+      </motion.div>
+
+      {/* Why Invest Section with Scroll-Based Animation */}
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <WhyInvestWithUs />
+      </motion.div>
+
+      {/* Property Categories Section with Scroll-Based Animation */}
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <PropertyCategory />
+      </motion.div>
+
+      {/* Recent Additions Section with Scroll-Based Animation */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <RecentAdditions properties={recentAdditionProperties} />
+      </motion.div>
+
+      {/* Signup Card Section with Scroll-Based Animation */}
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <SignupCard />
+      </motion.div>
+
+      {/* Trusted By Brands Section with Scroll-Based Animation */}
       <Suspense fallback={<div>Loading...</div>}>
-        <TrustedByBrands />
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 1,
+            staggerChildren: 0.3,
+          }}
+        >
+          <TrustedByBrands />
+        </motion.div>
       </Suspense>
-      <Footer />
+
+      {/* Footer Section with Scroll-Based Animation */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Footer />
+      </motion.div>
     </div>
   );
 }
