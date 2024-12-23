@@ -26,7 +26,7 @@ export default function Agent() {
   };
 
   return (
-    <section className="bg-red-400">
+    <section className="bg-red-400 overflow-hidden">
       {/* /* Hero Section */}
       <div
         className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
@@ -38,7 +38,7 @@ export default function Agent() {
         <div className="absolute inset-0 bg-gradient-to-r to-[#D02A1AD1] from-[#7D1910F7]" />
 
         <section
-          className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
+          className="relative flex flex-col items-center justify-center text-center bg-cover bg-center min-h-screen"
           style={{
             transform: "scaleX(-1)",
           }}
