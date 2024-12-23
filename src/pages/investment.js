@@ -60,7 +60,7 @@ export default function Investment() {
     >
       {/* Hero Section with Scroll Animation */}
       <motion.div
-        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
+        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat hero-bg"
         style={{
           backgroundImage: "url('/images//investment.jpeg')",
         }}

@@ -20,12 +20,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-/* THE STYLE FOR THE ANIMATION FOR THE PROJECT COMPONENT */
-
-
-/* Animation for sliding in from the right */
 @keyframes slideIn {
   from {
     transform: translateX(100%);
@@ -64,17 +58,14 @@ html, body{
   border-radius: 15px;
   text-align: center;
   width: 100%;
-  max-width: 400px; /* Increase card size */
   margin: auto;
-  animation: slideIn 1.5s ease-in-out; /* Apply animation */
+  animation: slideIn 1.5s ease-in-out; 
 }
-
 .project-card img {
   border-radius: 10px;
 }
 
 .project-card:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
   transition: transform 0.3s ease-in-out;
 }
 
@@ -108,7 +99,7 @@ html, body{
 
 @media (max-width: 768px) {
   .modal-container {
-    z-index: 9999; /* Make sure modal is always above other elements */
+    z-index: 9999; 
     position: fixed;
     top: 0;
     left: 0;

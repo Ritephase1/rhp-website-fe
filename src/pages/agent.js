@@ -29,7 +29,7 @@ export default function Agent() {
     <section className="bg-red-400 overflow-hidden">
       {/* /* Hero Section */}
       <div
-        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
+        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat hero-bg "
         style={{
           backgroundImage: "url('/images/agent.jpeg')",
           transform: "scaleX(-1)",

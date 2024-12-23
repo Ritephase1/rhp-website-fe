@@ -46,3 +46,143 @@
     }
   }
   
+
+  /* globals.css */
+/* Custom background for hero section */
+.hero-bg {
+  background-image: url('/images/about_image.png');
+  /* transform: scaleX(-1); */
+}
+
+/* Portrait Mode: Custom styles for portrait orientation */
+@media (orientation: portrait) {
+  /* Adjust the hero section height */
+  .hero-bg {
+    height: 50vh;
+  }
+
+  /* Adjust text sizes for small screens */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Make sure the paragraph in hero section stays readable */
+  .hero-text {
+    font-size: 1rem;
+  }
+}
+
+
+/* Add media query for landscape orientation */
+@media (orientation: landscape) {
+  /* Style for the navigation when on landscape */
+
+  nav.landscape-nav {
+    padding: 0px;
+    margin-top: 3px;
+  }
+
+/* For the hero element on all the pages */
+  .hero-bg {
+    height: 100vh !important; /* Ensure it still covers the viewport height */
+  }
+
+.inner-section{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.landscape-mobile-nav-right {
+  display: flex; /* or grid if you're using a grid layout */
+  justify-content: space-between; /* Adjust as needed */
+  align-items: center; /* Align items vertically if needed */
+  gap: 1rem; 
+  margin-right: 10px;
+}
+
+/* ABOUT US PAGE */
+.hero-container{
+  margin-top: 15px !important;
+}
+
+.hero-text{
+  font-size: 1.2rem !important;
+  font-weight: bold;
+  border-left: 3px solid red;
+  padding-left: 5px;
+  color: #fff;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.span-text{
+  font-size: 1.2rem !important;
+  font-weight: bold;
+  color: red;
+  margin-left: 5px;
+}
+
+.p-text{
+  padding: 3px !important;
+  font-size: 1rem !important;
+  padding-left: 5px !important;
+
+}
+
+
+/* ABOUT US COMPONENT */
+.landscape-about-us-container {
+  padding: 2rem 1rem;
+}
+
+.landscape-about-us-container .grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.landscape-about-us-container .grid > div {
+  padding: 1rem;
+}
+
+.landscape-about-us-container h3 {
+  font-size: 1.2rem;
+}
+
+.landscape-about-us-container h1 {
+  font-size: 2rem;
+}
+
+.landscape-about-us-container small {
+  font-size: 0.9rem;
+}
+}
+
+/* Further responsiveness for smaller landscape devices */
+@media (orientation: landscape) and (max-width: 480px) {
+.landscape-about-us-container {
+  padding: 1rem;
+}
+
+.landscape-about-us-container .grid {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.landscape-about-us-container h3 {
+  font-size: 1rem;
+}
+
+.landscape-about-us-container h1 {
+  font-size: 1.5rem;
+}
+
+.landscape-about-us-container small {
+  font-size: 0.8rem;
+}
+
+.landscape-about-us-container button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+}

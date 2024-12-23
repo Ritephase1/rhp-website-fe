@@ -16,7 +16,7 @@ export default function FAQ() {
     <section>
       {/* Hero Section */}
       <motion.div
-        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
+        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat hero-bg "
         style={{ backgroundImage: "url('/images/faq.png')" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

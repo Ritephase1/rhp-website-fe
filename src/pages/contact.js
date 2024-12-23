@@ -18,7 +18,7 @@ const ContactPage = () => {
     <div className="w-full">
       {/* Hero Section */}
       <div
-        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
+        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat  hero-bg "
         style={{
           backgroundImage: "url('/images/contactBg.jpeg')",
         }}
