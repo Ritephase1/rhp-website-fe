@@ -14,10 +14,10 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative text-white px-6 py-10 md:py-16"
-      style={{
-        backgroundColor: "#0A1229", // Footer background color
-      }}
+      className="relative text-white px-6 py-10 md:py-16 bg-[#050914]"
+      // style={{
+      //   backgroundColor: "#0A1229", // Footer background color
+      // }}
     >
       {/* Background Image Overlay */}
       <div
@@ -130,7 +130,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="relative bg-[#0A1229] border-t border-[#7C7878]">
+      <div className="relative  border-t border-[#7C7878]">
         {/* Footer Content */}
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left mt-10 py-4">
           {/* Logo */}
