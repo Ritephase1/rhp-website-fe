@@ -80,7 +80,7 @@ export default function Navigation() {
           </div>
 
           {/* Center Section - Desktop Links */}
-          <ul className="hidden lg:flex items-center justify-center space-x-6 font-medium">
+          <ul className="hidden lg:flex items-center justify-center space-x-4 font-medium">
             {links.map((link) => (
               <li key={link.name} className="relative group">
                 <Link
@@ -113,8 +113,8 @@ export default function Navigation() {
           </ul>
 
           {/* Right Section - Phone Number, Invest Button, and User Icon */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <ul className="flex items-center space-x-6 font-medium cursor-pointer">
+          <div className="hidden lg:flex items-center space-x-4">
+            <ul className="flex items-center space-x-4 font-medium cursor-pointer">
               <li className="flex items-center space-x-2 cursor-pointer">
                 <MdPhone />
                 <span>+ 3490-2734</span>
@@ -141,7 +141,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="lg:hidden flex items-center space-x-4">
+          <div className="lg:hidden flex items-center space-x-2">
             <Link
               href="/investment"
               onClick={handleLinkClick}
@@ -165,71 +165,83 @@ export default function Navigation() {
             </button>
           </div>
         </div>
+
         {/* Mobile Modal */}
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-70 z-40 flex flex-col items-center w-full justify-center">
-            <ul
+          <div className="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center overflow-hidden">
+            <div
               ref={modalRef}
-              className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 space-y-4"
+              className="bg-white rounded-lg shadow-lg w-full max-w-md p-6 space-y-2 relative flex flex-col justify-center"
             >
-              {links.map((link, index) => (
-                <li
-                  key={link.name}
-                  className="border-b-2 ml-7 border-gray-300 last:border-b-0 py-2"
-                  style={{
-                    animation: `slideInDown 0.5s ease-out ${index * 0.1}s both`, // Slide in with staggered delay
-                  }}
-                >
-                  <button
-                    onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center justify-between w-full text-left text-black font-semibold transition-all duration-300 hover:bg-gray-200 hover:rounded-md px-2 py-1 cursor-pointer"
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="absolute top-4 right-4 text-2xl text-black cursor-pointer"
+                aria-label="Close menu"
+              >
+                <FaTimes />
+              </button>
+              <ul className="flex flex-col items-center justify-center space-y-2">
+                {links.map((link, index) => (
+                  <li
+                    key={link.name}
+                    className="border-b-2 border-gray-300 last:border-b-0 py-2 w-full text-center"
+                    style={{
+                      animation: `slideInDown 0.5s ease-out ${
+                        index * 0.1
+                      }s both`, // Slide in with staggered delay
+                    }}
                   >
-                    <Link
-                      href={link.href}
-                      onClick={handleLinkClick} // Trigger spinner on link click
-                      className="hover:text-gray-700 transition cursor-pointer"
+                    <button
+                      onClick={() => setIsMenuOpen(false)}
+                      className="flex items-center justify-between w-full text-left text-black font-semibold transition-all duration-300 hover:bg-gray-200 hover:rounded-md px-2 py-1 cursor-pointer"
                     >
-                      {link.name}
-                    </Link>
-                    {link.subLinks && (
-                      <IoChevronDownSharp
-                        className={`ml-2 transition-transform ${
-                          activeDropdown === link.name ? "rotate-180" : ""
-                        }`}
-                      />
-                    )}
-                  </button>
-                  {activeDropdown === link.name && link.subLinks && (
-                    <ul className="mt-2 bg-gray-100 rounded-md">
-                      {link.subLinks.map((subLink, subIndex) => (
-                        <li
-                          key={subLink.name}
-                          style={{
-                            animation: `slideInDown 0.5s ease-out ${
-                              index * 0.1 + 0.2 + subIndex * 0.1
-                            }s both`, // Add delay for sub-links
-                          }}
-                        >
-                          <Link
-                            href={subLink.href}
-                            onClick={handleLinkClick}
-                            className="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-300 hover:rounded-md cursor-pointer"
+                      <Link
+                        href={link.href}
+                        onClick={handleLinkClick} // Trigger spinner on link click
+                        className="hover:text-gray-700 transition cursor-pointer"
+                      >
+                        {link.name}
+                      </Link>
+                      {link.subLinks && (
+                        <IoChevronDownSharp
+                          className={`ml-2 transition-transform ${
+                            activeDropdown === link.name ? "rotate-180" : ""
+                          }`}
+                        />
+                      )}
+                    </button>
+                    {activeDropdown === link.name && link.subLinks && (
+                      <ul className="mt-2 bg-gray-100 rounded-md">
+                        {link.subLinks.map((subLink, subIndex) => (
+                          <li
+                            key={subLink.name}
+                            style={{
+                              animation: `slideInDown 0.5s ease-out ${
+                                index * 0.1 + 0.2 + subIndex * 0.1
+                              }s both`, // Add delay for sub-links
+                            }}
                           >
-                            {subLink.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </ul>
+                            <Link
+                              href={subLink.href}
+                              onClick={handleLinkClick}
+                              className="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-300 hover:rounded-md cursor-pointer"
+                            >
+                              {subLink.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         )}
       </nav>
 
       <style jsx>{`
-        @media (max-width: 1024px) {
+        @media (max-width: 1024px), (orientation: landscape) {
           .lg\\:hidden {
             display: flex !important;
           }
