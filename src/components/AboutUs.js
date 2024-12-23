@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutUs({ imageUrl }) {
   return (
-    <section className="text-black bg-white text-center py-12">
+    <section className="text-black bg-white text-center py-12 landscape-about-us-container">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[95%] mx-auto my-0">
         <div className="md:px-5 md:py-2 p-2 bg-gray-200 rounded-lg text-left flex justify-center">
           <Image
