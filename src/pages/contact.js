@@ -11,49 +11,58 @@ import {
 } from "react-icons/fa";
 import "../styles/globals.css";
 import Navigation from "@/components/Navigation";
+import { motion } from "framer-motion";
 
 const ContactPage = () => {
   return (
     <div className="w-full">
+      {/* Hero Section */}
       <div
         className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/images/contactBg.jpeg')",
-          // transform: "scaleX(-1)",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#000000D1] to-[#C4C4C400]" />
 
-        <section
-          className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center"
-          style={
-            {
-              // transform: "scaleX(-1)",
-            }
-          }
-        >
+        <section className="relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center">
           <div className="absolute top-0 left-0 w-full z-10 mt-4">
-            {/* ADD NAVIGATION HERE */}
+            {/* Add Navigation here */}
             <Navigation />
 
-            <div className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white mt-20 md:mt-60 space-y-4 ">
+            <motion.div
+              className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white mt-20 md:mt-60 space-y-4"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
               <h1 className="text-2xl md:text-6xl font-bold">Contact Us</h1>
-              <p className="text-sm md:text-lg  max-w-[60%] md:max-w-xl border-l-4 border-red-500 text-left pl-4">
+              <p className="text-sm md:text-lg max-w-[60%] md:max-w-xl border-l-4 border-red-500 text-left pl-4">
                 Etiam scelerisque tortor at lectus dapibus, nec fermentum diam
                 feugiat. Morbi rutrum magna et dui.
               </p>
-            </div>
+            </motion.div>
           </div>
         </section>
       </div>
-      <div className="md:text-2xl text-lg font-bold text-red-800  border-b-4 border-red-800 max-w-[30%] md:w-[20%] m-auto text-center mt-5 py-5">
+
+      <motion.div
+        className="md:text-2xl text-lg font-bold text-red-800 border-b-4 border-red-800 max-w-[30%] md:w-[20%] m-auto text-center mt-5 py-5"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+      >
         Get In Touch
-      </div>
+      </motion.div>
 
       {/* Contact Section */}
       <div className="container my-7 mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-8 shadow-lg">
         {/* Contact Form */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.6, duration: 1 }}
+        >
           <h2 className="text-2xl font-semibold mb-6">Leave us a message</h2>
           <form className="space-y-4">
             <div>
@@ -105,10 +114,15 @@ const ContactPage = () => {
               Send Message
             </button>
           </form>
-        </div>
+        </motion.div>
 
         {/* Contact Info */}
-        <div className="space-y-8">
+        <motion.div
+          className="space-y-8"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.7, duration: 1 }}
+        >
           <div>
             <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
             <p className="text-gray-700">
@@ -146,8 +160,9 @@ const ContactPage = () => {
           <div className="w-full h-40 bg-gray-200 rounded-md">
             <p className="text-center text-gray-600">Google Maps Placeholder</p>
           </div>
-        </div>
+        </motion.div>
       </div>
+
       <Footer />
     </div>
   );
