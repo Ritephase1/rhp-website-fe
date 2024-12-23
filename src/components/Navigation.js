@@ -66,7 +66,7 @@ export default function Navigation() {
         </div>
       )}
 
-      <nav className="bg-white max-w-[90%] md:py-[1rem] w-[90%] m-auto text-black sticky top-0 z-50 border-b shadow-lg border border-red-800 rounded-full">
+      <nav className="bg-white max-w-[90%] md:py-[1rem] w-[90%] m-auto text-black sticky top-0 z-50 border-b shadow-lg border border-red-800 rounded-full landscape-nav ">
         <div className="flex justify-between items-center px-6 py-2 max-w-screen-xl mx-auto">
           {/* Left Section - Logo */}
           <div>
@@ -75,7 +75,7 @@ export default function Navigation() {
               alt="Real Estate Logo"
               width={60}
               height={60}
-              className="h-10 object-contain"
+              className="h-10 object-contain nav-img"
             />
           </div>
 
@@ -113,7 +113,7 @@ export default function Navigation() {
           </ul>
 
           {/* Right Section - Phone Number, Invest Button, and User Icon */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4 ">
             <ul className="flex items-center space-x-4 font-medium cursor-pointer">
               <li className="flex items-center space-x-2 cursor-pointer">
                 <MdPhone />
@@ -141,7 +141,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="lg:hidden flex items-center space-x-2">
+          <div className="lg:hidden flex items-center space-x-2 landscape-mobile-nav-right">
             <Link
               href="/investment"
               onClick={handleLinkClick}
