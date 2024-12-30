@@ -62,7 +62,7 @@ export default function Hero() {
         {/* Residential Image */}
         <div className="flex-1 max-w-[150px] text-center">
           <Image
-            src="/icons/residential.png"
+            src="/icons/resident.png"
             alt="residential button"
             layout="intrinsic"
             width={120}
