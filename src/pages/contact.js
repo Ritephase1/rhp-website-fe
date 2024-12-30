@@ -18,7 +18,7 @@ const ContactPage = () => {
     <div className="w-full">
       {/* Hero Section */}
       <div
-        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat  hero-bg "
+        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat hero-bg"
         style={{
           backgroundImage: "url('/images/contactBg.jpeg')",
         }}
@@ -31,13 +31,15 @@ const ContactPage = () => {
             <Navigation />
 
             <motion.div
-              className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white mt-20 md:mt-60 space-y-4"
+              className="relative h-full flex flex-col justify-center items-start pl-4 sm:pl-8 md:pl-16 text-white mt-10 sm:mt-20 md:mt-40 space-y-2 sm:space-y-4"
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <h1 className="text-2xl md:text-6xl font-bold">Contact Us</h1>
-              <p className="text-sm md:text-lg max-w-[60%] md:max-w-xl border-l-4 border-red-500 text-left pl-4">
+              <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold">
+                Contact Us
+              </h1>
+              <p className="text-xs sm:text-sm md:text-lg max-w-[80%] sm:max-w-[60%] md:max-w-xl border-l-4 border-red-500 text-left pl-2 sm:pl-4">
                 Etiam scelerisque tortor at lectus dapibus, nec fermentum diam
                 feugiat. Morbi rutrum magna et dui.
               </p>
@@ -47,7 +49,7 @@ const ContactPage = () => {
       </div>
 
       <motion.div
-        className="md:text-2xl text-lg font-bold text-red-800 border-b-4 border-red-800 max-w-[30%] md:w-[20%] m-auto text-center mt-5 py-5"
+        className="text-lg sm:text-xl md:text-2xl font-bold text-red-800 border-b-4 border-red-800 max-w-[80%] sm:max-w-[50%] md:max-w-[30%] lg:w-[20%] m-auto text-center mt-5 py-3 sm:py-5"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
@@ -56,14 +58,16 @@ const ContactPage = () => {
       </motion.div>
 
       {/* Contact Section */}
-      <div className="container my-7 mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-8 shadow-lg">
+      <div className="container my-7 mx-auto px-4 py-10 sm:py-20 grid grid-cols-1 lg:grid-cols-2 gap-8 shadow-lg">
         {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.6, duration: 1 }}
         >
-          <h2 className="text-2xl font-semibold mb-6">Leave us a message</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
+            Leave us a message
+          </h2>
           <form className="space-y-4">
             <div>
               <label
@@ -75,7 +79,7 @@ const ContactPage = () => {
               <input
                 type="text"
                 id="name"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full p-2 sm:p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                 placeholder="Your Name"
               />
             </div>
@@ -89,7 +93,7 @@ const ContactPage = () => {
               <input
                 type="email"
                 id="email"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full p-2 sm:p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                 placeholder="Your Email"
               />
             </div>
@@ -103,13 +107,13 @@ const ContactPage = () => {
               <textarea
                 id="message"
                 rows="4"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full p-2 sm:p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                 placeholder="Your Message"
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-red-600 text-white py-3 rounded-md hover:bg-red-700 transition"
+              className="w-full bg-red-600 text-white py-2 sm:py-3 rounded-md hover:bg-red-700 transition"
             >
               Send Message
             </button>
@@ -118,13 +122,15 @@ const ContactPage = () => {
 
         {/* Contact Info */}
         <motion.div
-          className="space-y-8"
+          className="space-y-4 sm:space-y-8"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.7, duration: 1 }}
         >
           <div>
-            <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4">
+              Contact Information
+            </h2>
             <p className="text-gray-700">
               Feel free to reach out to us through the following channels:
             </p>
@@ -157,7 +163,7 @@ const ContactPage = () => {
             </a>
           </div>
           {/* Google Map Placeholder */}
-          <div className="w-full h-40 bg-gray-200 rounded-md">
+          <div className="w-full h-32 sm:h-40 bg-gray-200 rounded-md">
             <p className="text-center text-gray-600">Google Maps Placeholder</p>
           </div>
         </motion.div>
