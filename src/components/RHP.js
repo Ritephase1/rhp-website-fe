@@ -11,17 +11,18 @@ export default function RHP() {
             width={500} // Adjust width as needed, here set to 500px (replace with your preferred size)
             height={300} // Adjust height accordingly
             className="w-full sm:w-[100%] h-auto object-contain md:object-cover rounded-lg"
-            // layout="intrinsic" // Maintains the aspect ratio of the image
           />
         </div>
 
         {/* Text Section */}
         <div className="px-5 py-2 rounded-lg bg-white text-left">
-          <h3 className="text-md md:text-xl font-bold text-red-600 mb-4">
+          <h3 className="text-sm sm:text-md md:text-xl font-bold text-red-600 mb-4">
             RHP AGENT
           </h3>
-          <h1 className="font-bold text-3xl mb-4">Who is an RHP agent</h1>
-          <small className="block text-black bg-white mb-6 text-md md:text-xl leading-relaxed mx-auto text-justify">
+          <h1 className="font-bold text-2xl sm:text-3xl mb-4">
+            Who is an RHP agent
+          </h1>
+          <small className="block text-sm sm:text-md md:text-xl text-black bg-white mb-6 leading-relaxed mx-auto text-justify">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

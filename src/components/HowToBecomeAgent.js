@@ -1,7 +1,6 @@
 import React from "react";
-// Importation of icons
 import Image from "next/image";
-import { MdCoPresent } from "react-icons/md";
+
 const HowToBecome = () => {
   const points = [
     {
@@ -14,7 +13,6 @@ const HowToBecome = () => {
     {
       sn: 2,
       img: "/icons/brownSquare.png",
-      // img: "/icons/mission.png",
       title: "Comprehensive Training and Development",
       description:
         "Access to detailed training programs, including sales techniques, real estate market insights, and negotiation skills, to enhance professional growth.",
@@ -61,19 +59,6 @@ const HowToBecome = () => {
       description:
         "Agents get early or exclusive access to prime properties, enhancing their ability to serve high-value clients.",
     },
-    // {
-    //   sn: 9,
-    //   img: "/icons/poduim.png",
-    //   title: "Technology and Tools",
-    //   description:
-    //     "Utilize cutting-edge tools and software provided by Rhino Homes to manage leads, track sales, and improve customer experiences.",
-    // },
-    // {
-    //   sn: 10,
-    //   title: "Supportive Team Environment",
-    //   description:
-    //     "Work with a collaborative and supportive team dedicated to helping agents succeed in their roles.",
-    // },
   ];
 
   return (
@@ -86,34 +71,25 @@ const HowToBecome = () => {
           To become an agent with Rhino Homes and Properties, follow these
           steps:
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6  ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {points.map((point, index) => (
             <div
               key={index}
-              className="group border-gray-300 p-6 bg-white shadow hover:shadow-md transition border-red-800 shadow-xl border-b-4 hover:border-white hover:bg-[#7D1910F7]"
+              className="group border-gray-300 p-4 sm:p-6 bg-white shadow hover:shadow-md transition border-red-800 shadow-xl border-b-4 hover:border-white hover:bg-[#7D1910F7]"
             >
-              <div className="grid grid-cols-3 items-center ">
-                {/* Icon aligned to the left */}
-                <div className="flex justify-start sm:w-3/4 md:w-3/4 w-3/4 lg:w-3/4 xl:w-3/4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 items-center gap-4">
+                <div className="flex justify-center sm:justify-start">
                   <Image
                     src={point.img}
                     alt="RHP Logo"
-                    width={300}
-                    height={200}
+                    width={150} // Reduced width for mobile and tablet
+                    height={100} // Reduced height for mobile and tablet
                     quality={100}
-                    className="
-      w-full 
-      h-auto 
-      max-w-[300px] 
-      rounded-md 
-      group-hover:text-white
-    "
+                    className="w-full h-auto max-w-[150px] sm:max-w-[300px] rounded-md group-hover:text-white"
                   />
                 </div>
-
-                {/* Content spanning two columns */}
-                <div className=" col-span-2 flex flex-col justify-end p-4 gap-4 text-left">
-                  <div className="flex justify-between items-center gap-4">
+                <div className="col-span-2 flex flex-col justify-end p-2 sm:p-4 gap-2 sm:gap-4 text-left">
+                  <div className="flex justify-between items-center gap-2 sm:gap-4">
                     <h3 className="md:text-xl text-lg font-semibold text-gray-800 md:mb-2 mb-0 group-hover:text-white">
                       {point.title}
                     </h3>

@@ -27,9 +27,9 @@ export default function Agent() {
 
   return (
     <section className="bg-red-400 overflow-hidden">
-      {/* /* Hero Section */}
+      {/* Hero Section */}
       <div
-        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat hero-bg "
+        className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat hero-bg"
         style={{
           backgroundImage: "url('/images/agent.jpeg')",
           transform: "scaleX(-1)",
@@ -43,21 +43,21 @@ export default function Agent() {
             transform: "scaleX(-1)",
           }}
         >
-          <div className="absolute top-0 left-0 w-full z-10 mt-4">
+          <div className="absolute top-0 left-0 w-full z-10 mt-4 inner-section">
             <Navigation />
 
             <motion.div
-              className="relative h-full flex flex-col justify-center items-start px-4 md:px-16 text-white space-y-4"
+              className="relative h-full flex flex-col justify-center items-start px-4 md:px-8 lg:px-16 text-white space-y-4 hero-container"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.2 }}
               variants={slideFromLeft}
             >
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-10 md:mt-40">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-10 md:mt-20 lg:mt-40 hero-text">
                 Agent
               </h1>
               <motion.p
-                className="text-sm sm:text-base md:text-lg lg:text-xl text-white text-left font-bold p-4 md:p-6 lg:p-8 shadow-lg max-w-sm md:max-w-xl opacity-90 border-l-4 border-white pl-4"
+                className="text-sm sm:text-base md:text-lg lg:text-xl text-white text-left md: font-bold p-4 md:p-6 lg:p-8 shadow-lg max-w-sm md:max-w-xl opacity-90 border-l-4 border-white pl-4"
                 variants={fadeIn}
               >
                 We build luxury and affordable homes for our clients at
@@ -68,7 +68,7 @@ export default function Agent() {
           </div>
         </section>
       </div>
-      {/* /* Content Sections */}
+      {/* Content Sections */}
       <motion.div
         initial="hidden"
         whileInView="visible"
