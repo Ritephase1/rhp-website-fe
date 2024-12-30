@@ -57,23 +57,25 @@ const WhyBecomeAgent = () => {
   return (
     <section className="py-12 bg-gray-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-md md:text-xl font-bold text-center mb-8 text-red-800">
+        <h2 className="text-lg md:text-2xl font-bold text-center mb-8 text-red-800">
           Why Become an Agent
         </h2>
         <h1 className="font-bold text-xl md:text-3xl text-center text-black pb-8">
           Benefits of becoming an RHP agent
         </h1>
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {points.map((point, index) => (
-            <ol
+            <div
               key={index}
-              className="border border-gray-300 rounded-lg p-6 bg-white shadow hover:shadow-md my-4 transition"
+              className="border border-gray-300 rounded-lg p-6 bg-white shadow hover:shadow-md transition"
             >
-              <li className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
                 {point.title}
-              </li>
-              <p className="text-gray-600 text-sm">{point.description}</p>
-            </ol>
+              </h3>
+              <p className="text-gray-600 text-sm md:text-base">
+                {point.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>
