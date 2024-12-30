@@ -1,4 +1,6 @@
+"use client";
 import React, { lazy, Suspense } from "react";
+import { useInView } from "react-intersection-observer";
 import Loader from "../components/Loader";
 
 const Hero = lazy(() => import("../components/Hero"));
@@ -9,6 +11,24 @@ const SignupCard = lazy(() => import("../components/SignupCard"));
 const RHP = lazy(() => import("../components/RHP"));
 const Footer = lazy(() => import("../components/Footer"));
 const TrustedByBrands = lazy(() => import("../components/TrustedByBrands"));
+
+const AnimatedSection = ({ children }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-opacity duration-1000 ${
+        inView ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      {children}
+    </div>
+  );
+};
 
 export default function Home() {
   const bookedProperties = [
@@ -29,31 +49,45 @@ export default function Home() {
   ];
 
   return (
-    <div>
+    <div className="space-y-8">
       <Suspense fallback={<Loader />}>
-        <Hero />
+        <AnimatedSection>
+          <Hero />
+        </AnimatedSection>
       </Suspense>
 
       <Suspense fallback={<Loader image="/images/logo.png" />}>
-        <Projects properties={bookedProperties} />
+        <AnimatedSection>
+          <Projects properties={bookedProperties} />
+        </AnimatedSection>
       </Suspense>
 
       <Suspense fallback={<Loader />}>
-        <MissionVision />
+        <AnimatedSection>
+          <MissionVision />
+        </AnimatedSection>
       </Suspense>
 
       <Suspense fallback={<Loader />}>
-        <AboutUs imageUrl="/images/building1.jpg" />
+        <AnimatedSection>
+          <AboutUs imageUrl="/images/building1.jpg" />
+        </AnimatedSection>
       </Suspense>
 
-      <SignupCard />
+      <AnimatedSection>
+        <SignupCard />
+      </AnimatedSection>
 
       <Suspense fallback={<Loader />}>
-        <RHP />
+        <AnimatedSection>
+          <RHP />
+        </AnimatedSection>
       </Suspense>
 
       <Suspense fallback={<Loader />}>
-        <TrustedByBrands />
+        <AnimatedSection>
+          <TrustedByBrands />
+        </AnimatedSection>
       </Suspense>
 
       <Footer />

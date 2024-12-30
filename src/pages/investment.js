@@ -62,7 +62,7 @@ export default function Investment() {
       <motion.div
         className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center bg-no-repeat hero-bg"
         style={{
-          backgroundImage: "url('/images//investment.jpeg')",
+          backgroundImage: "url('/images/investment.jpeg')",
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -73,14 +73,14 @@ export default function Investment() {
           <div className="absolute top-0 left-0 w-full z-10 mt-4">
             <Navigation />
             <motion.div
-              className="relative h-full flex flex-col justify-center items-start pl-8 md:pl-16 text-white mt-10 md:mt-60 space-y-4 "
+              className="relative h-full flex flex-col justify-center items-start pl-4 sm:pl-8 md:pl-16 text-white mt-10 md:mt-40 space-y-4"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
               {/* Hero Text Section */}
               <motion.h1
-                className="text-2xl md:text-6xl font-bold"
+                className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold"
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -88,7 +88,7 @@ export default function Investment() {
                 Investment
               </motion.h1>
               <motion.p
-                className="text-sm md:text-lg max-w-[60%] md:max-w-xl border-l-4 border-red-500 text-left pl-4"
+                className="text-xs sm:text-sm md:text-lg max-w-[80%] sm:max-w-[70%] md:max-w-xl border-l-4 border-red-500 text-left pl-4"
                 initial={{ x: 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
