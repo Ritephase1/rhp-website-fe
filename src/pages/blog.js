@@ -54,7 +54,7 @@ const Blog = () => {
             <Navigation />
 
             <motion.div
-              className="flex justify-between items-center gap-4 px-4 md:px-16 mt- md:mt-20"
+              className="flex justify-between items-center gap-4 px-4 md:px-16 mt- md:mt-40"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.2 }}
