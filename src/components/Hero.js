@@ -46,7 +46,7 @@ export default function Hero() {
         <p className="md:text-xl">What are you looking for ?</p>
       </div>
 
-      {/* Image Section */}
+      {/* Image Section*/}
       <div className="flex flex-wrap justify-center gap-8 mt-10">
         {/* Commercial Image */}
         <div className="flex-1 max-w-[150px] text-center ">
