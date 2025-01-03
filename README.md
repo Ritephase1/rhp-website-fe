@@ -55,6 +55,7 @@ or, if you use Yarn:
 yarn install
 ```
 
+<!--
 ### Environment Variables
 
 Create a `.env.local` file in the root directory and add the necessary environment variables. Below is an example structure:
@@ -64,7 +65,7 @@ NEXT_PUBLIC_API_URL=<Your API URL>
 NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=<Your Google Maps API Key>
 ```
 
-Replace `<Your API URL>` and `<Your Google Maps API Key>` with your actual values.
+Replace `<Your API URL>` and `<Your Google Maps API Key>` with your actual values. -->
 
 ### Running the Application
 
